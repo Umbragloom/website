@@ -2,7 +2,7 @@
 title = "About"
 date = "2020-08-27"
 author = "Joshua Mathie"
-cover = "me.png"
+cover = "me.jpg"
 +++
 
 # Hi there
