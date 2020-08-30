@@ -4,7 +4,7 @@ backend:
 
 publish_mode: editorial_workflow # allows for edits to posts before posting.
 
-media_folder: "static/images/uploads" # where files should be store when posting from cms.
+media_folder: "/static/images/uploads" # where files should be store when posting from cms.
 public_folder: "/images/uploads" 
 
 # configurations
@@ -23,7 +23,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "art"
     label: "Art Posts" 
-    folder: "content/art"
+    folder: "/content/posts/art"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -36,7 +36,7 @@ collections:
       - {label: Type, name: type, widget: hidden, default: "post"}
   - name: "projects"
     label: "Project Posts" 
-    folder: "content/projects"
+    folder: "/content/posts/projects"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -49,7 +49,7 @@ collections:
       - {label: Type, name: type, widget: hidden, default: "post"}
   - name: "tutorials"
     label: "Tutorials" 
-    folder: "content/tutorials"
+    folder: "/content/posts/tutorials"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
