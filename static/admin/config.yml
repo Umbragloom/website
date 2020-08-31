@@ -11,7 +11,7 @@ public_folder: "/images/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "public/content/posts/blog" # The path to the folder where the documents are stored
+    folder: "content/posts/blog" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -26,7 +26,7 @@ collections:
 
   - name: "art"
     label: "Art Posts" 
-    folder: "posts/art"
+    folder: "/content/posts/art"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -39,7 +39,7 @@ collections:
       - {label: Type, name: type, widget: hidden, default: "post"}
   - name: "projects"
     label: "Project Posts" 
-    folder: "content/projects"
+    folder: "content/post/projects"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
@@ -52,7 +52,7 @@ collections:
       - {label: Type, name: type, widget: hidden, default: "post"}
   - name: "tutorials"
     label: "Tutorials" 
-    folder: "content/tutorials"
+    folder: "content/posts/tutorials"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
