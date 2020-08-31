@@ -15,48 +15,50 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: Type, name: type, widget: hidden, default: "post"}
   - name: "art"
     label: "Art Posts" 
     folder: "/content/posts/art"
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Categories", name: "categories", widget: "string", required: true}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: Author, name: author, widget: hidden, default: Chris Stayte}
-      - {label: Type, name: type, widget: hidden, default: "post"}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: Type, name: type, widget: hidden, default: "art"}
   - name: "projects"
     label: "Project Posts" 
     folder: "/content/posts/projects"
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Categories", name: "categories", widget: "string", required: true}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: Author, name: author, widget: hidden, default: Chris Stayte}
-      - {label: Type, name: type, widget: hidden, default: "post"}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: Type, name: type, widget: hidden, default: "projects"}
   - name: "tutorials"
     label: "Tutorials" 
     folder: "/content/posts/tutorials"
     create: true
-    slug: "{{year}}-{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
-      - {label: "Categories", name: "categories", widget: "string", required: true}
+      - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: Type, name: type, widget: hidden, default: "post"}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie 
+      - {label: Type, name: type, widget: hidden, default: "tutorials"}
     
