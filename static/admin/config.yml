@@ -4,7 +4,7 @@ backend:
 
 publish_mode: editorial_workflow # allows for edits to posts before posting.
 
-media_folder: "/static/images/uploads" # where files should be store when posting from cms.
+media_folder: "static/images/uploads" # where files should be store when posting from cms.
 public_folder: "/images/uploads" 
 
 # configurations
