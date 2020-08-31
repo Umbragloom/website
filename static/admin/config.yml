@@ -59,6 +59,6 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: Author, name: author, widget: hidden, default: Joshua Mathie 
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie} 
       - {label: Type, name: type, widget: hidden, default: "tutorials"}
     
