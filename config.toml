@@ -75,15 +75,15 @@ paginate = 5
     [[languages.en.menu.main]]
         identifier = "blog"
         name = "Blog"
-        url = "blog/"
+        url = "/posts/blog"
           
     [[languages.en.menu.main]]
         identifier = "art"
         name = "Art"
-        url = "/posts/art/"
+        url = "/posts/art"
         
     [[languages.en.menu.main]]
         identifier = "tutorials"
         name = "Tutorials"
-        url = "/posts/tutorials/"
+        url = "/posts/tutorials"
         
