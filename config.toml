@@ -10,7 +10,7 @@ disqusShortname = "mathiejosh-xyz"
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "green"
+  themeColor = "red"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 5
