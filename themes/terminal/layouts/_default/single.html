@@ -51,8 +51,8 @@
   {{ if eq .Type $.Site.Params.contentTypeName }}
   {{ partial "posts_pagination.html" . }}
   {{ end }}
-  <div>
-  {{ partial "disqus.html" . }}
-  </div>
+ 
+  {{ partial "comments.html" . }}
+  
 </div>
 {{ end }}
