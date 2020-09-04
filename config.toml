@@ -47,7 +47,7 @@ disqusShortname = "mathiejosh-xyz"
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Mathie_Josh"
+    title = "[Mathie@josh]#"
     subtitle = "A simple, retro theme for Hugo"
     owner = ""
     keywords = ""
@@ -59,7 +59,7 @@ disqusShortname = "mathiejosh-xyz"
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "Mathie_Josh"
+      logoText = "[Mathie@josh]#"
       logoHomeLink = "/"
       
     [languages.en.menu]
