@@ -20,8 +20,10 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required:false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
       - {label: Type, name: type, widget: hidden, default: "post"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "art"
     label: "Art Posts" 
     folder: "/content/posts/art"
@@ -33,8 +35,10 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
       - {label: Type, name: type, widget: hidden, default: "art"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects"
     label: "Project Posts" 
     folder: "/content/posts/projects"
@@ -46,8 +50,10 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
       - {label: Type, name: type, widget: hidden, default: "projects"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "tutorials"
     label: "Tutorials" 
     folder: "/content/posts/tutorials"
@@ -59,6 +65,7 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - {label: "Categories", name: "categories", widget: "string", required: false}
       - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie} 
       - {label: Type, name: type, widget: hidden, default: "tutorials"}
-    
+      - {label: "Body", name: "body", widget: "markdown"}
