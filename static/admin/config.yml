@@ -19,7 +19,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "cover", widget: "image", required:false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
-      - {label: Type, name: type, widget: hidden, default: "post"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "art"
     label: "Art Posts" 
@@ -31,7 +30,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "cover", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
-      - {label: Type, name: type, widget: hidden, default: "art"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects"
     label: "Project Posts" 
@@ -43,7 +41,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "cover", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
-      - {label: Type, name: type, widget: hidden, default: "projects"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "tutorials"
     label: "Tutorials" 
@@ -55,5 +52,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "cover", widget: "image", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie} 
-      - {label: Type, name: type, widget: hidden, default: "tutorials"}
       - {label: "Body", name: "body", widget: "markdown"}
