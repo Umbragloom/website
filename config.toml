@@ -3,6 +3,7 @@ languageCode = "en-us"
 theme = "terminal"
 paginate = 5
 disqusShortname = "mathiejosh-xyz"
+googleAnalytics = "UA-177349046-1"
 
 [params]
   # dir name of your main content (default is `content/posts`).
