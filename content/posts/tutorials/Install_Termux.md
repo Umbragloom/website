@@ -1,8 +1,12 @@
 ---
-title: "Installing Termux"
+title: Installing Termux
 date: 2020-09-10T18:20:23-04:00
 draft: false
-tags: [Termux, Linux, Android]
+tags:
+  - Termux
+  - Linux
+  - Android
+  - Tutorial
 ---
 
 # Installing Termux
