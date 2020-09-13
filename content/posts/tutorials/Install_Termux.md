@@ -9,9 +9,6 @@ tags:
   - Tutorial
 ---
 
-# Installing Termux
-
-* * * 
 Today I would like to go through how I Installed Termux on my Android phone,
 how I edited the app, what applications I use it for, why I installed it, and what I have learned.
 
