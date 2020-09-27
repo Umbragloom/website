@@ -2,6 +2,8 @@
 title: Installing Termux
 date: 2020-09-10T18:20:23-04:00
 draft: false
+description: "Quick guide on how to install, setup and customizer Termux on an
+Android device"
 tags:
   - Termux
   - Linux

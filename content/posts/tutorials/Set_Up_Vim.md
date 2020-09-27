@@ -2,6 +2,7 @@
 title: Setting Up Vim
 date: 2020-09-26T12:16:20-04:00 
 draft: false
+description: "Installing Vim and setting up customization."
 tags:
  - Linux
  - Tutorial
