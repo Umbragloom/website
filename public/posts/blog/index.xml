@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>[Mathie@josh]#</title>
+    <link>/posts/blog/</link>
+    <description>Recent content on [Mathie@josh]#</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Sep 2020 14:05:43 -0400</lastBuildDate><atom:link href="/posts/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Musical Impact</title>
+      <link>/posts/blog/first_blog_post/</link>
+      <pubDate>Sat, 26 Sep 2020 14:05:43 -0400</pubDate>
+      
+      <guid>/posts/blog/first_blog_post/</guid>
+      <description>Impactful  Music. There are hundreds, thousands even, of genres of music in the world, and new and emerging types are being created every day. The impact music has on this world is astronomical and is completely different for every single person.Someone once asked me: If music is so impactful, which ones are impactful to me, and why?
+My Musical History I believe, remembering back the one Genre of music that impacted me so much in my young life was The Great Scottish Highland Bagpipe music.</description>
+    </item>
+    
+  </channel>
+</rss>

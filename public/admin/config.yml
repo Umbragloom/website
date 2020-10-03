@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow # allows for edits to posts before posting.
+
+media_folder: "static/images/uploads" # where files should be store when posting from cms.
+public_folder: "/images/uploads" 
+
+# configurations
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "/content/posts/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "cover", widget: "image", required:false}
+      - {label: "Decription", name: "desciption", widget: hidden, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "art"
+    label: "Art Posts" 
+    folder: "/content/posts/art"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "cover", widget: "image", required: false}
+      - {label: "Decription", name: "desciption", widget: hidden, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "projects"
+    label: "Project Posts" 
+    folder: "/content/posts/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "cover", widget: "image", required: false}
+      - {label: "Decription", name: "desciption", widget: hidden, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "tutorials"
+    label: "Tutorials" 
+    folder: "/content/posts/tutorials"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "cover", widget: "image", required: false}
+      - {label: "Decription", name: "desciption", widget: hidden, required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie} 
+      - {label: "Body", name: "body", widget: "markdown"}

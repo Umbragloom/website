@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>[Mathie@josh]#</title>
+    <link>/posts/tutorials/</link>
+    <description>Recent content on [Mathie@josh]#</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="/posts/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Vim</title>
+      <link>/posts/tutorials/set_up_vim/</link>
+      <pubDate>Sat, 26 Sep 2020 12:16:20 -0400</pubDate>
+      
+      <guid>/posts/tutorials/set_up_vim/</guid>
+      <description>Vim needs no introduction.  Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it. vim or Vi IMproved, is a well known port of the vi editor created by Bill Joy, that was created by Bram Moolenaar. vim was designed as a more improved text editor over the original vi, with a heavy influence on the use of the keyboard over the mouse, and pre-installed movement commands, or custom macros, to traverse the document you are creating or editing.</description>
+    </item>
+    
+    <item>
+      <title>Installing Termux</title>
+      <link>/posts/tutorials/install_termux/</link>
+      <pubDate>Thu, 10 Sep 2020 18:20:23 -0400</pubDate>
+      
+      <guid>/posts/tutorials/install_termux/</guid>
+      <description>Today I would like to go through how I Installed Termux on my Android phone, how I edited the app, what applications I use it for, why I installed it, and what I have learned.
+First What is Termux you might ask? Pulled directly form the main website https://www.termux.com:
+ Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager.</description>
+    </item>
+    
+  </channel>
+</rss>

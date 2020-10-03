@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Setting Up Vim :: [Mathie@josh]#</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vim needs no introduction.  Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it. vim or Vi IMproved, is a well known port of the vi editor created by Bill Joy, that was created by Bram Moolenaar. vim was designed as a more improved text editor over the original vi, with a heavy influence on the use of the keyboard over the mouse, and pre-installed movement commands, or custom macros, to traverse the document you are creating or editing." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/tutorials/set_up_vim/" />
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-177349046-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/red.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/img/favicon/red.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Setting Up Vim :: [Mathie@josh]#">
+<meta property="og:description" content="Installing Vim and setting up customization." />
+<meta property="og:url" content="/posts/tutorials/set_up_vim/" />
+<meta property="og:site_name" content="Setting Up Vim" />
+
+  
+    <meta property="og:image" content="/img/favicon/red.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-09-26 12:16:20 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="red">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    [Mathie@josh]#
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts/art/">Art</a></li>
+        
+      
+        
+          <li><a href="/posts/blog/">Blog</a></li>
+        
+      
+        
+          <li><a href="/posts/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="/posts/tutorials/">Tutorials</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts/art/">Art</a></li>
+      
+    
+      
+        <li><a href="/posts/blog/">Blog</a></li>
+      
+    
+      
+        <li><a href="/posts/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="/posts/tutorials/">Tutorials</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/tutorials/set_up_vim/">Setting Up Vim</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-09-26 [Updated: 2020-09-26]
+      </span>
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/linux/">Linux</a>&nbsp;
+    
+    #<a href="/tags/tutorial/">Tutorial</a>&nbsp;
+    
+    #<a href="/tags/vim/">Vim</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="vim-needs-no-introduction">Vim needs no introduction.<a href="#vim-needs-no-introduction" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>Well that&rsquo;s not entirely true, it probably does if you have never heard of it.
+<code>vim</code> or Vi IMproved, is a well known port of the vi editor created by Bill
+Joy, that was created by Bram Moolenaar. <code>vim</code> was designed as a more improved
+text editor over the original vi, with a heavy influence on the use of the
+keyboard over the mouse, and pre-installed movement commands, or custom macros,
+to traverse the document you are creating or editing. For more detailed
+information, including the history of Vim, please go to the home page at <a href="https://www.vim.org/">vim.org/</a></p>
+<h1 id="installing-vim">Installing Vim<a href="#installing-vim" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>To install <code>vim</code> consult your Linux distributions wiki. A few of the popular
+ways are below:</p>
+<p>For Arch based systems:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S vim
+</code></pre></div><p>For Unbuntu based systems:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo apt install vim
+</code></pre></div><p>For Debian based systems:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ apt-get install vim
+</code></pre></div><h1 id="basic-layout">Basic layout<a href="#basic-layout" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>When you first start vim via <code>$ vim</code> you are greeted with the following screen:</p>
+
+  <img src="/images/vim_screen.png"  class="center"  />
+
+
+<p>Pretty simple design and can get you buy if your need to edit some files, but
+i&rsquo;m going to edit it up a little and make it cleaner, and nicer to use a little
+later. But first lets go though some of the most basic commands that should be
+learned.</p>
+<p>One of the best things to do if you have never used vim before is to run <code>$ vimtutor</code> in your preferred terminal. This is a very nice introduction to the
+standard movements utilized in Vim. A few of the really important ones are:</p>
+<ol>
+<li>
+<p>The hjkl keys - this is the standard movement keys for getting around in the
+file you are using. <code>h</code> moves left, <code>j</code> moves down, <code>k</code> moves up, <code>l</code> moves right.</p>
+</li>
+<li>
+<p>Exiting - use <code>:q</code> to exit, <code>:q!</code> to force a quit, and <code>:wq</code> to write the file and exit vim.</p>
+</li>
+<li>
+<p>When in normal mode (the standard) mode, you can utilize a number in front
+of the action you would like to do, such as <code>2j</code> moves 2 down, <code>32k</code> moves 32
+characters up, etc. This can also be utilized for other commands.</p>
+</li>
+<li>
+<p>In normal mode the <code>x</code> button will delete a single character at the cursor, <code>dw</code>
+will delete from the cursor to the end of the word, including the space,
+<code>d$</code>
+from the cursor to the end of the line, <code>dd</code> to delete a whole line.</p>
+</li>
+<li>
+<p>What about if you did something and want to undo it? simply pressing <code>u</code> in
+normal mode will do that for you.</p>
+</li>
+<li>
+<p>What about if you want to just update a word: <code>cw</code> and type the  correct word then press <code>&lt;ESC&gt;</code>.</p>
+</li>
+<li>
+<p>Pressing <code>i</code> will put you into INSERT mode.</p>
+</li>
+</ol>
+<p>These are just some of the basic commands that can be handled from within vim,
+<code>vimtutor</code> as well as the documentation can aid you in learning and figuring out
+other macros and commands.</p>
+<h1 id="setting-up-customization">Setting up customization.<a href="#setting-up-customization" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>Vim utilizes a configuration file, the vimrc. This vimrc can be utilized
+globally, or at a user level by utilizing a <code>.vimrc</code> file in your home
+directory.</p>
+<p>Here you can choose which settings you would like to add. A few of the options
+I utilize are below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">&#34;set line numbers to both relative and number.</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">number</span> <span style="color:#a6e22e">relativenumber</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34;set file stats</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">ruler</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; spacing and whitespace things</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">wrap</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">textwidth</span>=<span style="color:#ae81ff">79</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">tabstop</span>=<span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">shiftwidth</span>=<span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">softtabstop</span>=<span style="color:#ae81ff">4</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">autoindent</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">set</span> <span style="color:#a6e22e">nofoldenable</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>You can also set custom key macros as well. A few of the ones that are useful
+to me are:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vim" data-lang="vim"><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; set jk to esc</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">inoremap</span> <span style="color:#a6e22e">jk</span> &lt;<span style="color:#a6e22e">esc</span>&gt; <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">vnoremap</span> <span style="color:#a6e22e">jk</span> &lt;<span style="color:#a6e22e">esc</span>&gt; <span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34;disable arrow keys</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">up</span>&gt; &lt;<span style="color:#a6e22e">nop</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">down</span>&gt; &lt;<span style="color:#a6e22e">nop</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">left</span>&gt; &lt;<span style="color:#a6e22e">nop</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">map</span> &lt;<span style="color:#a6e22e">right</span>&gt; &lt;<span style="color:#a6e22e">nop</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">
+</span><span style="color:#75715e">&#34; Auto Close tags. Adds the start and close tags and centers the cursor in the</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e">&#34; center.</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">inoremap</span> ( ()&lt;<span style="color:#a6e22e">Left</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">inoremap</span> { {}&lt;<span style="color:#a6e22e">Left</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#a6e22e">inoremap</span> [ []&lt;<span style="color:#a6e22e">Left</span>&gt;<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Then you can utilize Plugins to get other features. I use a program called
+<a href="https://github.com/VundleVim/Vundle.vim">Vundle</a> to install plugins. To
+install Vundle follow the README found on the github, thtough that link.</p>
+<p>Some of the plugins I utilize are</p>
+<ol>
+<li>(NERDtree)[https://github.com/preservim/nerdtree] - A custom file system
+explorer for Vim. Need to also use (Vim-devicons){https://github.com/ryanoasis/vim-devicons} to get working file system icons.</li>
+<li>(Onedark)[https://github.com/joshdick/onedark.vim] - A Dark colorscheme for
+Vim/Neovim. Sometimes I use (Gruvbox)[https://github.com/morhetz/gruvbox].</li>
+<li>(vimrainbow)[https://github.com/frazrepo/vim-rainbow] - Colorizes your
+paranthesis, brackets, and squierlies to make them easier to distinguish.</li>
+</ol>
+<p>These are just a few of the plugins I utilize. After installing and setting
+everything up my vim now looks like below:</p>
+
+  <img src="/images/vim_custom.png"  class="center"  />
+
+
+<h1 id="-sudo-exit">$ sudo exit<a href="#-sudo-exit" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>This was a VERY simple introduction to vim. There are a plethora of resources
+online for learning how to utilize, configure and customize vim. a few
+suggestions that i have used are :</p>
+<ol>
+<li>The vim documentation.</li>
+<li>the following youtubers / channels: (Luke Smith)[https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA], (ThePrimeagen)[https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw], and (Thoughtbot)[https://www.youtube.com/user/ThoughtbotVideo]</li>
+<li>(VIM Adventures)[https://vim-adventures.com/] - a really fun interactive
+game, created to easily teach vim movements, while playing an RPG style
+game.</li>
+</ol>
+<p>If you would like to see my vimrc and other dotfiles please feel free to go to
+my (Github)[https://github.com/Mathie-Josh/Arch_laptop/]. I need to update my
+README, but the files are all there!</p>
+<p>I hope you enjoy the wonderful and majestic world that is vim!</p>
+<hr>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/tutorials/install_termux/">
+                <span class="button__text">Installing Termux</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mathiejosh-xyz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2020 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
