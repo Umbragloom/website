@@ -5,6 +5,16 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: content/posts/art
+  label: Art
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/posts/tutorials
+  label: tutorials
+  create: all
+  match: "**/*"
+- type: directory
   path: content/posts/projects
   label: Projects
   create: all
