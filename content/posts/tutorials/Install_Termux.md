@@ -2,7 +2,7 @@
 title: Installing Termux
 date: 2020-09-10T18:20:23-04:00
 draft: false
-description: "Quick guide on how to install, setup and customizer Termux on an
+description: "Quick guide on how to install, setup and customize Termux on an
 Android device"
 tags:
   - Termux
@@ -79,7 +79,7 @@ the apps I Installed were:
 1. `vim` - One of the best terminal based text editors around.
 2. `git` - for managing git repos, also use it to push my Termux files to github
    to keep them in one place. (This is not really needed as Termux has a built
-   in backup utility that saves a zip file of everything in the termux
+   in backup utility that saves a zip file of everything in the Termux
    folder, but I am learning how to properly use git, so it helps.)
 3. `zsh` - a new command-line interpreter that offers improvements over Bash. (with the oh-my-zsh framework and the powerlevel10k theme.)
 4. `WeeChat` - a IRC (Internet Relay Chat) client. Other alternatives are

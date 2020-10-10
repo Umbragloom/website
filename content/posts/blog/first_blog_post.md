@@ -2,7 +2,7 @@
 title: "Musical Impact"
 date: 2020-09-26T14:05:43-04:00
 draft: false
-description: Music that has impacted me thorough my life.
+description: Music that has impacted me thorough out my life.
 tags:
  - Blog
  - Ramblings

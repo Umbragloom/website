@@ -23,8 +23,7 @@ information, including the history of Vim, please go to the home page at [vim.or
 # Installing Vim 
 ----
 
-To install `vim` consult your Linux distributions wiki. A few of the popular
-ways are below:
+As i used Linux I will mainly work on installing Vim on Arch. To install `vim` consult your Linux distributions wiki, or the Vim website for other ways to installvim. A few of the popular ways are below:
 
 For Arch based systems:
 ```bash
