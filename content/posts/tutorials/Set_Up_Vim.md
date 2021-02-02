@@ -23,7 +23,7 @@ information, including the history of Vim, please go to the home page at [vim.or
 # Installing Vim 
 ----
 
-As i used Linux I will mainly work on installing Vim on Arch. To install `vim` consult your Linux distributions wiki, or the Vim website for other ways to installvim. A few of the popular ways are below:
+As I use Linux, I will mainly work on installing Vim on Arch. To install `vim` consult your Linux distributions wiki, or the Vim website for other ways to install vim. A few of the popular ways are below:
 
 For Arch based systems:
 ```bash
@@ -134,11 +134,11 @@ install Vundle follow the README found on the github, thtough that link.
 
 Some of the plugins I utilize are 
 
-1. (NERDtree)[https://github.com/preservim/nerdtree] - A custom file system
+1. [NERDtree](https://github.com/preservim/nerdtree) - A custom file system
    explorer for Vim. Need to also use (Vim-devicons){https://github.com/ryanoasis/vim-devicons} to get working file system icons. 
-2. (Onedark)[https://github.com/joshdick/onedark.vim] - A Dark colorscheme for
+2. [Onedark](https://github.com/joshdick/onedark.vim) - A Dark colorscheme for
    Vim/Neovim. Sometimes I use (Gruvbox)[https://github.com/morhetz/gruvbox].
-3. (vimrainbow)[https://github.com/frazrepo/vim-rainbow] - Colorizes your
+3. [vimrainbow](https://github.com/frazrepo/vim-rainbow) - Colorizes your
    paranthesis, brackets, and squierlies to make them easier to distinguish. 
 
 
