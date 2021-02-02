@@ -155,13 +155,13 @@ online for learning how to utilize, configure and customize vim. a few
 suggestions that i have used are :
 
 1. The vim documentation.
-2. the following youtubers / channels: (Luke Smith)[https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA], (ThePrimeagen)[https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw], and (Thoughtbot)[https://www.youtube.com/user/ThoughtbotVideo]
-3. (VIM Adventures)[https://vim-adventures.com/] - a really fun interactive
+2. the following youtubers / channels: [Luke Smith](https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA), [ThePrimeagen](https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw), and [Thoughtbot](https://www.youtube.com/user/ThoughtbotVideo)
+3. [VIM Adventures](https://vim-adventures.com/) - a really fun interactive
    game, created to easily teach vim movements, while playing an RPG style
    game. 
 
 If you would like to see my vimrc and other dotfiles please feel free to go to
-my (Github)[https://github.com/Mathie-Josh/Arch_laptop/]. I need to update my
+my [Github](https://github.com/Mathie-Josh/Arch_laptop/). I need to update my
 README, but the files are all there!
 
 I hope you enjoy the wonderful and majestic world that is vim!
