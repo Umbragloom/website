@@ -27,13 +27,13 @@ There are a lot of reasons to host your own website. My reasons are below:
    that went into WebDev and website management. 
 
 3. It looks good to potential employers, as well being able to act as a simple
-   portfolio for projects, and things you are passionate about. 
+   portfolio for projects and things you are passionate about. 
 
 # How to get started.
 ----
 
 RESEARCH is your best friend. Look into YouTube videos, Read the documentation
-from the [Hugo](https://gohugo.io/getting-started/quick-start) and research other
+from the [Hugo](https://gohugo.io/getting-started/quick-start) website and research other
 peoples code bases if they have them available to you.
 
 # So where do I even begin??
@@ -42,10 +42,10 @@ peoples code bases if they have them available to you.
 ## First Steps!
 The first thing to do once you've done your research is to install Hugo. For my
 example I will be doing this on Linux. There are a plethora of resources on how
-to handle this if your on Mac or Windows. 
+to handle this if your on Mac or Windows. **COUGH** ***RTFM***
 
 From your terminal make sure whatever system you are using has git installed or
-Homebrew if you go that route. For me as I'm using Arch Linux, i can just
+Homebrew if you go that route. For me as I'm using Arch Linux, I can just
 install Hugo directly from the Arch Linux community repository by using the
 following command in my terminal.
 
@@ -68,10 +68,104 @@ hugo new site "sitename"
 ```
 
 The above command will create a new Hugo site in a folder called "Sitename", you can 
-replace sitename with your desired site name.
+replace Sitename with your desired name. Within this folder will be the files, folders, and items needed to run your site.
 
-Congrats you have the start of a website, but its going to be pretty bland
-starting off. 
+The main file you currently need is the `config.toml` file. This is the base configuration of your site. For example mine is below:
+
+```vim
+baseurl = "/"
+languageCode = "en-us"
+theme = "terminal"
+paginate = 5
+
+[params]
+  # dir name of your main content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  # ["orange", "blue", "red", "green", "pink"]
+  themeColor = "red"
+
+  # if you set this to 0, only submenu trigger will be visible
+  showMenuItems = 5
+
+  # show selector to switch language
+  showLanguageSelector = false
+
+  # set theme to full screen width
+  fullWidthTheme = false
+
+  # center theme with default width
+  centerTheme = true
+
+  # set a custom favicon (default is a `themeColor` square)
+  # favicon = "favicon.ico"
+
+  # set post to show the last updated
+  # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
+  showLastUpdated = true
+  #enagleGitInfo = true
+  
+ # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
+   updatedDatePrefix = "Updated"
+
+  # set all headings to their default size (depending on browser settings)
+  # it's set to `true` by default
+  # oneHeadingSize = false
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "[Mathie@josh]#"
+    subtitle = "A simple, retro theme for Hugo"
+    owner = ""
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+
+    [languages.en.params.logo]
+      logoText = "[Mathie@josh]#"
+      logoHomeLink = "/"
+      
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+            
+    [[languages.en.menu.main]]
+        identifier = "projects"
+        name = "Projects"
+        url = "/posts/projects"
+        
+    [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/posts/blog/"
+          
+    [[languages.en.menu.main]]
+        identifier = "art"
+        name = "Art"
+        url = "/posts/art/"
+        
+    [[languages.en.menu.main]]
+        identifier = "tutorials"
+        name = "Tutorials"
+        url = "/posts/tutorials/"   
+
+```
+This configures the base navigation section of your website. In my example, I have the sub folders Tutorials, 
+Art, Blog, Projects, and the About Me pages. This takes you to the sub pages and content for each. This is 
+also where you can have links to your social media, as well as where you can set certain parameters required
+by your theme. 
+
+Congrats you have the start of a website, if you havent set anyhting up yet in the `config.yml` its going to be 
+pretty bland starting off. 
 
 ## Make it ***STAND OUT***
 
@@ -85,8 +179,8 @@ Theme](themes.gohugo.io/themes/hugo-theme-terminal/) from panr on
 
 This is where Git comes in, you need to clone the theme into your websites
 folder. For the Terminal Theme, panr recommends using a git submodule (as does the Hugo dev team), which
-allows you to use the updates made to the repo, without causing any harm to the master branch of the repository once you start making changes to it. 
-To do this type the following into your terminal:
+allows you to use the updates made to the repo, without causing any harm to the master branch of the repository 
+once you start making changes to it. To do this type the following into your terminal:
 
 ```bash
 $ cd sitename #to move into your hugo root folder.
@@ -94,7 +188,7 @@ $ git submodule add https://github.com/panr/hugo-theme-terminal.git
 themes/terminal
 ```
 
-This will install all information you need to utilize the theme on your
+This will install all files you need to utilize the theme on your
 website, in a dedicated theme folder within your root folder of your website. 
 
 From here just follow the documentation to set up the theme and your ready to
@@ -112,7 +206,7 @@ $ hugo new posts/"your-posts-title"
 ```
 
 This will create a new .md file for you to edit. Hugo utilizes markdown syntex
-for your websites content. Below would be the example of what will be in your new post that you can open in any viewer:
+for your websites content. Below would be the example of what will be in your new post that you can open in any text editor:
 
 ```vim
 ---
@@ -129,7 +223,7 @@ as a draft that will not be posted to your site, until it is ready.
 # Check it out!
 ---
 
-So after youve set up your website, chose a theme that you enjoy (or made your own), and posted your 
+So after you've set up your website, chosen a theme that you enjoy (or made your own), and posted your 
 first piece of content you can start the hugo server and view the local copy of your website in any browser! 
 Type the following into your command line:
 
@@ -184,31 +278,75 @@ then run the following commands:
 ```bash
 $ git init
 ```
-This will intialize the folder as a git repository waiting to be pushed to Github/Gitlab. Go to your Github/Gitlab create a new repo, and copy the supplied `git remote add` and `git push` commans from the `...or push an existing repository from the command line` section, then commit the changes to the staging area and commit them to Github:
+
+This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied `git remote add` and `git push` commans from the `...or push an existing repository from the command line` section, then commit the changes to the staging area and commit them to GitHub/GitLab:
 
 ```bash
 $ git add . #this adds all files in the root folder to the staging area.
 $ git commit -m "Your commit message here" #This is the commit message that you should use to keep track of changes you have made to your git folder, this is useful if you are working in groups.
 ```
+
 Then push the local Git repo to your repository on Github/Gitlab:
 
 ```bash
 $ git remote add origin https://your-github's-repository-address.git
 $ git push -u origin master
 ```
+
 Congrats you have now begun the process of keeping all data on Github/Gitlab for version control!
 
 # Netlify to the rescue!
 
-Next steps are to deploy your website on ***Netlify***. Head over to [Netlify](https://netlify.com) and create an account. You can also use your Github login details if you feel like that would make it easier. Once your logged in you'll see an option `New site from Git:` click this and you will be asked to choose your git provider, Either Github ot GitLab, Choose which ever site you used. From here youll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then youll be asked to verify your build settings. For this set the build command as `hugo` and what directory you need to publish, for us this is the `public` directory where all our content is stored. After this is confirmed click the `Deply site` button at the bottom of the page.
+Next steps are to deploy your website on ***Netlify***. Head over to [Netlify](https://netlify.com) and create an account. You can also use your Github login details if you feel like that would make it easier. Once your logged in you'll see an option `New site from Git:` click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you'll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you'll be asked to verify your build settings. For this set the build command as `hugo` and what directory you need to publish, for us this is the `public` directory where all our content is stored. After this is confirmed click the `Deply site` button at the bottom of the page.
 
-Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the `baseUrl` setting value in the `config.toml` file. Therefore, click on the `Deploy settings` in the site overview. Then select the `Site details` under the `General` tab. In the `Site details` tab, click on the `Change site name:` button, this will cause a pop up to show up, from here set it to whatever your `baseUrl` setting was, be it a domain name if you have one. 
+Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the `baseUrl` setting value in the `config.toml` file. Therefore, click on the `Deploy settings` in the site overview. Then select the `Site details` under the `General` tab. In the `Site details` tab, click on the `Change site name:` button, this will cause a pop up to show up, from here set it to whatever your `baseUrl` setting was.
 
 #***CONGRATUALTIONS***
 
-You now have your own personal website, that is manual updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up netlifies CMS so you can edit, update and push content remotely from netlify's CMS system!
+You now have your own personal website with the Netlify hosting page, that is manually updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up Netlify CMS so you can edit, update and push content remotely!
+---
 
+#CMS's are great!
 
+CMS's or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, NetlifyCMS is one of the best options. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere
+
+We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static `admin` folder, in this case with Hugo it is stored in the `/static` folder. 
+
+To get this set up simply do the following in your Root folder of your website:
+
+```bash
+$ cd /static
+$ mkdir /admin && cd /admin # The && is a logical AND function.
+$ touch index.html && touch config.yml
+```
+
+The first file `admin/index.html`, is the base entry point for the Netlify CMS admin interface. This allosws users set up in the CMS to navigate to `yoursite.com/admin/` to access the CMS and start publishing content. On the code side, this is a very basic HTML starter page that loads the Netlify CMS JavaScript file. In the `index.html` file you can place the following: 
+
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
+```
+---
+
+The second file `admin/config.yml` is the heart of the CMS instillation. Since im already utilizing Netlify for hostin and unthentication, the backend configuration is fairly straightforward. For GitHub and GitLab repositories, you should start your `config.yml` file with the following lines:
+
+```yml
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+```
+
+This specifies your backend protocol and your publication branch. API that acts as a proxy between authenticated users of your site and your site repo.
 
 
 
