@@ -382,7 +382,7 @@ After this we need to set up something called collections. Collections define th
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Featured Image", name: "cover", widget: "image", required: false}
-      - {label: "Decription", name: "desciption", widget: string"", required: true}
+      - {label: "Decription", name: "desciption", widget: "string", required: true}
       - {label: "Tags", name: "tags", widget: "list", required: false}
       - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
       - {label: "Body", name: "body", widget: "markdown"}
