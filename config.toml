@@ -14,7 +14,7 @@ googleAnalytics = "UA-177349046-1"
   themeColor = "red"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
+  showMenuItems = 6
 
   # show selector to switch language
   showLanguageSelector = false
@@ -90,4 +90,11 @@ googleAnalytics = "UA-177349046-1"
         identifier = "tutorials"
         name = "Tutorials"
         url = "/posts/tutorials/"
+
+   [[languages.en.menu.main]]
+        identifier = "contact"
+        name = "Contact Me"
+        url = "/pages/contact/"
         
+
+
