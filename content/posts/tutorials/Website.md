@@ -33,7 +33,7 @@ There are a lot of reasons to host your own website. My reasons are below:
 ----
 
 RESEARCH is your best friend. Look into YouTube videos, Read the documentation
-from the [Hugo](https://gohugo.io/getting-started/quick-start) website and research other
+from the [Hugo](http://gohugo.io), [Netlify](http://www.netlify.com), and [Netlify CMS](http://www.netlifycms.org) and research other
 peoples code bases if they have them available to you.
 
 # So where do I even begin??
@@ -64,7 +64,7 @@ correctly. If it does congrats you have the Hugo Framework installed.
 Next steps are to create a new site! 
 
 ```bash
-hugo new site "sitename"
+$ hugo new site "Sitename"
 ```
 
 The above command will create a new Hugo site in a folder called "Sitename", you can 
@@ -159,12 +159,13 @@ paginate = 5
         url = "/posts/tutorials/"   
 
 ```
+
 This configures the base navigation section of your website. In my example, I have the sub folders Tutorials, 
 Art, Blog, Projects, and the About Me pages. This takes you to the sub pages and content for each. This is 
 also where you can have links to your social media, as well as where you can set certain parameters required
 by your theme. 
 
-Congrats you have the start of a website, if you havent set anyhting up yet in the `config.yml` its going to be 
+Congrats you have the start of a website, if you haven't set anyhting up yet in the `config.yml` its going to be 
 pretty bland starting off. 
 
 ## Make it ***STAND OUT***
@@ -256,17 +257,15 @@ Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
 Press Ctrl+C to stop
 ```
 
-This will load the hugo server for you,and all you need to do is navigate to http://localhost:1313/ 
+This will load the hugo server for you, and all you need to do is navigate to http://localhost:1313/ 
 and view your website!! The -D option loads any drafts that you have so you can view them before posting!
 
-From here you can continue to configure your theme by updated the themes `config.taml` file. Here you 
-can set a base url if you have a domain ready, replace the title for your webpage, as well as many other 
-options!
+From here you can continue to configure your theme by updating your `config.taml` file with the certain themes requirements.
 
 ---
 
 But ***"Wait!"*** you say, ***"My website isn't online now is it?"*** The answer to that is yes, your correct 
-its not online, and canont be accessed on the web. This is where Netlify and Github come in handy!
+its not online, and it canont be accessed on the web. This is where Netlify and Github come in handy!
 
 # Git Commit!
 
@@ -279,7 +278,7 @@ then run the following commands:
 $ git init
 ```
 
-This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied `git remote add` and `git push` commans from the `...or push an existing repository from the command line` section, then commit the changes to the staging area and commit them to GitHub/GitLab:
+This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied `git remote add` and `git push` commands from the `...or push an existing repository from the Command line` section, then commit the changes to the staging area and commit them to GitHub/GitLab:
 
 ```bash
 $ git add . #this adds all files in the root folder to the staging area.
@@ -295,9 +294,11 @@ $ git push -u origin master
 
 Congrats you have now begun the process of keeping all data on Github/Gitlab for version control!
 
+---
+
 # Netlify to the rescue!
 
-Next steps are to deploy your website on ***Netlify***. Head over to [Netlify](https://netlify.com) and create an account. You can also use your Github login details if you feel like that would make it easier. Once your logged in you'll see an option `New site from Git:` click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you'll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you'll be asked to verify your build settings. For this set the build command as `hugo` and what directory you need to publish, for us this is the `public` directory where all our content is stored. After this is confirmed click the `Deply site` button at the bottom of the page.
+Next steps are to deploy your website on ***Netlify***. Head over to [Netlify](https://netlify.com) and create an account. You can also use your GitHub/GitLab login credentials if you feel like that would make it easier. Once your logged in you'll see an option `New site from Git:` click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you'll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you'll be asked to verify your build settings. For this set the build command as `hugo` and what directory you need to publish, for us this is the `public` directory where all our content is stored. After this is confirmed click the `Deply site` button at the bottom of the page.
 
 Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the `baseUrl` setting value in the `config.toml` file. Therefore, click on the `Deploy settings` in the site overview. Then select the `Site details` under the `General` tab. In the `Site details` tab, click on the `Change site name:` button, this will cause a pop up to show up, from here set it to whatever your `baseUrl` setting was.
 
@@ -307,13 +308,13 @@ You now have your own personal website with the Netlify hosting page, that is ma
 
 ---
 
-#CMS's are great!
+# CMS's are great!
 
-CMS's or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, NetlifyCMS is one of the best options. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere
+CMS's or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, Netlify CMS is one of the best options in my opinion. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere, like me.
 
-We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static `admin` folder, in this case with Hugo it is stored in the `/static` folder. 
+We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static `admin` folder, in this case with Hugo it is stored in the `/static` folder as `/static/admin/`
 
-To get this set up simply do the following in your Root folder of your website:
+To get this set up simply do the following in your ROOT folder of your website:
 
 ```bash
 $ cd /static
@@ -403,15 +404,15 @@ PHEW that was alot to take in huh? Get conmfy were not done yet!
 Next we need to set up authentication. Thankfully because we are using the Netlify platform already this is relatively easy to do as they offer a nuilt-in authorization service they call Identify.
 
 
-1. Go to Settings > Identity, and select Enable Identity service.
-2. Under Registration preferences, select Open or Invite only. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
-3. If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use, under External providers.
-4. Scroll down to Services > Git Gateway, and click Enable Git Gateway. This authenticates with your Git host and generates an API access token. In this case, we're leaving the Roles field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.
+1. Go to `Settings > Identity`, and select Enable Identity service.
+2. Under Registration preferences, select `Open` or `Invite only`. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
+3. If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use, under `External providers`.
+4. Scroll down to `Services > Git Gateway`, and click `Enable Git Gateway`. This authenticates with your Git host and generates an API access token. In this case, we're leaving the `Roles` field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.
 
 
 Once thats done the backend has been setup to handle authentication, now you just need a frontend interface. Don't worry were almost done. Netlify Identify has a nice widget that we can install as a drop-in for this purpose. To include the widget just add the following in 2 places"
 
-```yml
+```html
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 ```
 
@@ -432,6 +433,7 @@ Whe a user logs in with the Metlify Identify widget an access token redirects to
   }
 </script>
 ```
+---
 
 ## CONGRATULATIONS AGAIN
 
@@ -442,3 +444,4 @@ Your site is now fully configured and ready for you to start using the CMS and d
 -----
 
 All thanks to [Hugo](http://gohugo.io), [Netlify](http://www.netlify.com), and [Netlify CMS](http://www.netlifycms.org) for posting their amazing tutorials on setting this all up. 
+
