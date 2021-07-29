@@ -301,9 +301,10 @@ Next steps are to deploy your website on ***Netlify***. Head over to [Netlify](h
 
 Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the `baseUrl` setting value in the `config.toml` file. Therefore, click on the `Deploy settings` in the site overview. Then select the `Site details` under the `General` tab. In the `Site details` tab, click on the `Change site name:` button, this will cause a pop up to show up, from here set it to whatever your `baseUrl` setting was.
 
-#***CONGRATUALTIONS***
+# ***CONGRATUALTIONS***
 
 You now have your own personal website with the Netlify hosting page, that is manually updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up Netlify CMS so you can edit, update and push content remotely!
+
 ---
 
 #CMS's are great!
