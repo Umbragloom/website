@@ -347,7 +347,98 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 ```
 
-This specifies your backend protocol and your publication branch. API that acts as a proxy between authenticated users of your site and your site repo.
+This specifies your backend protocol and your publication branch. Git Gateway is an open source API that acts as a proxy between authenticated users of your site and your site repo. 
+
+By default, saving a post in the CMS interface pushes a commit directly to the publication branch. However, you can enable the **Editorial Workflow**, which adds an very nice intuative interface for drafting, reviewing, and approving posts. To do this, add the following line to your Netlify CMS `config.yml`:
+
+```yml
+# This line should *not* be indented
+publish_mode: editorial_workflow
+```
+
+Great now the admins set up on your account can review and approve posts that your writters are making! But they be able to post images sadly. We can easiy fix this.  If you already have an images folder in your project, you could use its path, possibly creating an uploads sub-folder, for example:
+
+```yml
+# These lines should *not* be indented
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+```
+
+If you're creating a new folder for uploaded media, you'll need to know where your static site generator expects static files. In the configuration above adds a new setting, `public_folder`. While `media_folder` specifies where uploaded files are saved in the repo, `public_folder` indicates where they are found in the published site. Image `src` attributes use this path, which is relative to the file where it's called. For this reason, we usually start the path at the site root, using the opening `/`.
+
+If public_folder is not set, Netlify CMS defaults to the same value as media_folder, adding an opening / if one is not included.
+
+After this we need to set up something called collections. Collections define the structure for the different types of content on your site. For example a magority of my posts all have a title, publish date, description, tags, and a body. I can also post a featured image and list an author if i wanted to. For my website, my `config.yml` file in the `adnmin` folder has the following:
+
+```yml
+ - name: "projects"
+    label: "Project Posts" 
+    folder: "/content/posts/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "date"}
+      - {label: "Featured Image", name: "cover", widget: "image", required: false}
+      - {label: "Decription", name: "desciption", widget: string"", required: true}
+      - {label: "Tags", name: "tags", widget: "list", required: false}
+      - {label: Author, name: author, widget: hidden, default: Joshua Mathie}
+      - {label: "Body", name: "body", widget: "markdown"}
+```
+
+This is set up for every type of post that I could want to utilize. This might look quite confusing, and not going to lie it is, so let me break it down for you. 
+
+| ITEM   | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| name   | Post type identifier, used in routes. Must be unique.                                                                                                                                                                                                                                                                                                                                                                                            |
+| label  | What the admin UI calls the post type.                                                                                                                                                                                                                                                                                                                                                                                                           |
+| folder | Where files of this type are stored, relative to the repo root.                                                                                                                                                                                                                                                                                                                                                                                  |
+| slug   | Template for filenames. {{year}}, {{month}}, and {{day}} pulls from the post's date field or save date {{slug}} is a url-safe version of the post's title. Default is simply {{slug}}.                                                                                                                                                                                                                                                           |
+| fields | Fields listed here are shown as fields in the content editor, then saved as front matter at the beginning of the document (except for body , which follows the front matter). Each field contains the following properties:  - label: Field label in the editor UI. - name: Field name in the document front matter. - widget: Determines UI style and value data type (details below). - default(optional): Sets a default value for the field. |
+
+---
+
+PHEW that was alot to take in huh? Get conmfy were not done yet!
+
+Next we need to set up authentication. Thankfully because we are using the Netlify platform already this is relatively easy to do as they offer a nuilt-in authorization service they call Identify.
 
 
+1. Go to Settings > Identity, and select Enable Identity service.
+2. Under Registration preferences, select Open or Invite only. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
+3. If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use, under External providers.
+4. Scroll down to Services > Git Gateway, and click Enable Git Gateway. This authenticates with your Git host and generates an API access token. In this case, we're leaving the Roles field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.
 
+
+Once thats done the backend has been setup to handle authentication, now you just need a frontend interface. Don't worry were almost done. Netlify Identify has a nice widget that we can install as a drop-in for this purpose. To include the widget just add the following in 2 places"
+
+```yml
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+```
+
+These need to be added to the `<head>` of your CMS index page located at `/admin/index.html`, as well as the `<head>` of your sites main index page. Depending on how your site generator is set up, this may mean you need to add it to the default template, or to a "partial" or "include" template. If you can find where the site stylesheet is linked, that's probably the right place.
+
+Whe a user logs in with the Metlify Identify widget an access token redirects to the site homepage. In order to complete the login and get back into the CMS, we need to redirect the user back to the `/admin/` path. This can be accomplished by adding the below script right before the closing `body` tag of your sites main index page:
+
+```html
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+```
+
+## CONGRATULATIONS AGAIN
+
+Your site is now fully configured and ready for you to start using the CMS and draft, review, and post content independant of your base install on your PC. Just don't forget to invite people to post if your doing this!
+
+# Enjoy your website!
+
+-----
+
+All thanks to [Hugo](http://gohugo.io), [Netlify](http://www.netlify.com), and [Netlify CMS](http://www.netlifycms.org) for posting their amazing tutorials on setting this all up. 
