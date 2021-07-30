@@ -6,6 +6,14 @@ title = "Contact Me"
 ````
 {{< rawhtml >}}
 
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+onload="if(submitted) {window.location='/thankyou';}"></iframe>
+
+<form action="https://docs.google.com/forms/d/e/<formID>/formResponse" 
+method="post" target="hidden_iframe" onsubmit="submitted=true;">
+</form>
+  
 <form action="https://docs.google.com/forms/d/e/1FAIpQLScfv3s2pbi4PL7LTIbYn9ecSBMwsjQNFEIx6qsiELtxeojIRA/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true">
   <label>Name*</label>
         <input type="text" placeholder="Name*" class="form-input" name="entry.2005620554" required>
