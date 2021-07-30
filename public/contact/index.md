@@ -5,7 +5,7 @@ title = "Contact Me"
 
 <form name="contact" method="post" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
   <p style="visibility: hidden">
-    <label>"Dont Fill This Out If You're Human:" </label><input name="bot-field/"
+    <label>"Dont Fill This Out If You're Human:" </label><input name="bot-field/">
   </p>
   <label for="fname">First Name</label>
   <br>
