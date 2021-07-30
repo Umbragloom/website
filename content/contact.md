@@ -3,23 +3,23 @@ Date = "7/30/2021"
 title = "Contact Me"
 +++
 
-<form name="contact" method="POST" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true">
-  <p class="hidden">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-  </p>
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>   
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-    </p>
-  <div data-netlify-recaptcha="true"></div>
-  <p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
+<form method="POST">
+  <label>Comments:
+    <textarea name="comments"></textarea>
+  </label>
 </form>
+After:
+
+<form name="comments" method="POST" netlify-honeypot="hpfield" netlify>
+  <div class="hpot">
+    <label>Leave this field empty: <input name="hpfield"></label>
+  </div>
+  <label>Comments:
+    <textarea name="comments"></textarea>
+  </label>
+</form>
+
+// style.css
+.hpot {
+  display: none;
+}
