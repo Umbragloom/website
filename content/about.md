@@ -41,7 +41,7 @@ I will be posting quite a few different things such as:
 
 <form
     name="simpleContactForm"
-    method="POST"
+    method="post"
     data-netlify="true"
     data-netlify-recaptcha="true"
     id="simple-contact-form"
