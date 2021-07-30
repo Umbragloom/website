@@ -38,29 +38,6 @@ I will be posting quite a few different things such as:
   - Writing prompts etc. 
 
 ----
-<html>
-<h2>Contact Form</h2>
-
-<form method="post" name="Contact Form" data-netlify="true" netlify-honeypot="hpfield" >
-<input class="hidden" name="hpfield">
-<p>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-</p>
-<p>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
-</p>
-<p>
-    <label for="comments">Comments:</label><br/>
-    <textarea name="comments" id="comments"></textarea>
-</p>
-<p>
-    <input type="submit">
-</p>
-</form>
-</html>
------
 
 &nbsp;
 &nbsp;
