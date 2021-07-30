@@ -38,8 +38,9 @@ I will be posting quite a few different things such as:
   - Writing prompts etc. 
 
 ----
-
+<html>
 <h2>Contact Form</h2>
+
 <form method="post" name="Contact Form" data-netlify="true" netlify-honeypot="hpfield" >
 <input class="hidden" name="hpfield">
 <p>
@@ -58,7 +59,7 @@ I will be posting quite a few different things such as:
     <input type="submit">
 </p>
 </form>
-
+</html>
 -----
 
 &nbsp;
