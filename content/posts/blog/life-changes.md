@@ -1,19 +1,16 @@
-+++
-title = "Life Changes . . . For the Better"
-date = "2021-08-23T08:27:00-0400"
-author = ""
-cover = ""
-tags = ["Blog", "Life"]
+---
+title: "Life Changes . . . For the Better"
+date: 2021-08-23T08:27:00-0400
+tags: 
+    - Blog 
+    - Life
 
-keywords = ["", ""]
-description = " Talking about the resent things that have happened in my life, and the impacts they have had on my life choices."
-showFullContent = true
-draft = false
-+++
-
+description: " Talking about the resent things that have happened in my life, and the impacts they have had on my life choices."
+draft: false
+---
 
 # Life Changes . . . 
-***
+----
 
 I have never been one to really take care of myself. I tend to care for others
 before I even consider my own self. I have always been quite overweight, for most
@@ -27,7 +24,7 @@ roommates, Most processed food and fast food were the cheapest things I could
 afford. Now that i'm older, I completely regret it.
 
 ## What happened..
-***
+----
 
 When I had my first daughter, my wife and I decided to move away from my hometown
 so I could continue my Schooling (more on that later). I found an amazing job
@@ -83,7 +80,7 @@ room where the nurse tells me they believe based on the X-ray failing the walk,
 They believe it is not Pneumonia, but CHF, Congestive heart failure.
 
 # Say what? But your young?
-***
+----
 
 They admitted me to the ER, gave me medicine to calm down because not going to
 lie I kind of lost my shit and cried. Being told that you might have heart
@@ -102,8 +99,8 @@ I would have just kept my BP under control.
 Luckily the doctor told me that with me being young, I have a great chance to
 make my heart better, not 100%, it will never be 100%, but better. 
 
-# Whats changed?
-***
+# What's changed?
+----
 
 1. I've completely overhauled my diet. Cut my sodium intake to the recommended
    1500 mg a day. Started eating lots more vegetables, fruits, and whole
@@ -124,16 +121,15 @@ make my heart better, not 100%, it will never be 100%, but better.
 4. Trying to not stress myself out as much as I have in the past. 
 
 # What now?
-
+---
 Now? I keep living my life! I have two amazing kids that need their dad. I have
 an amazing wife, that needs her best friend. I have so much more to do in my
 life, and **I'M GOING TO STICK TO THESE CHANGES. BECAUSE I HAVE TO MANY PEOPLE
-THAT DEPEND ON ME. 
+THAT DEPEND ON ME. **
 
-LIFE YOUR LIFE! But pleas, be mindful and eat healthy, and TAKE CARE OF YOUR
+**LIFE YOUR LIFE! But please, be mindful and eat healthy, and TAKE CARE OF YOUR
 SELF!!**
 
-***
 ---- 
 
 
