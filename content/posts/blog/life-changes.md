@@ -124,8 +124,10 @@ make my heart better, not 100%, it will never be 100%, but better.
 ---
 Now? I keep living my life! I have two amazing kids that need their dad. I have
 an amazing wife, that needs her best friend. I have so much more to do in my
-life, and **I'M GOING TO STICK TO THESE CHANGES. BECAUSE I HAVE TO MANY PEOPLE
-THAT DEPEND ON ME. **
+life, and
+
+**I'M GOING TO STICK TO THESE CHANGES. BECAUSE I HAVE TO MANY PEOPLE
+THAT DEPEND ON ME.**
 
 **LIFE YOUR LIFE! But please, be mindful and eat healthy, and TAKE CARE OF YOUR
 SELF!!**
