@@ -1,4 +1,4 @@
----
+r--
 title: "Life Changes . . . For the Better"
 date: 2021-08-23T08:27:00-0400
 tags: 
@@ -27,7 +27,7 @@ afford. Now that i'm older, I completely regret it.
 ----
 
 When I had my first daughter, my wife and I decided to move away from my hometown
-so I could continue my Schooling (more on that later). I found an amazing job
+so I could continue my schooling (more on that later). I found an amazing job
 that has taught me so much, and has some of the best people I have ever met,
 Much better than the crappy job I held for over a decade that just added to my
 growing stress. 
@@ -43,13 +43,13 @@ I started to change my diet slightly, and felt better. Then me and my wife were
 surprised with our second daughter. I fell of the wagon, but continued to take
 my medicine. For a time.. then stupidly stopped. 
 
-Fast forward a two years, and i decide i've had enough and get on a diet.
-I keep the diet going for several months. Lose nearly 50Lbs, and feel better
+Fast forward two years, and i decide i've had enough and get on a diet.
+I keep the diet going for several months. Lose nearly 50 Lbs, and feel better
 than ever. Then stress hits me like a brick and I fall back into my horrible
-eating habits.. gain all that weight lost back, and make myself worse and more
+eating habits.. gain all that I weight lost back, and make myself worse and more
 miserable. Cut to a few weeks ago. 
 
-I felt like like i was getting sick, like very sick, and with everything going
+I felt like I was getting sick, like very sick, and with everything going
 on in the world with Covid, I wasn't going to chance my kids getting it. I go
 to the hospital, they scold me or not taking my blood pressure medicines,
 (which I did start taking again, but couldn't get refills on because my
@@ -75,7 +75,7 @@ i'm still very panicky, and feel like my BP hasn't dropped any, and think the ot
 This test is typically done for around 3 minutes, which is about the time it
 took to walk from the waiting room to the X-ray room. By the time I got to the
 X-ray I was completely out of breath and having a difficult time holding my
-breath. After walking back and waiting for a few moments i'm escorted to a ED
+breath for the xrays. After walking back and waiting for a few moments i'm escorted to a ED
 room where the nurse tells me they believe based on the X-ray failing the walk,
 They believe it is not Pneumonia, but CHF, Congestive heart failure.
 
