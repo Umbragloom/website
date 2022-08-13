@@ -99,7 +99,7 @@ googleAnalytics = "UA-177349046-1"
   [[languages.en.menu.main]]
         identifier = "MythosReborn"
         name = "Mythos Reborn"
-        url = ""
+        url = "mythosreborn.mathiejosh.xyz"
         
 
       
