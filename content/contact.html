@@ -9,20 +9,23 @@ title = "Contact Me"
   netlify-honeypot="bot-field"
   data-netlify="true"
   action="/thankyou.html"
->
+  margin= 0 auto;
+  width= 250px;>
+
+
   <p class="hidden">
     <label>
       Don’t fill this out if you’re human: <input name="bot-field" />
     </label>
   </p>
   <p>
-    <label>Your Name: <input type="text" name="name" /></label>
+    <label>Your Name: <input type="text" name="name" class="form-input" /></label>
   </p>
   <p>
-    <label>Your Email: <input type="email" name="email" /></label>
+    <label>Your Email: <input type="email" name="email" class="form-input" /></label>
   </p>
   <p>
-    <label>Message: <textarea name="message"></textarea></label>
+    <label>Message: <textarea rows="7" name="message" class="form-input"></textarea></label>
   </p>
   <div data-netlify-recaptcha="true"></div>
   <p>
@@ -30,3 +33,47 @@ title = "Contact Me"
   </p>
 </form>
 
+<style>
+.form-input {
+color:cyan;
+font-family: Helvetica, Arial, sans-serif;
+font-weight:500;
+font-size: 18px;
+border-radius: 5px;
+line-height: 22px;
+background-color: transparent;
+border:2px solid #BD00FF;
+transition: all 0.3s;
+padding: 13px;
+margin-bottom: 15px;
+width:100%;
+box-sizing: border-box;
+outline:0;
+}
+
+.form-input:focus { border:2px solid #5E007F; }
+
+textarea {
+height: 150px;
+line-height: 150%;
+resize:vertical;
+}
+
+[type="submit"] {
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+width: 100%;
+background:#BD00FF;
+border-radius:5px;
+border:0;
+cursor:pointer;
+color:white;
+font-size:24px;
+padding-top:10px;
+padding-bottom:10px;
+transition: all 0.3s;
+margin-top:-4px;
+font-weight:700;
+}
+[type="submit"]:hover { background:#5E007F; }
+
+</style>

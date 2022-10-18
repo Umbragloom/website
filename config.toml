@@ -14,7 +14,7 @@ googleAnalytics = "UA-177349046-1"
   themeColor = ":root"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 6
+  showMenuItems = 7
 
   # show selector to switch language
   showLanguageSelector = false
