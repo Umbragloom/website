@@ -25,6 +25,7 @@ textarea {
 height: 150px;
 line-height: 150%;
 resize:vertical;
+background-color:001438;
 }
 
 [type="submit"] {
@@ -34,7 +35,7 @@ background:#CC6666;
 border-radius:5px;
 border:0;
 cursor:pointer;
-color:white;
+color:#B2ffE2;
 font-size:24px;
 padding-top:10px;
 padding-bottom:10px;
