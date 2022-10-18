@@ -25,7 +25,7 @@ textarea {
 height: 150px;
 line-height: 150%;
 resize:vertical;
-background-color:001438;
+background-color: #001438;
 }
 
 [type="submit"] {
@@ -43,5 +43,5 @@ transition: all 0.3s;
 margin-top:-4px;
 font-weight:700;
 }
-[type="submit"]:hover { background:#CC4949; }
+[type="submit"]:hover { background:#CC4949; color:#b2ffe2;}
 
