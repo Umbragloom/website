@@ -4,7 +4,6 @@ ody {
     --color-text-subtle: #bd00ff;
 
     padding: 0; margin: 0;
-    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -21,12 +20,6 @@ ody {
  * @version 0.0.1
  * @license MIT
  */
-
-:root {
-    --color-bg: #fff;
-    --color-text: #eee;
-    --color-text-subtle: #a2a2a2;
-}
 
 [data-termynal] {
     width: 750px;
