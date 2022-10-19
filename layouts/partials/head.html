@@ -75,11 +75,9 @@
 <!-- Extended head section-->
 {{ partial "extended_head.html" . }}
 
-// css
 {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}
 
-// javascript
 <script src="termynal.js" data-termynal-container="#termynal"></script>
 <link rel="stylesheet" href="termynal.css">
