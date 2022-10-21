@@ -14,4 +14,3 @@ draft = true
 I've had my eye on wanting to design a wifi/bluetooth enabled keyboard for
 a while. Finding the [Fsociety Keyboard](https://hackaday.io/project/13210-the-fsociety-keyboard) gave me the basis for alot of my design.
 
-
