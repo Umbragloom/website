@@ -6,7 +6,7 @@ tags:
     - Life
 
 description: " Talking about the resent things that have happened in my life, and the impacts they have had on my life choices."
-draft: false
+draft: true
 ---
 
 # Life Changes . . . 

@@ -7,7 +7,7 @@ tags:
     - Life
 
 description: "Quick update on my life and health."
-draft: false
+draft: true
 ---
 
 # Life Updates
