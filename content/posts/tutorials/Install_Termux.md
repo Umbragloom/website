@@ -9,6 +9,7 @@ tags:
   - Linux
   - Android
   - Tutorial
+  - Mobile Dev Ops
 ---
 
 Today I would like to go through how I Installed Termux on my Android phone,
