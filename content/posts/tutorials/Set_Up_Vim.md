@@ -7,6 +7,7 @@ tags:
  - Linux
  - Tutorial
  - Vim
+ - Neovim
 ---
 
 # Vim needs no introduction. 
