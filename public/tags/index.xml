@@ -18,7 +18,7 @@
     </item>
     
     <item>
-      <title>LaTeX</title>
+      <title>Latex</title>
       <link>//localhost:1313/tags/latex/</link>
       <pubDate>Mon, 20 Oct 2025 20:09:35 -0400</pubDate>
       
@@ -28,41 +28,11 @@
     </item>
     
     <item>
-      <title>Pcb Design</title>
-      <link>//localhost:1313/tags/pcb-design/</link>
-      <pubDate>Thu, 30 Jun 2022 20:17:00 +0400</pubDate>
+      <title>Tutorial</title>
+      <link>//localhost:1313/tags/tutorial/</link>
+      <pubDate>Mon, 20 Oct 2025 20:09:35 -0400</pubDate>
       
-      <guid>//localhost:1313/tags/pcb-design/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>//localhost:1313/tags/projects/</link>
-      <pubDate>Thu, 30 Jun 2022 20:17:00 +0400</pubDate>
-      
-      <guid>//localhost:1313/tags/projects/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>//localhost:1313/tags/blog/</link>
-      <pubDate>Sat, 11 Jun 2022 12:56:00 -0400</pubDate>
-      
-      <guid>//localhost:1313/tags/blog/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>//localhost:1313/tags/life/</link>
-      <pubDate>Sat, 11 Jun 2022 12:56:00 -0400</pubDate>
-      
-      <guid>//localhost:1313/tags/life/</guid>
+      <guid>//localhost:1313/tags/tutorial/</guid>
       <description></description>
       <content></content>
     </item>
@@ -78,21 +48,21 @@
     </item>
     
     <item>
-      <title>Tutorial</title>
-      <link>//localhost:1313/tags/tutorial/</link>
-      <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
-      
-      <guid>//localhost:1313/tags/tutorial/</guid>
-      <description></description>
-      <content></content>
-    </item>
-    
-    <item>
       <title>WebDev</title>
       <link>//localhost:1313/tags/webdev/</link>
       <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
       
       <guid>//localhost:1313/tags/webdev/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>//localhost:1313/tags/blog/</link>
+      <pubDate>Sat, 26 Sep 2020 14:05:43 -0400</pubDate>
+      
+      <guid>//localhost:1313/tags/blog/</guid>
       <description></description>
       <content></content>
     </item>

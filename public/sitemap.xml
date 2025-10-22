@@ -23,35 +23,17 @@
     <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/tags/tutorial/</loc>
+    <lastmod>2025-10-20T20:09:35-04:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/contact/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:1313/posts/projects/</loc>
     <lastmod>2022-06-30T20:17:00+04:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/pcb-design/</loc>
-    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/projects/</loc>
-    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/projects/keyboard_design/</loc>
-    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/posts/blog/</loc>
     <lastmod>2022-06-11T12:56:00-04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/blog/</loc>
-    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/tags/life/</loc>
-    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/blog/life-updates/</loc>
-    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
-  </url><url>
-    <loc>//localhost:1313/posts/blog/life-changes/</loc>
-    <lastmod>2021-08-23T08:27:00-04:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/linux/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
@@ -59,11 +41,11 @@
     <loc>//localhost:1313/posts/tutorials/website/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/tutorial/</loc>
-    <lastmod>2021-07-28T12:19:00-04:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/tags/webdev/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/blog/</loc>
+    <lastmod>2020-09-26T14:05:43-04:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/music/</loc>
     <lastmod>2020-09-26T14:05:43-04:00</lastmod>

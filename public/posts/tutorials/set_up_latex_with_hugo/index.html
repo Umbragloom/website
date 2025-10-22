@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="I&rsquo;ve been interested in LaTeX for years, and never really had a use case beyond a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I found out that you could get LaTeX, specifically MathTeX/KaTeX to show in a hugo website. I figured i&rsquo;d give it a try and see how well it works. I&rsquo;m going to use Katex as i&rsquo;ve read it can be implemented a little faster than standard MathJaX.
 " />
-<meta name="keywords" content="Linux, LaTeX" />
+<meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="//localhost:1313/posts/tutorials/set_up_latex_with_hugo/" />
 
@@ -46,7 +46,9 @@
 <meta property="og:url" content="//localhost:1313/posts/tutorials/set_up_latex_with_hugo/" />
 <meta property="og:site_name" content="Setting up LaTeX to show on Hugo site." />
 
-  <meta property="og:image" content="//localhost:1313/">
+  
+    <meta property="og:image" content="//localhost:1313/img/favicon/:root.png">
+  
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -202,8 +204,6 @@
       </span>
     
     
-    <span class="post-author">:: Josh Mathie</span>
-    
   </div>
 
   
@@ -211,7 +211,9 @@
     
     #<a href="//localhost:1313/tags/hugo/">Hugo</a>&nbsp;
     
-    #<a href="//localhost:1313/tags/latex/">LaTeX</a>&nbsp;
+    #<a href="//localhost:1313/tags/latex/">Latex</a>&nbsp;
+    
+    #<a href="//localhost:1313/tags/tutorial/">Tutorial</a>&nbsp;
     
   </span>
   
@@ -243,7 +245,7 @@ these are at <code>mywebsitename/layouts/partials/helpers/</code>.</li>
 <li>You will need to import the required files. these can be found from the
 <a href="https://katex.org/docs/browser.html">KaTeX site</a>. You should add the
 following to the katex.html file you just made. Make sure this matches what
-ever information is available on the <a href="https://katex.org/docs/browser.htm">KaTeX documentation</a>l</li>
+ever information is available on the <a href="https://katex.org/docs/browser.html">KaTeX documentation</a></li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> &lt;link rel<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css&#34;</span> integrity<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi&#34;</span> crossorigin<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>
@@ -255,11 +257,12 @@ ever information is available on the <a href="https://katex.org/docs/browser.htm
 </span></span><span style="display:flex;"><span>        onload<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;renderMathInElement(document.body);&#34;</span>&gt;&lt;/script&gt;
 </span></span></code></pre></div><h2 id="integrate-this-into-your-website">Integrate this into your website.<a href="#integrate-this-into-your-website" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <hr>
-<p>It important to integrate this into something that is commonly accessed in all
+<p>Its important to integrate this into something that is commonly accessed in all
 of your site. the <code>header</code> or <code>footer</code> or <code>head</code> are perfect places.</p>
 <ol>
 <li>Create a <code>footer.html</code> or <code>header.html</code> or <code>head.html</code> in the same partials folder
-at <code>layouts/patrials</code>. Note if doing this in a <code>footer.html</code> this
+at <code>layouts/patrials</code> if these arent already made, if they are edit as
+needed. Note if doing this in a <code>footer.html</code> this
 will overide the <code>footer.html</code> provided by the theme you are using.</li>
 <li>Add the following to your prefered partial. I will be adding this to my
 <code>head.html</code>:</li>
@@ -280,9 +283,9 @@ do is add the following to the front matter of any markdown file on our site.</p
 </span></span><span style="display:flex;"><span>---
 </span></span></code></pre></div><p>Now this should allow the KaTeX partial to be used on any page with that in the
 front matter.</p>
-<p>The following</p>
+<p>The following: <code>bash $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</code> will
+display as this:</p>
 <p>$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$</p>
-<p>Is an integral</p>
 <p>If you wanted to have inline equations you should add the following to your
 partial:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&lt;script&gt;

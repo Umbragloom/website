@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LaTeX on [Mathie@josh]#</title>
+    <title>Latex on [Mathie@josh]#</title>
     <link>//localhost:1313/tags/latex/</link>
-    <description>Recent content in LaTeX on [Mathie@josh]#</description>
+    <description>Recent content in Latex on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
@@ -40,7 +40,7 @@ these are at &lt;code&gt;mywebsitename/layouts/partials/helpers/&lt;/code&gt;.&l
 &lt;li&gt;You will need to import the required files. these can be found from the
 &lt;a href=&#34;https://katex.org/docs/browser.html&#34;&gt;KaTeX site&lt;/a&gt;. You should add the
 following to the katex.html file you just made. Make sure this matches what
-ever information is available on the &lt;a href=&#34;https://katex.org/docs/browser.htm&#34;&gt;KaTeX documentation&lt;/a&gt;l&lt;/li&gt;
+ever information is available on the &lt;a href=&#34;https://katex.org/docs/browser.html&#34;&gt;KaTeX documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;link rel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; href&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css&amp;#34;&lt;/span&gt; integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi&amp;#34;&lt;/span&gt; crossorigin&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -52,11 +52,12 @@ ever information is available on the &lt;a href=&#34;https://katex.org/docs/brow
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        onload&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;renderMathInElement(document.body);&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;integrate-this-into-your-website&#34;&gt;Integrate this into your website.&lt;/h2&gt;
 &lt;hr&gt;
-&lt;p&gt;It important to integrate this into something that is commonly accessed in all
+&lt;p&gt;Its important to integrate this into something that is commonly accessed in all
 of your site. the &lt;code&gt;header&lt;/code&gt; or &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;head&lt;/code&gt; are perfect places.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a &lt;code&gt;footer.html&lt;/code&gt; or &lt;code&gt;header.html&lt;/code&gt; or &lt;code&gt;head.html&lt;/code&gt; in the same partials folder
-at &lt;code&gt;layouts/patrials&lt;/code&gt;. Note if doing this in a &lt;code&gt;footer.html&lt;/code&gt; this
+at &lt;code&gt;layouts/patrials&lt;/code&gt; if these arent already made, if they are edit as
+needed. Note if doing this in a &lt;code&gt;footer.html&lt;/code&gt; this
 will overide the &lt;code&gt;footer.html&lt;/code&gt; provided by the theme you are using.&lt;/li&gt;
 &lt;li&gt;Add the following to your prefered partial. I will be adding this to my
 &lt;code&gt;head.html&lt;/code&gt;:&lt;/li&gt;
@@ -77,7 +78,7 @@ do is add the following to the front matter of any markdown file on our site.&lt
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now this should allow the KaTeX partial to be used on any page with that in the
 front matter.&lt;/p&gt;
-&lt;p&gt;The following&lt;/p&gt;
+&lt;p&gt;The following: &lt;code&gt;bash $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$&lt;/p&gt;
 &lt;p&gt;Is an integral&lt;/p&gt;
 &lt;p&gt;If you wanted to have inline equations you should add the following to your
