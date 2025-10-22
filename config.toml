@@ -1,13 +1,13 @@
 baseurl = "/"
 languageCode = "en-us"
 theme = "terminal"
-pagination.pagerSize = 6
+#pagination.pagerSize = 6
 disqusShortname = "mathiejosh-xyz"
 googleAnalytics = "UA-177349046-1"
 
 [params]
  # mathtex
-   math = true
+ # math = true
 
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
