@@ -1,15 +1,13 @@
-+++
-title = "Setting up LaTeX to show on Hugo site."
-date = 2025-10-20T20:09:35-04:00
-author = "Josh Mathie"
-authorTwitter = "" #do not include @
-cover = ""
-tags = ["Hugo", "LaTeX"]
-keywords = ["Linux", "LaTeX"]
-description = "Shows how to set up LaTex to display on a Hugo static website."
-showFullContent = true
-math = true
-+++
+---
+title: "Setting up LaTeX to show on Hugo site."
+date: 2025-10-20T20:09:35-04:00
+tags:
+- Hugo
+- Latex
+- Tutorial
+description: "Shows how to set up LaTex to display on a Hugo static website."
+math: true
+---
 
 I've been interested in LaTeX for years, and never really had a use case beyond
 a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I
