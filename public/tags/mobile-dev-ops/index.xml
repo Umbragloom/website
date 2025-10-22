@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mobile Dev Ops on [Mathie@josh]#</title>
-    <link>//localhost:1313/tags/mobile-dev-ops/</link>
+    <link>//localhost:37865/tags/mobile-dev-ops/</link>
     <description>Recent content in Mobile Dev Ops on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Sep 2020 18:20:23 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/mobile-dev-ops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Sep 2020 18:20:23 -0400</lastBuildDate><atom:link href="//localhost:37865/tags/mobile-dev-ops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Termux</title>
-      <link>//localhost:1313/posts/tutorials/install_termux/</link>
+      <link>//localhost:37865/posts/tutorials/install_termux/</link>
       <pubDate>Thu, 10 Sep 2020 18:20:23 -0400</pubDate>
       
-      <guid>//localhost:1313/posts/tutorials/install_termux/</guid>
+      <guid>//localhost:37865/posts/tutorials/install_termux/</guid>
       <description>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
 how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
 &lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
@@ -81,7 +81,7 @@ can help you if you ever get lost. Termux uses the package manager &lt;code&gt;p
 install different applications or packages. &lt;code&gt;pkg&lt;/code&gt; is used by a majority of
 Debian based Linux distributions ,or Distros,(such as Ubuntu, Linux Mint and
 Zorin OS) use pkg as standard.
-  &lt;img src=&#34;//localhost:1313/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
 
 &lt;/p&gt;
 &lt;/li&gt;
@@ -115,7 +115,7 @@ terminal. See the documentation at the link provided above.&lt;/li&gt;
 For example I configured my .vimrc to include the
 &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; plugin manager.&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;You might notice that there are some extra rows of keys above my keyboard (such as the arrow keys, PGUP
@@ -130,7 +130,7 @@ follow the git repo instillation guides for both of these for how to properly
 install and configure them. After installing, customizing and restarting
 Termux, it now looks like this:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;I used the screen capture tool &lt;code&gt;neofetch&lt;/code&gt; to get the OS Printout info and the

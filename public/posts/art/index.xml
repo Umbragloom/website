@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>[Mathie@josh]#</title>
-    <link>//localhost:1313/posts/art/</link>
+    <link>//localhost:37865/posts/art/</link>
     <description>Recent content on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="//localhost:1313/posts/art/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="//localhost:37865/posts/art/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

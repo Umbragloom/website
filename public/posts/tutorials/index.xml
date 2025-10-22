@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>[Mathie@josh]#</title>
-    <link>//localhost:1313/posts/tutorials/</link>
+    <link>//localhost:37865/posts/tutorials/</link>
     <description>Recent content on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:1313/posts/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:37865/posts/tutorials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up LaTeX to show on Hugo site.</title>
-      <link>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</link>
+      <link>//localhost:37865/posts/tutorials/set_up_latex_with_hugo/</link>
       <pubDate>Mon, 20 Oct 2025 20:09:35 -0400</pubDate>
       
-      <guid>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</guid>
+      <guid>//localhost:37865/posts/tutorials/set_up_latex_with_hugo/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been interested in LaTeX for years, and never really had a use case beyond
 a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I
 found out that you could get LaTeX, specifically MathTeX/KaTeX to show in a hugo
@@ -100,10 +100,10 @@ partial:&lt;/p&gt;
     
     <item>
       <title>Personal Website with Hugo and Netlify!</title>
-      <link>//localhost:1313/posts/tutorials/website/</link>
+      <link>//localhost:37865/posts/tutorials/website/</link>
       <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
       
-      <guid>//localhost:1313/posts/tutorials/website/</guid>
+      <guid>//localhost:37865/posts/tutorials/website/</guid>
       <description>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
@@ -456,10 +456,10 @@ then run the following commands:&lt;/p&gt;
     
     <item>
       <title>Setting Up Vim</title>
-      <link>//localhost:1313/posts/tutorials/set_up_vim/</link>
+      <link>//localhost:37865/posts/tutorials/set_up_vim/</link>
       <pubDate>Sat, 26 Sep 2020 12:16:20 -0400</pubDate>
       
-      <guid>//localhost:1313/posts/tutorials/set_up_vim/</guid>
+      <guid>//localhost:37865/posts/tutorials/set_up_vim/</guid>
       <description>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
@@ -491,7 +491,7 @@ information, including the history of Vim, please go to the home page at &lt;a h
 &lt;hr&gt;
 &lt;p&gt;When you first start vim via &lt;code&gt;$ vim&lt;/code&gt; you are greeted with the following screen:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;Pretty simple design and can get you buy if your need to edit some files, but
@@ -587,7 +587,7 @@ paranthesis, brackets, and squierlies to make them easier to distinguish.&lt;/li
 &lt;p&gt;These are just a few of the plugins I utilize. After installing and setting
 everything up my vim now looks like below:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;
@@ -612,10 +612,10 @@ README, but the files are all there!&lt;/p&gt;
     
     <item>
       <title>Installing Termux</title>
-      <link>//localhost:1313/posts/tutorials/install_termux/</link>
+      <link>//localhost:37865/posts/tutorials/install_termux/</link>
       <pubDate>Thu, 10 Sep 2020 18:20:23 -0400</pubDate>
       
-      <guid>//localhost:1313/posts/tutorials/install_termux/</guid>
+      <guid>//localhost:37865/posts/tutorials/install_termux/</guid>
       <description>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
 how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
 &lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
@@ -684,7 +684,7 @@ can help you if you ever get lost. Termux uses the package manager &lt;code&gt;p
 install different applications or packages. &lt;code&gt;pkg&lt;/code&gt; is used by a majority of
 Debian based Linux distributions ,or Distros,(such as Ubuntu, Linux Mint and
 Zorin OS) use pkg as standard.
-  &lt;img src=&#34;//localhost:1313/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
 
 &lt;/p&gt;
 &lt;/li&gt;
@@ -718,7 +718,7 @@ terminal. See the documentation at the link provided above.&lt;/li&gt;
 For example I configured my .vimrc to include the
 &lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; plugin manager.&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;You might notice that there are some extra rows of keys above my keyboard (such as the arrow keys, PGUP
@@ -733,7 +733,7 @@ follow the git repo instillation guides for both of these for how to properly
 install and configure them. After installing, customizing and restarting
 Termux, it now looks like this:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:1313/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:37865/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;I used the screen capture tool &lt;code&gt;neofetch&lt;/code&gt; to get the OS Printout info and the
