@@ -2,18 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on [Mathie@josh]#</title>
-    <link>/tags/vim/</link>
+    <link>//localhost:1313/tags/vim/</link>
     <description>Recent content in Vim on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Vim</title>
-      <link>/posts/tutorials/set_up_vim/</link>
+      <link>//localhost:1313/posts/tutorials/set_up_vim/</link>
       <pubDate>Sat, 26 Sep 2020 12:16:20 -0400</pubDate>
       
-      <guid>/posts/tutorials/set_up_vim/</guid>
-      <description>Vim needs no introduction.  Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it. vim or Vi IMproved, is a well known port of the vi editor created by Bill Joy, that was created by Bram Moolenaar. vim was designed as a more improved text editor over the original vi, with a heavy influence on the use of the keyboard over the mouse, and pre-installed movement commands, or custom macros, to traverse the document you are creating or editing.</description>
+      <guid>//localhost:1313/posts/tutorials/set_up_vim/</guid>
+      <description>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
+&lt;code&gt;vim&lt;/code&gt; or Vi IMproved, is a well known port of the vi editor created by Bill
+Joy, that was created by Bram Moolenaar. &lt;code&gt;vim&lt;/code&gt; was designed as a more improved
+text editor over the original vi, with a heavy influence on the use of the
+keyboard over the mouse, and pre-installed movement commands, or custom macros,
+to traverse the document you are creating or editing. For more detailed
+information, including the history of Vim, please go to the home page at &lt;a href=&#34;https://www.vim.org/&#34;&gt;vim.org/&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
+&lt;code&gt;vim&lt;/code&gt; or Vi IMproved, is a well known port of the vi editor created by Bill
+Joy, that was created by Bram Moolenaar. &lt;code&gt;vim&lt;/code&gt; was designed as a more improved
+text editor over the original vi, with a heavy influence on the use of the
+keyboard over the mouse, and pre-installed movement commands, or custom macros,
+to traverse the document you are creating or editing. For more detailed
+information, including the history of Vim, please go to the home page at &lt;a href=&#34;https://www.vim.org/&#34;&gt;vim.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;installing-vim&#34;&gt;Installing Vim&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;As I use Linux, I will mainly work on installing Vim on Arch. To install &lt;code&gt;vim&lt;/code&gt; consult your Linux distributions wiki, or the Vim website for other ways to install vim. A few of the popular ways are below:&lt;/p&gt;
+&lt;p&gt;For Arch based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo pacman -S vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Unbuntu based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Debian based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ apt-get install vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;basic-layout&#34;&gt;Basic layout&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;When you first start vim via &lt;code&gt;$ vim&lt;/code&gt; you are greeted with the following screen:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;Pretty simple design and can get you buy if your need to edit some files, but
+i&amp;rsquo;m going to edit it up a little and make it cleaner, and nicer to use a little
+later. But first lets go though some of the most basic commands that should be
+learned.&lt;/p&gt;
+&lt;p&gt;One of the best things to do if you have never used vim before is to run &lt;code&gt;$ vimtutor&lt;/code&gt; in your preferred terminal. This is a very nice introduction to the
+standard movements utilized in Vim. A few of the really important ones are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The hjkl keys - this is the standard movement keys for getting around in the
+file you are using. &lt;code&gt;h&lt;/code&gt; moves left, &lt;code&gt;j&lt;/code&gt; moves down, &lt;code&gt;k&lt;/code&gt; moves up, &lt;code&gt;l&lt;/code&gt; moves right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Exiting - use &lt;code&gt;:q&lt;/code&gt; to exit, &lt;code&gt;:q!&lt;/code&gt; to force a quit, and &lt;code&gt;:wq&lt;/code&gt; to write the file and exit vim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When in normal mode (the standard) mode, you can utilize a number in front
+of the action you would like to do, such as &lt;code&gt;2j&lt;/code&gt; moves 2 down, &lt;code&gt;32k&lt;/code&gt; moves 32
+characters up, etc. This can also be utilized for other commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In normal mode the &lt;code&gt;x&lt;/code&gt; button will delete a single character at the cursor, &lt;code&gt;dw&lt;/code&gt;
+will delete from the cursor to the end of the word, including the space,
+&lt;code&gt;d$&lt;/code&gt;
+from the cursor to the end of the line, &lt;code&gt;dd&lt;/code&gt; to delete a whole line.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What about if you did something and want to undo it? simply pressing &lt;code&gt;u&lt;/code&gt; in
+normal mode will do that for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What about if you want to just update a word: &lt;code&gt;cw&lt;/code&gt; and type the  correct word then press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pressing &lt;code&gt;i&lt;/code&gt; will put you into INSERT mode.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are just some of the basic commands that can be handled from within vim,
+&lt;code&gt;vimtutor&lt;/code&gt; as well as the documentation can aid you in learning and figuring out
+other macros and commands.&lt;/p&gt;
+&lt;h1 id=&#34;setting-up-customization&#34;&gt;Setting up customization.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Vim utilizes a configuration file, the vimrc. This vimrc can be utilized
+globally, or at a user level by utilizing a &lt;code&gt;.vimrc&lt;/code&gt; file in your home
+directory.&lt;/p&gt;
+&lt;p&gt;Here you can choose which settings you would like to add. A few of the options
+I utilize are below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;set line numbers to both relative and number.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;relativenumber&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;set file stats&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ruler&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; spacing and whitespace things&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wrap&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;textwidth&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;79&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabstop&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;shiftwidth&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;softtabstop&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;autoindent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nofoldenable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can also set custom key macros as well. A few of the ones that are useful
+to me are:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; set jk to esc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jk&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;esc&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vnoremap&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jk&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;esc&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;disable arrow keys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;up&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;down&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;left&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;right&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; Auto Close tags. Adds the start and close tags and centers the cursor in the&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; center.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; ( ()&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; { {}&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; [ []&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you can utilize Plugins to get other features. I use a program called
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; to install plugins. To
+install Vundle follow the README found on the github, thtough that link.&lt;/p&gt;
+&lt;p&gt;Some of the plugins I utilize are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/preservim/nerdtree&#34;&gt;NERDtree&lt;/a&gt; - A custom file system
+explorer for Vim. Need to also use (Vim-devicons){https://github.com/ryanoasis/vim-devicons} to get working file system icons.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/joshdick/onedark.vim&#34;&gt;Onedark&lt;/a&gt; - A Dark colorscheme for
+Vim/Neovim. Sometimes I use (Gruvbox)[https://github.com/morhetz/gruvbox].&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/frazrepo/vim-rainbow&#34;&gt;vimrainbow&lt;/a&gt; - Colorizes your
+paranthesis, brackets, and squierlies to make them easier to distinguish.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are just a few of the plugins I utilize. After installing and setting
+everything up my vim now looks like below:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This was a VERY simple introduction to vim. There are a plethora of resources
+online for learning how to utilize, configure and customize vim. a few
+suggestions that i have used are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The vim documentation.&lt;/li&gt;
+&lt;li&gt;the following youtubers / channels: &lt;a href=&#34;https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA&#34;&gt;Luke Smith&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw&#34;&gt;ThePrimeagen&lt;/a&gt;, and &lt;a href=&#34;https://www.youtube.com/user/ThoughtbotVideo&#34;&gt;Thoughtbot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vim-adventures.com/&#34;&gt;VIM Adventures&lt;/a&gt; - a really fun interactive
+game, created to easily teach vim movements, while playing an RPG style
+game.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you would like to see my vimrc and other dotfiles please feel free to go to
+my &lt;a href=&#34;https://github.com/Mathie-Josh/Arch_laptop/&#34;&gt;Github&lt;/a&gt;. I need to update my
+README, but the files are all there!&lt;/p&gt;
+&lt;p&gt;I hope you enjoy the wonderful and majestic world that is vim!&lt;/p&gt;
+&lt;hr&gt;
+</content>
     </item>
     
   </channel>

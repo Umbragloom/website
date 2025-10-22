@@ -2,20 +2,167 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Termux on [Mathie@josh]#</title>
-    <link>/tags/termux/</link>
+    <link>//localhost:1313/tags/termux/</link>
     <description>Recent content in Termux on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 10 Sep 2020 18:20:23 -0400</lastBuildDate><atom:link href="/tags/termux/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Sep 2020 18:20:23 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/termux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Termux</title>
-      <link>/posts/tutorials/install_termux/</link>
+      <link>//localhost:1313/posts/tutorials/install_termux/</link>
       <pubDate>Thu, 10 Sep 2020 18:20:23 -0400</pubDate>
       
-      <guid>/posts/tutorials/install_termux/</guid>
-      <description>Today I would like to go through how I Installed Termux on my Android phone, how I edited the app, what applications I use it for, why I installed it, and what I have learned.
-First What is Termux you might ask? Pulled directly form the main website https://www.termux.com:
- Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager.</description>
+      <guid>//localhost:1313/posts/tutorials/install_termux/</guid>
+      <description>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
+how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
+website &lt;a href=&#34;https://termux.com/&#34; title=&#34;Termux Main Website&#34;&gt;https://www.termux.com&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; is an Android terminal emulator and Linux environment app that
+works directly with no rooting or setup required. A minimal base system is
+installed automatically - additional packages are available using the APT
+package manager.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
+how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
+website &lt;a href=&#34;https://termux.com/&#34; title=&#34;Termux Main Website&#34;&gt;https://www.termux.com&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; is an Android terminal emulator and Linux environment app that
+works directly with no rooting or setup required. A minimal base system is
+installed automatically - additional packages are available using the APT
+package manager.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That seems like a lot of information to take in at once. Let&amp;rsquo;s break that down
+further:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Android Terminal Emulator: This is a computer program {or in this case
+a android app} that emulates a text terminal on our android phone.&lt;/li&gt;
+&lt;li&gt;Text Terminal:  Also just called a terminal or system console is a standard
+serial computer interface for text entry and display. The system console is
+a text terminal used to operate a computer. One of the main uses and
+applications utilized in a terminal is the Shell, also known as a command-line
+interpreter. The shell is used type out commands and execute them.&lt;/li&gt;
+&lt;li&gt;Linux Environment: This is simply a &amp;ldquo;Linux Like&amp;rdquo; environment that is
+installed on your android phone via the Termux application. You can run normal
+terminal commands as well as applications that are made to run in the terminal,
+such as &lt;a href=&#34;https://weechat.org/&#34;&gt;Weechat&lt;/a&gt;,
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt;, or
+&lt;a href=&#34;https://github.com/tmux/tmux/wiki&#34;&gt;tmux&lt;/a&gt;.  It is not a linux subsystem, but
+simply a package ecosystem.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-do-you-install-termux&#34;&gt;How do you install Termux?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are two ways you can install Termux:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Through the Google Play Apps Store.&lt;/li&gt;
+&lt;li&gt;Through the F-Droid App - The Free Open Source Android App Repository.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The option you choose is entirely up to your preference. The F-Droid versions
+add-on apps (Styling, API, Widget, Float, Boot, and Tasker) are free but are
+not maintained by Frederick Fornwall, the author and main maintainer. Where as
+the Google Play version&amp;rsquo;s add-on apps are small costs to purchase (about $6.00 USD for all
+of them I believe) and is maintained by Frederick and the money goes to helping him continue
+his work. I choose the Google Play Store version as I wanted to support the
+project.&lt;/p&gt;
+&lt;h1 id=&#34;instillation-steps&#34;&gt;Instillation Steps:&lt;/h1&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download the App from the &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;Play Store&lt;/a&gt; Or from the &lt;a href=&#34;https://f-droid.org/packages/com.termux&#34;&gt;F-droid App&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the app on your phone once it is done installing. The app will install
+the base system itself.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once this is finished you are greeted by the Termux welcome screen. I would recommend reading
+through the wiki,  there is &lt;strong&gt;A LOT&lt;/strong&gt; of great information that
+can help you if you ever get lost. Termux uses the package manager &lt;code&gt;pkg&lt;/code&gt; to
+install different applications or packages. &lt;code&gt;pkg&lt;/code&gt; is used by a majority of
+Debian based Linux distributions ,or Distros,(such as Ubuntu, Linux Mint and
+Zorin OS) use pkg as standard.
+  &lt;img src=&#34;//localhost:1313/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
+
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Termux is now installed and ready to use. I would suggest running &lt;code&gt;pkg update&lt;/code&gt; and accept the upgrade. This will make sure your system is completely up to date.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;now-to-make-it-look-better-and-run-some-stuff&#34;&gt;Now to make it look better and run some stuff!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Now you can install a plethora of packages. You can peruse the full list
+&lt;a href=&#34;https://github.com/termux/termux-packages/tree/master/packages&#34;&gt;here&lt;/a&gt;. Some of
+the apps I Installed were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;vim&lt;/code&gt; - One of the best terminal based text editors around.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt; - for managing git repos, also use it to push my Termux files to github
+to keep them in one place. (This is not really needed as Termux has a built
+in backup utility that saves a zip file of everything in the Termux
+folder, but I am learning how to properly use git, so it helps.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zsh&lt;/code&gt; - a new command-line interpreter that offers improvements over Bash. (with the oh-my-zsh framework and the powerlevel10k theme.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WeeChat&lt;/code&gt; - a IRC (Internet Relay Chat) client. Other alternatives are
+&lt;a href=&#34;https://irssi.org/&#34;&gt;irrsi&lt;/a&gt; or &lt;a href=&#34;http://www.epicsol.org/&#34;&gt;epic&lt;/a&gt; among some of
+the top used ones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Tmux&lt;/code&gt; - A terminal multiplexer. It allows you to switch between programs that
+you run in a session that you can detach and reattach on a different
+terminal. See the documentation at the link provided above.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OpenSSH&lt;/code&gt; - Secure Shell tool for remote connection.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The easiest way to download a package is to run &lt;code&gt;pkg install &amp;quot;packagename&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After installing the packages you want you can configure the apps further
+(Please read the documentation for the package you would like to customize.)
+For example I configured my .vimrc to include the
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; plugin manager.&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;You might notice that there are some extra rows of keys above my keyboard (such as the arrow keys, PGUP
+and HOME buttons.) These are not 100% necessary, but I prefer having them.
+Follow
+&lt;a href=&#34;https://wiki.termux.com/wiki/Touch_Keyboard#:~:text=Extra%20Keys%20Row,Q%20or%20Volume%20Up%2BK.&#34;&gt;this&lt;/a&gt; link to see how to set it up.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quick summary copy the code block from the Wiki and paste it into a &lt;code&gt;termux.properties&lt;/code&gt; file in the &lt;code&gt;~/.termux/&lt;/code&gt; folder (the ~ refers back to the users &lt;code&gt;home&lt;/code&gt; directory.) then tun the &lt;code&gt;termux-reload-settings&lt;/code&gt; from the command line to refresh Termux and ashow the additional keys.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After this I set up a new shell, zsh, with the &lt;a href=&#34;https://ohmyz.sh/&#34;&gt;Oh-my-zsh&lt;/a&gt; framework and the &lt;a href=&#34;https://github.com/romkatv/powerlevel10k&#34;&gt;powerlevel10k&lt;/a&gt; theme. You can
+follow the git repo instillation guides for both of these for how to properly
+install and configure them. After installing, customizing and restarting
+Termux, it now looks like this:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;I used the screen capture tool &lt;code&gt;neofetch&lt;/code&gt; to get the OS Printout info and the
+ascii art image, that I tied to an alias &lt;code&gt;ps&lt;/code&gt;, to make it easier to execute.&lt;/p&gt;
+&lt;h1 id=&#34;why-did-i-install-termux&#34;&gt;Why did I install Termux?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;I installed Termux as a way to continue learning the Linux command line, and
+understanding the packages that can be used. A majority of everything I have
+installed on my laptop (BTW I use Arch&amp;hellip;sorry that&amp;rsquo;s over used..) I have
+installed on my Termux application. One nice thing I can do is use my phone to
+SSH into some other machine if I need to do something quickly, or ssh tunnel
+into one of my VPS&amp;rsquo;s running Tmux. There are a lot of options I can continue to
+use the app for and will most likely write up more things about it.&lt;/p&gt;
+&lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Before I close out, here are a few projects on github that I personally would suggest you potentially look into related to Termux (I havent tryed any of these, but plan on looking into them):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/YadominJinta/atilo&#34;&gt;atlio&lt;/a&gt; - A termux program to install
+a few minimal linux distors inside termux.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SDRausty/TermuxArch&#34;&gt;TermuxArch&lt;/a&gt; allows you to attempt
+to install an Arch Linux inside of the Termux environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Hax4us/Nethunter-In-Termux&#34;&gt;Nethunter-in-Termux&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;install Kali nethunter in Termux, WITHOUT root.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+&lt;hr&gt;
+</content>
     </item>
     
   </channel>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebDev on [Mathie@josh]#</title>
+    <link>//localhost:1313/tags/webdev/</link>
+    <description>Recent content in WebDev on [Mathie@josh]#</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 28 Jul 2021 12:19:00 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website with Hugo and Netlify!</title>
+      <link>//localhost:1313/posts/tutorials/website/</link>
+      <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
+      
+      <guid>//localhost:1313/posts/tutorials/website/</guid>
+      <description>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
+Especially with things such as WIX, WordPress and Squarespace. But I wanted
+a bit more of a personal technological feel behind it to justify having one.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are a lot of reasons to host your own website. My reasons are below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted somewhere I could post what ever I wanted.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
+Especially with things such as WIX, WordPress and Squarespace. But I wanted
+a bit more of a personal technological feel behind it to justify having one.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are a lot of reasons to host your own website. My reasons are below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted somewhere I could post what ever I wanted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted to learn a little of both the frontend and backend development
+that went into WebDev and website management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It looks good to potential employers, as well being able to act as a simple
+portfolio for projects and things you are passionate about.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-to-get-started&#34;&gt;How to get started.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;RESEARCH is your best friend. Look into YouTube videos, Read the documentation
+from the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;http://www.netlify.com&#34;&gt;Netlify&lt;/a&gt;, and &lt;a href=&#34;http://www.netlifycms.org&#34;&gt;Netlify CMS&lt;/a&gt; and research other
+peoples code bases if they have them available to you.&lt;/p&gt;
+&lt;h1 id=&#34;so-where-do-i-even-begin&#34;&gt;So where do I even begin??&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;first-steps&#34;&gt;First Steps!&lt;/h2&gt;
+&lt;p&gt;The first thing to do once you&amp;rsquo;ve done your research is to install Hugo. For my
+example I will be doing this on Linux. There are a plethora of resources on how
+to handle this if your on Mac or Windows. &lt;strong&gt;COUGH&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;RTFM&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;From your terminal make sure whatever system you are using has git installed or
+Homebrew if you go that route. For me as I&amp;rsquo;m using Arch Linux, I can just
+install Hugo directly from the Arch Linux community repository by using the
+following command in my terminal.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo pacman -Syu hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you should verify the install with the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your Command line should show the version number of Hugo if it was installed
+correctly. If it does congrats you have the Hugo Framework installed.&lt;/p&gt;
+&lt;p&gt;Next steps are to create a new site!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo new site &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sitename&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above command will create a new Hugo site in a folder called &amp;ldquo;Sitename&amp;rdquo;, you can
+replace Sitename with your desired name. Within this folder will be the files, folders, and items needed to run your site.&lt;/p&gt;
+&lt;p&gt;The main file you currently need is the &lt;code&gt;config.toml&lt;/code&gt; file. This is the base configuration of your site. For example mine is below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseurl&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en-us&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;terminal&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;paginate&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;dir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;posts&lt;/span&gt;`).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;list&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;up&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;page&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;baseurl&lt;/span&gt;).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;contentTypeName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;themeColor&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;this&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;only&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submenu&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;trigger&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;be&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visible&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showMenuItems&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selector&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;language&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showLanguageSelector&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;full&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;screen&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;fullWidthTheme&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;center&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;centerTheme&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;custom&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;favicon&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;themeColor&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;square&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;favicon&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;favicon.ico&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;updated&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;If&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;can&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;enableGitInfo&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;automatically&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;updated&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showLastUpdated&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  #&lt;span style=&#34;color:#a6e22e&#34;&gt;enagleGitInfo&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # &lt;span style=&#34;color:#a6e22e&#34;&gt;Provide&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;prefix&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt;. &lt;span style=&#34;color:#a6e22e&#34;&gt;By&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;it&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;looks&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;this&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt; [&lt;span style=&#34;color:#a6e22e&#34;&gt;Updated&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;] :: &lt;span style=&#34;color:#a6e22e&#34;&gt;Author&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Updated&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;headings&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;their&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;depending&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;settings&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;it&lt;/span&gt;&amp;#39;&lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;oneHeadingSize&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[Mathie@josh]#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;subtitle&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A simple, retro theme for Hugo&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;owner&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;keywords&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;copyright&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;menuMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Show more&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read more&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;readOtherPosts&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read other posts&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;missingContentMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page not found...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;missingBackButtonLabel&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Back to home page&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;logo&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;logoText&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[Mathie@josh]#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;logoHomeLink&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blog&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blog&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/blog/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;art&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Art&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/art/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tutorials&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tutorials&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/tutorials/&amp;#34;&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This configures the base navigation section of your website. In my example, I have the sub folders Tutorials,
+Art, Blog, Projects, and the About Me pages. This takes you to the sub pages and content for each. This is
+also where you can have links to your social media, as well as where you can set certain parameters required
+by your theme.&lt;/p&gt;
+&lt;p&gt;Congrats you have the start of a website, if you haven&amp;rsquo;t set anyhting up yet in the &lt;code&gt;config.yml&lt;/code&gt; its going to be
+pretty bland starting off.&lt;/p&gt;
+&lt;h2 id=&#34;make-it-stand-out&#34;&gt;Make it &lt;em&gt;&lt;strong&gt;STAND OUT&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;From here you should add a theme. There are HUNDREDS of themes
+you can install. the best place to go is, you guessed it, the &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;Hugo
+Themes&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;For my website I went with the Amazing &lt;a href=&#34;themes.gohugo.io/themes/hugo-theme-terminal/&#34;&gt;Terminal
+Theme&lt;/a&gt; from panr on
+&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is where Git comes in, you need to clone the theme into your websites
+folder. For the Terminal Theme, panr recommends using a git submodule (as does the Hugo dev team), which
+allows you to use the updates made to the repo, without causing any harm to the master branch of the repository
+once you start making changes to it. To do this type the following into your terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd sitename &lt;span style=&#34;color:#75715e&#34;&gt;#to move into your hugo root folder.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git submodule add https://github.com/panr/hugo-theme-terminal.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;themes/terminal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will install all files you need to utilize the theme on your
+website, in a dedicated theme folder within your root folder of your website.&lt;/p&gt;
+&lt;p&gt;From here just follow the documentation to set up the theme and your ready to
+go and start making posts.&lt;/p&gt;
+&lt;h1 id=&#34;post-and-post-and-post&#34;&gt;Post and post and post!!&lt;/h1&gt;
+&lt;p&gt;Now its time to start making some glorious, glorious content! You can manually
+create content files for example typing &lt;code&gt;content/&amp;lt;CATAGORY&amp;gt;/&amp;lt;FILE&amp;gt;/&amp;lt;FORMAT&amp;gt;&lt;/code&gt;
+and provide metadata in them, however I would recommend the &lt;code&gt;new&lt;/code&gt; command to do
+a few things for you (like add title and date):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo new posts/&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your-posts-title&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a new .md file for you to edit. Hugo utilizes markdown syntex
+for your websites content. Below would be the example of what will be in your new post that you can open in any text editor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your Posts Title&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2019-03-26&lt;/span&gt;T&lt;span style=&#34;color:#ae81ff&#34;&gt;08&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;47&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;+&lt;span style=&#34;color:#ae81ff&#34;&gt;01&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;draft&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will make whatever you put in &amp;ldquo;Your Posts Title&amp;rdquo; the title of your first post, then
+display the date of the post. The next line &lt;code&gt;draft: True&lt;/code&gt; is important, this sets the post
+as a draft that will not be posted to your site, until it is ready.&lt;/p&gt;
+&lt;h1 id=&#34;check-it-out&#34;&gt;Check it out!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;So after you&amp;rsquo;ve set up your website, chosen a theme that you enjoy (or made your own), and posted your
+first piece of content you can start the hugo server and view the local copy of your website in any browser!
+Type the following into your command line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your terminal will output something similar to the below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ▶ hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   | EN
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+------------------+----+
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Pages            | &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Paginator pages  |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Non-page files   |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Static files     |  &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Processed images |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Aliases          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Sitemaps         |  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Cleaned          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Total in &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt; ms
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; changes in /Users/bep/quickstart/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;content,data,layouts,static,themes&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; config changes in /Users/bep/quickstart/config.toml
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Environment: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Serving pages from memory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Web Server is available at http://localhost:1313/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Press Ctrl+C to stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will load the hugo server for you, and all you need to do is navigate to http://localhost:1313/
+and view your website!! The -D option loads any drafts that you have so you can view them before posting!&lt;/p&gt;
+&lt;p&gt;From here you can continue to configure your theme by updating your &lt;code&gt;config.taml&lt;/code&gt; file with the certain themes requirements.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;But &lt;em&gt;&lt;strong&gt;&amp;ldquo;Wait!&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; you say, &lt;em&gt;&lt;strong&gt;&amp;ldquo;My website isn&amp;rsquo;t online now is it?&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; The answer to that is yes, your correct
+its not online, and it canont be accessed on the web. This is where Netlify and Github come in handy!&lt;/p&gt;
+&lt;h1 id=&#34;git-commit&#34;&gt;Git Commit!&lt;/h1&gt;
+&lt;p&gt;So you&amp;rsquo;ve made your site, configured it to your hearts content, and seen what it will look like from your browser, now your ready to
+get yourself setup online. For this we will transition our website&amp;rsquo;s root folder into a Git folder! On your commandline &lt;code&gt;cd&lt;/code&gt; ,or change directory,
+into the root folder of your website (Should be something like: &lt;code&gt;~username/home/mywebsite/&lt;/code&gt; if you made it in your home folder)
+then run the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied &lt;code&gt;git remote add&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt; commands from the &lt;code&gt;...or push an existing repository from the Command line&lt;/code&gt; section, then commit the changes to the staging area and commit them to GitHub/GitLab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git add . &lt;span style=&#34;color:#75715e&#34;&gt;#this adds all files in the root folder to the staging area.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your commit message here&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#This is the commit message that you &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# should use to keep track of changes you have made to your git folder, this is useful if you are working in groups.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then push the local Git repo to your repository on Github/Gitlab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git remote add origin https://your-github&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;s-repository-address.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congrats you have now begun the process of keeping all data on Github/Gitlab for version control!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;netlify-to-the-rescue&#34;&gt;Netlify to the rescue!&lt;/h1&gt;
+&lt;p&gt;Next steps are to deploy your website on &lt;em&gt;&lt;strong&gt;Netlify&lt;/strong&gt;&lt;/em&gt;. Head over to &lt;a href=&#34;https://netlify.com&#34;&gt;Netlify&lt;/a&gt; and create an account. You can also use your GitHub/GitLab login credentials if you feel like that would make it easier. Once your logged in you&amp;rsquo;ll see an option &lt;code&gt;New site from Git:&lt;/code&gt; click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you&amp;rsquo;ll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you&amp;rsquo;ll be asked to verify your build settings. For this set the build command as &lt;code&gt;hugo&lt;/code&gt; and what directory you need to publish, for us this is the &lt;code&gt;public&lt;/code&gt; directory where all our content is stored. After this is confirmed click the &lt;code&gt;Deply site&lt;/code&gt; button at the bottom of the page.&lt;/p&gt;
+&lt;p&gt;Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the &lt;code&gt;baseUrl&lt;/code&gt; setting value in the &lt;code&gt;config.toml&lt;/code&gt; file. Therefore, click on the &lt;code&gt;Deploy settings&lt;/code&gt; in the site overview. Then select the &lt;code&gt;Site details&lt;/code&gt; under the &lt;code&gt;General&lt;/code&gt; tab. In the &lt;code&gt;Site details&lt;/code&gt; tab, click on the &lt;code&gt;Change site name:&lt;/code&gt; button, this will cause a pop up to show up, from here set it to whatever your &lt;code&gt;baseUrl&lt;/code&gt; setting was.&lt;/p&gt;
+&lt;h1 id=&#34;congratualtions&#34;&gt;&lt;em&gt;&lt;strong&gt;CONGRATUALTIONS&lt;/strong&gt;&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;You now have your own personal website with the Netlify hosting page, that is manually updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up Netlify CMS so you can edit, update and push content remotely!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;cmss-are-great&#34;&gt;CMS&amp;rsquo;s are great!&lt;/h1&gt;
+&lt;p&gt;CMS&amp;rsquo;s or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, Netlify CMS is one of the best options in my opinion. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere, like me.&lt;/p&gt;
+&lt;p&gt;We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static &lt;code&gt;admin&lt;/code&gt; folder, in this case with Hugo it is stored in the &lt;code&gt;/static&lt;/code&gt; folder as &lt;code&gt;/static/admin/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To get this set up simply do the following in your ROOT folder of your website:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd /static
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ mkdir /admin &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd /admin &lt;span style=&#34;color:#75715e&#34;&gt;# The &amp;amp;&amp;amp; is a logical AND function.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ touch index.html &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; touch config.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The first file &lt;code&gt;admin/index.html&lt;/code&gt;, is the base entry point for the Netlify CMS admin interface. This allosws users set up in the CMS to navigate to &lt;code&gt;yoursite.com/admin/&lt;/code&gt; to access the CMS and start publishing content. On the code side, this is a very basic HTML starter page that loads the Netlify CMS JavaScript file. In the &lt;code&gt;index.html&lt;/code&gt; file you can place the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewport&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Content Manager&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Include the script that builds the page and powers Netlify CMS --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;The second file &lt;code&gt;admin/config.yml&lt;/code&gt; is the heart of the CMS instillation. Since im already utilizing Netlify for hostin and unthentication, the backend configuration is fairly straightforward. For GitHub and GitLab repositories, you should start your &lt;code&gt;config.yml&lt;/code&gt; file with the following lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;backend&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;git-gateway&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Branch to update (optional; defaults to master)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This specifies your backend protocol and your publication branch. Git Gateway is an open source API that acts as a proxy between authenticated users of your site and your site repo.&lt;/p&gt;
+&lt;p&gt;By default, saving a post in the CMS interface pushes a commit directly to the publication branch. However, you can enable the &lt;strong&gt;Editorial Workflow&lt;/strong&gt;, which adds an very nice intuative interface for drafting, reviewing, and approving posts. To do this, add the following line to your Netlify CMS &lt;code&gt;config.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# This line should *not* be indented&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;publish_mode&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;editorial_workflow&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Great now the admins set up on your account can review and approve posts that your writters are making! But they wont be able to post images sadly. We can easiy fix this.  If you already have an images folder in your project, you could use its path, possibly creating an uploads sub-folder, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# These lines should *not* be indented&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;media_folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;static/images/uploads&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Media files will be stored in the repo under static/images/uploads&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;public_folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/images/uploads&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# The src attribute for uploaded media will begin with /images/uploads&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;re creating a new folder for uploaded media, you&amp;rsquo;ll need to know where your static site generator expects static files. In the configuration above adds a new setting, &lt;code&gt;public_folder&lt;/code&gt;. While &lt;code&gt;media_folder&lt;/code&gt; specifies where uploaded files are saved in the repo, &lt;code&gt;public_folder&lt;/code&gt; indicates where they are found in the published site. Image &lt;code&gt;src&lt;/code&gt; attributes use this path, which is relative to the file where it&amp;rsquo;s called. For this reason, we usually start the path at the site root, using the opening &lt;code&gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If public_folder is not set, Netlify CMS defaults to the same value as &lt;code&gt;media_folder&lt;/code&gt;, adding an opening &lt;code&gt;/&lt;/code&gt; if one is not included.&lt;/p&gt;
+&lt;p&gt;After this we need to set up something called collections. Collections define the structure for the different types of content on your site. For example a magority of my posts all have a title, publish date, description, tags, and a body. I can also post a featured image and list an author if i wanted to. For my website, my &lt;code&gt;config.yml&lt;/code&gt; file in the &lt;code&gt;adnmin&lt;/code&gt; folder has the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Project Posts&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/content/posts/projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;create&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;slug&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{year}}-{{month}}-{{day}}-{{slug}}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;fields&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Publish Date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Featured Image&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cover&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Decription&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;desciption&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tags&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;list&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label: Author, name: author, widget: hidden, default&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Joshua Mathie}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;markdown&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is set up for every type of post that I could want to utilize. This might look quite confusing, and not going to lie it is, so let me break it down for you.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;ITEM&lt;/th&gt;
+          &lt;th&gt;DESCRIPTION&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;name&lt;/td&gt;
+          &lt;td&gt;Post type identifier, used in routes. Must be unique.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;label&lt;/td&gt;
+          &lt;td&gt;What the admin UI calls the post type.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;folder&lt;/td&gt;
+          &lt;td&gt;Where files of this type are stored, relative to the repo root.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;slug&lt;/td&gt;
+          &lt;td&gt;Template for filenames. {{year}}, {{month}}, and {{day}} pulls from the post&amp;rsquo;s date field or save date {{slug}} is a url-safe version of the post&amp;rsquo;s title. Default is simply {{slug}}.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;fields&lt;/td&gt;
+          &lt;td&gt;Fields listed here are shown as fields in the content editor, then saved as front matter at the beginning of the document (except for body , which follows the front matter). Each field contains the following properties:  - label: Field label in the editor UI. - name: Field name in the document front matter. - widget: Determines UI style and value data type (details below). - default(optional): Sets a default value for the field.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These collections also act as the submenus when you make a post in the CMS Admin console.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;PHEW that was alot to take in huh? Get conmfy were not done yet!&lt;/p&gt;
+&lt;p&gt;Next we need to set up authentication. Thankfully because we are using the Netlify platform already this is relatively easy to do as they offer a built-in authorization service they call &lt;em&gt;Identify.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;code&gt;Settings &amp;gt; Identity&lt;/code&gt;, and select &lt;code&gt;Enable Identity service&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;code&gt;Registration preferences&lt;/code&gt;, select &lt;code&gt;Open&lt;/code&gt; or &lt;code&gt;Invite only&lt;/code&gt;. In most cases, you want only invited users to access your CMS, but if you&amp;rsquo;re just experimenting, you can leave it open for convenience.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;d like to allow one-click login with services like Google and GitHub, check the boxes next to the services you&amp;rsquo;d like to use, under &lt;code&gt;External providers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Scroll down to &lt;code&gt;Services &amp;gt; Git Gateway&lt;/code&gt;, and click &lt;code&gt;Enable Git Gateway&lt;/code&gt;. This authenticates with your Git host and generates an API access token. In this case, we&amp;rsquo;re leaving the &lt;code&gt;Roles&lt;/code&gt; field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once thats done the backend has been setup to handle authentication, now you just need a frontend interface. Don&amp;rsquo;t worry were almost done. Netlify Identify has a nice widget that we can install as a drop-in for this purpose. To include the widget just add the following in 2 places:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://identity.netlify.com/v1/netlify-identity-widget.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These need to be added to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of your CMS index page located at &lt;code&gt;/admin/index.html&lt;/code&gt;, as well as the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of your sites main index page. Depending on how your site generator is set up, this may mean you need to add it to the default template, or to a &amp;ldquo;partial&amp;rdquo; or &amp;ldquo;include&amp;rdquo; template. If you can find where the site stylesheet is linked, that&amp;rsquo;s probably the right place.&lt;/p&gt;
+&lt;p&gt;Whe a user logs in with the Metlify Identify widget an access token redirects to the site homepage. In order to complete the login and get back into the CMS, we need to redirect the user back to the &lt;code&gt;/admin/&lt;/code&gt; path. This can be accomplished by adding the below script right before the closing &lt;code&gt;body&lt;/code&gt; tag of your sites main index page:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;init&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt; =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;login&amp;#34;&lt;/span&gt;, () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/admin/&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;congratulations-again&#34;&gt;CONGRATULATIONS AGAIN&lt;/h2&gt;
+&lt;p&gt;Your site is now fully configured and ready for you to start using the CMS to draft, review, and post content independant of your base install on your PC. Just don&amp;rsquo;t forget to invite people to post if your doing this!!&lt;/p&gt;
+&lt;h1 id=&#34;enjoy-your-website&#34;&gt;Enjoy your website!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;All thanks to &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;http://www.netlify.com&#34;&gt;Netlify&lt;/a&gt;, and &lt;a href=&#34;http://www.netlifycms.org&#34;&gt;Netlify CMS&lt;/a&gt; for posting their amazing tutorials on setting this all up.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,29 +2,754 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>[Mathie@josh]#</title>
-    <link>/posts/tutorials/</link>
+    <link>//localhost:1313/posts/tutorials/</link>
     <description>Recent content on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="/posts/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:1313/posts/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up LaTeX to show on Hugo site.</title>
+      <link>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</link>
+      <pubDate>Mon, 20 Oct 2025 20:09:35 -0400</pubDate>
+      
+      <guid>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve been interested in LaTeX for years, and never really had a use case beyond
+a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I
+found out that you could get LaTeX, specifically MathTeX to show in a hugo
+website. I figured i&amp;rsquo;d give it a try and see how well it works. I&amp;rsquo;m going to use
+Katex as i&amp;rsquo;ve read it can be implemented a little faster than standard MathJaX.&lt;/p&gt;</description>
+      <content>&lt;p&gt;I&amp;rsquo;ve been interested in LaTeX for years, and never really had a use case beyond
+a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I
+found out that you could get LaTeX, specifically MathTeX to show in a hugo
+website. I figured i&amp;rsquo;d give it a try and see how well it works. I&amp;rsquo;m going to use
+Katex as i&amp;rsquo;ve read it can be implemented a little faster than standard MathJaX.&lt;/p&gt;
+&lt;h1 id=&#34;setup&#34;&gt;Setup&lt;/h1&gt;
+&lt;p&gt;There are a few simple steps that need to take place for LaTeX to integrate
+with you&amp;rsquo;re Hugo Site.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Set up a KaTeX partial.&lt;/li&gt;
+&lt;li&gt;Reference it somewhere it can be seen everywhere.&lt;/li&gt;
+&lt;li&gt;Active the partial.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;create-the-partial&#34;&gt;Create the Partial.&lt;/h2&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;Its best to set up a KaTex partial to access everywhere on your site. We will call
+this &lt;code&gt;katex.html&lt;/code&gt;and we will store this where your other partials are store. In my example
+these are at &lt;code&gt;mywebsitename/layouts/partials&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;You will need to import the required files. these can be found from the
+&lt;a href=&#34;https://katex.org/docs/browser.html&#34;&gt;KaTeX site&lt;/a&gt;. You should add the
+following to the katex.html file you just made. Make sure this matches what
+ever information is available on the &lt;a href=&#34;https://katex.org/docs/browser.htm&#34;&gt;KaTeX documentation&lt;/a&gt;l&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &amp;lt;link rel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stylesheet&amp;#34;&lt;/span&gt; href&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css&amp;#34;&lt;/span&gt; integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi&amp;#34;&lt;/span&gt; crossorigin&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;!-- The loading of KaTeX is deferred to speed up page rendering --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;script defer src&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js&amp;#34;&lt;/span&gt; integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ&amp;#34;&lt;/span&gt; crossorigin&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;!-- To automatically render math in text elements, include the auto-render extension: --&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;script defer src&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js&amp;#34;&lt;/span&gt; integrity&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh&amp;#34;&lt;/span&gt; crossorigin&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;anonymous&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        onload&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;renderMathInElement(document.body);&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;integrate-this-into-your-website&#34;&gt;Integrate this into your website.&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;It important to integrate this into something that is commonly accessed in all
+of your site. the &lt;code&gt;header&lt;/code&gt; and &lt;code&gt;footer&lt;/code&gt; are perfect places.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a &lt;code&gt;footer.html&lt;/code&gt; or &lt;code&gt;header.html&lt;/code&gt; in the same partials folder
+at &lt;code&gt;layouts/patrials&lt;/code&gt;. Note if doing this in a &lt;code&gt;footer.html&lt;/code&gt; this
+will overide the &lt;code&gt;footer.html&lt;/code&gt; provided by the theme you are using.&lt;/li&gt;
+&lt;li&gt;Add the following to your &lt;code&gt;footer.html&lt;/code&gt;:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;.Params.katex&lt;/span&gt;}&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;{&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#34;helpers/partial/katex.html&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;.&lt;/span&gt; }&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;{&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;end&lt;/span&gt; }&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Now that this is referenced you should be able to reference the use of KaTeX
+for each of mark down files seperatly. This makes it so you don&amp;rsquo;t have to
+use KaTeX JS and CSS file for posts that it&amp;rsquo;s not needed in.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;using-the-katex-partial&#34;&gt;Using the Katex Partial&lt;/h2&gt;
+&lt;p&gt;Now we can start using the KaTeX partial in pages that need it. All we need to
+do is add the following to the front matter of any markdown file on our site.&lt;/p&gt;
+&lt;p&gt;partial&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;math : true 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now this should allow the KaTeX partial to be used on any page with that in the
+front matter.&lt;/p&gt;
+&lt;p&gt;The following&lt;/p&gt;
+&lt;p&gt;$$\int_{a}^{b} x^2 dx$$&lt;/p&gt;
+&lt;p&gt;Is an integral&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Personal Website with Hugo and Netlify!</title>
+      <link>//localhost:1313/posts/tutorials/website/</link>
+      <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
+      
+      <guid>//localhost:1313/posts/tutorials/website/</guid>
+      <description>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
+Especially with things such as WIX, WordPress and Squarespace. But I wanted
+a bit more of a personal technological feel behind it to justify having one.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are a lot of reasons to host your own website. My reasons are below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted somewhere I could post what ever I wanted.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
+Especially with things such as WIX, WordPress and Squarespace. But I wanted
+a bit more of a personal technological feel behind it to justify having one.&lt;/p&gt;
+&lt;h1 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are a lot of reasons to host your own website. My reasons are below:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted somewhere I could post what ever I wanted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I wanted to learn a little of both the frontend and backend development
+that went into WebDev and website management.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;It looks good to potential employers, as well being able to act as a simple
+portfolio for projects and things you are passionate about.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-to-get-started&#34;&gt;How to get started.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;RESEARCH is your best friend. Look into YouTube videos, Read the documentation
+from the &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;http://www.netlify.com&#34;&gt;Netlify&lt;/a&gt;, and &lt;a href=&#34;http://www.netlifycms.org&#34;&gt;Netlify CMS&lt;/a&gt; and research other
+peoples code bases if they have them available to you.&lt;/p&gt;
+&lt;h1 id=&#34;so-where-do-i-even-begin&#34;&gt;So where do I even begin??&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;first-steps&#34;&gt;First Steps!&lt;/h2&gt;
+&lt;p&gt;The first thing to do once you&amp;rsquo;ve done your research is to install Hugo. For my
+example I will be doing this on Linux. There are a plethora of resources on how
+to handle this if your on Mac or Windows. &lt;strong&gt;COUGH&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;RTFM&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;From your terminal make sure whatever system you are using has git installed or
+Homebrew if you go that route. For me as I&amp;rsquo;m using Arch Linux, I can just
+install Hugo directly from the Arch Linux community repository by using the
+following command in my terminal.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo pacman -Syu hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you should verify the install with the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your Command line should show the version number of Hugo if it was installed
+correctly. If it does congrats you have the Hugo Framework installed.&lt;/p&gt;
+&lt;p&gt;Next steps are to create a new site!&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo new site &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sitename&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The above command will create a new Hugo site in a folder called &amp;ldquo;Sitename&amp;rdquo;, you can
+replace Sitename with your desired name. Within this folder will be the files, folders, and items needed to run your site.&lt;/p&gt;
+&lt;p&gt;The main file you currently need is the &lt;code&gt;config.toml&lt;/code&gt; file. This is the base configuration of your site. For example mine is below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;baseurl&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;languageCode&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en-us&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;terminal&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;paginate&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;dir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;/&lt;span style=&#34;color:#a6e22e&#34;&gt;posts&lt;/span&gt;`).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;list&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;of&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;up&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;your&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;index&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;page&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;baseurl&lt;/span&gt;).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;contentTypeName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pink&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;themeColor&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;this&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;only&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;submenu&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;trigger&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;be&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;visible&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showMenuItems&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selector&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;switch&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;language&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showLanguageSelector&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;full&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;screen&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;fullWidthTheme&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;center&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;theme&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;with&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;width&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;centerTheme&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;custom&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;favicon&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;is&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;themeColor&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;square&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;favicon&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;favicon.ico&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;show&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;updated&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;If&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;use&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;you&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;can&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;enableGitInfo&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;then&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;post&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;will&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;automatically&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;updated&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;showLastUpdated&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  #&lt;span style=&#34;color:#a6e22e&#34;&gt;enagleGitInfo&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; # &lt;span style=&#34;color:#a6e22e&#34;&gt;Provide&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;string&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;prefix&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;the&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;last&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt;. &lt;span style=&#34;color:#a6e22e&#34;&gt;By&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;it&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;looks&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;like&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;this&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt; [&lt;span style=&#34;color:#a6e22e&#34;&gt;Updated&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2020&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;-&lt;span style=&#34;color:#a6e22e&#34;&gt;xx&lt;/span&gt;] :: &lt;span style=&#34;color:#a6e22e&#34;&gt;Author&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;   &lt;span style=&#34;color:#a6e22e&#34;&gt;updatedDatePrefix&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Updated&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;all&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;headings&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;their&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;depending&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;browser&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;settings&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;it&lt;/span&gt;&amp;#39;&lt;span style=&#34;color:#a6e22e&#34;&gt;s&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;to&lt;/span&gt; `&lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;` &lt;span style=&#34;color:#a6e22e&#34;&gt;by&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  # &lt;span style=&#34;color:#a6e22e&#34;&gt;oneHeadingSize&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;languageName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[Mathie@josh]#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;subtitle&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A simple, retro theme for Hugo&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;owner&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;keywords&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;copyright&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;menuMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Show more&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;readMore&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read more&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;readOtherPosts&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read other posts&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;missingContentMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page not found...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;missingBackButtonLabel&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Back to home page&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;logo&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;logoText&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[Mathie@josh]#&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#a6e22e&#34;&gt;logoHomeLink&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blog&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Blog&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/blog/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;art&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Art&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/art/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [[&lt;span style=&#34;color:#a6e22e&#34;&gt;languages&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;en&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;identifier&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tutorials&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tutorials&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;url&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/posts/tutorials/&amp;#34;&lt;/span&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This configures the base navigation section of your website. In my example, I have the sub folders Tutorials,
+Art, Blog, Projects, and the About Me pages. This takes you to the sub pages and content for each. This is
+also where you can have links to your social media, as well as where you can set certain parameters required
+by your theme.&lt;/p&gt;
+&lt;p&gt;Congrats you have the start of a website, if you haven&amp;rsquo;t set anyhting up yet in the &lt;code&gt;config.yml&lt;/code&gt; its going to be
+pretty bland starting off.&lt;/p&gt;
+&lt;h2 id=&#34;make-it-stand-out&#34;&gt;Make it &lt;em&gt;&lt;strong&gt;STAND OUT&lt;/strong&gt;&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;From here you should add a theme. There are HUNDREDS of themes
+you can install. the best place to go is, you guessed it, the &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;Hugo
+Themes&lt;/a&gt; page.&lt;/p&gt;
+&lt;p&gt;For my website I went with the Amazing &lt;a href=&#34;themes.gohugo.io/themes/hugo-theme-terminal/&#34;&gt;Terminal
+Theme&lt;/a&gt; from panr on
+&lt;a href=&#34;https://github.com/panr/hugo-theme-terminal&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is where Git comes in, you need to clone the theme into your websites
+folder. For the Terminal Theme, panr recommends using a git submodule (as does the Hugo dev team), which
+allows you to use the updates made to the repo, without causing any harm to the master branch of the repository
+once you start making changes to it. To do this type the following into your terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd sitename &lt;span style=&#34;color:#75715e&#34;&gt;#to move into your hugo root folder.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git submodule add https://github.com/panr/hugo-theme-terminal.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;themes/terminal
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will install all files you need to utilize the theme on your
+website, in a dedicated theme folder within your root folder of your website.&lt;/p&gt;
+&lt;p&gt;From here just follow the documentation to set up the theme and your ready to
+go and start making posts.&lt;/p&gt;
+&lt;h1 id=&#34;post-and-post-and-post&#34;&gt;Post and post and post!!&lt;/h1&gt;
+&lt;p&gt;Now its time to start making some glorious, glorious content! You can manually
+create content files for example typing &lt;code&gt;content/&amp;lt;CATAGORY&amp;gt;/&amp;lt;FILE&amp;gt;/&amp;lt;FORMAT&amp;gt;&lt;/code&gt;
+and provide metadata in them, however I would recommend the &lt;code&gt;new&lt;/code&gt; command to do
+a few things for you (like add title and date):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo new posts/&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your-posts-title&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will create a new .md file for you to edit. Hugo utilizes markdown syntex
+for your websites content. Below would be the example of what will be in your new post that you can open in any text editor:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your Posts Title&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2019-03-26&lt;/span&gt;T&lt;span style=&#34;color:#ae81ff&#34;&gt;08&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;47&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;+&lt;span style=&#34;color:#ae81ff&#34;&gt;01&lt;/span&gt;:&lt;span style=&#34;color:#ae81ff&#34;&gt;00&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;draft&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will make whatever you put in &amp;ldquo;Your Posts Title&amp;rdquo; the title of your first post, then
+display the date of the post. The next line &lt;code&gt;draft: True&lt;/code&gt; is important, this sets the post
+as a draft that will not be posted to your site, until it is ready.&lt;/p&gt;
+&lt;h1 id=&#34;check-it-out&#34;&gt;Check it out!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;So after you&amp;rsquo;ve set up your website, chosen a theme that you enjoy (or made your own), and posted your
+first piece of content you can start the hugo server and view the local copy of your website in any browser!
+Type the following into your command line:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Your terminal will output something similar to the below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ▶ hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                   | EN
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;+------------------+----+
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Pages            | &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Paginator pages  |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Non-page files   |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Static files     |  &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Processed images |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Aliases          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Sitemaps         |  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Cleaned          |  &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Total in &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt; ms
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; changes in /Users/bep/quickstart/&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;content,data,layouts,static,themes&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Watching &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; config changes in /Users/bep/quickstart/config.toml
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Environment: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Serving pages from memory
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Web Server is available at http://localhost:1313/ &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;bind address 127.0.0.1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Press Ctrl+C to stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will load the hugo server for you, and all you need to do is navigate to http://localhost:1313/
+and view your website!! The -D option loads any drafts that you have so you can view them before posting!&lt;/p&gt;
+&lt;p&gt;From here you can continue to configure your theme by updating your &lt;code&gt;config.taml&lt;/code&gt; file with the certain themes requirements.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;But &lt;em&gt;&lt;strong&gt;&amp;ldquo;Wait!&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; you say, &lt;em&gt;&lt;strong&gt;&amp;ldquo;My website isn&amp;rsquo;t online now is it?&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; The answer to that is yes, your correct
+its not online, and it canont be accessed on the web. This is where Netlify and Github come in handy!&lt;/p&gt;
+&lt;h1 id=&#34;git-commit&#34;&gt;Git Commit!&lt;/h1&gt;
+&lt;p&gt;So you&amp;rsquo;ve made your site, configured it to your hearts content, and seen what it will look like from your browser, now your ready to
+get yourself setup online. For this we will transition our website&amp;rsquo;s root folder into a Git folder! On your commandline &lt;code&gt;cd&lt;/code&gt; ,or change directory,
+into the root folder of your website (Should be something like: &lt;code&gt;~username/home/mywebsite/&lt;/code&gt; if you made it in your home folder)
+then run the following commands:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git init
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied &lt;code&gt;git remote add&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt; commands from the &lt;code&gt;...or push an existing repository from the Command line&lt;/code&gt; section, then commit the changes to the staging area and commit them to GitHub/GitLab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git add . &lt;span style=&#34;color:#75715e&#34;&gt;#this adds all files in the root folder to the staging area.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Your commit message here&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#This is the commit message that you &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# should use to keep track of changes you have made to your git folder, this is useful if you are working in groups.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then push the local Git repo to your repository on Github/Gitlab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git remote add origin https://your-github&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;&amp;#39;&lt;/span&gt;s-repository-address.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git push -u origin master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Congrats you have now begun the process of keeping all data on Github/Gitlab for version control!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;netlify-to-the-rescue&#34;&gt;Netlify to the rescue!&lt;/h1&gt;
+&lt;p&gt;Next steps are to deploy your website on &lt;em&gt;&lt;strong&gt;Netlify&lt;/strong&gt;&lt;/em&gt;. Head over to &lt;a href=&#34;https://netlify.com&#34;&gt;Netlify&lt;/a&gt; and create an account. You can also use your GitHub/GitLab login credentials if you feel like that would make it easier. Once your logged in you&amp;rsquo;ll see an option &lt;code&gt;New site from Git:&lt;/code&gt; click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you&amp;rsquo;ll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you&amp;rsquo;ll be asked to verify your build settings. For this set the build command as &lt;code&gt;hugo&lt;/code&gt; and what directory you need to publish, for us this is the &lt;code&gt;public&lt;/code&gt; directory where all our content is stored. After this is confirmed click the &lt;code&gt;Deply site&lt;/code&gt; button at the bottom of the page.&lt;/p&gt;
+&lt;p&gt;Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the &lt;code&gt;baseUrl&lt;/code&gt; setting value in the &lt;code&gt;config.toml&lt;/code&gt; file. Therefore, click on the &lt;code&gt;Deploy settings&lt;/code&gt; in the site overview. Then select the &lt;code&gt;Site details&lt;/code&gt; under the &lt;code&gt;General&lt;/code&gt; tab. In the &lt;code&gt;Site details&lt;/code&gt; tab, click on the &lt;code&gt;Change site name:&lt;/code&gt; button, this will cause a pop up to show up, from here set it to whatever your &lt;code&gt;baseUrl&lt;/code&gt; setting was.&lt;/p&gt;
+&lt;h1 id=&#34;congratualtions&#34;&gt;&lt;em&gt;&lt;strong&gt;CONGRATUALTIONS&lt;/strong&gt;&lt;/em&gt;&lt;/h1&gt;
+&lt;p&gt;You now have your own personal website with the Netlify hosting page, that is manually updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up Netlify CMS so you can edit, update and push content remotely!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;cmss-are-great&#34;&gt;CMS&amp;rsquo;s are great!&lt;/h1&gt;
+&lt;p&gt;CMS&amp;rsquo;s or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, Netlify CMS is one of the best options in my opinion. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere, like me.&lt;/p&gt;
+&lt;p&gt;We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static &lt;code&gt;admin&lt;/code&gt; folder, in this case with Hugo it is stored in the &lt;code&gt;/static&lt;/code&gt; folder as &lt;code&gt;/static/admin/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;To get this set up simply do the following in your ROOT folder of your website:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd /static
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ mkdir /admin &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cd /admin &lt;span style=&#34;color:#75715e&#34;&gt;# The &amp;amp;&amp;amp; is a logical AND function.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ touch index.html &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; touch config.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The first file &lt;code&gt;admin/index.html&lt;/code&gt;, is the base entry point for the Netlify CMS admin interface. This allosws users set up in the CMS to navigate to &lt;code&gt;yoursite.com/admin/&lt;/code&gt; to access the CMS and start publishing content. On the code side, this is a very basic HTML starter page that loads the Netlify CMS JavaScript file. In the &lt;code&gt;index.html&lt;/code&gt; file you can place the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewport&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;content&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span&gt; /&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Content Manager&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Include the script that builds the page and powers Netlify CMS --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;The second file &lt;code&gt;admin/config.yml&lt;/code&gt; is the heart of the CMS instillation. Since im already utilizing Netlify for hostin and unthentication, the backend configuration is fairly straightforward. For GitHub and GitLab repositories, you should start your &lt;code&gt;config.yml&lt;/code&gt; file with the following lines:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;backend&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;git-gateway&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;branch&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;master&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Branch to update (optional; defaults to master)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This specifies your backend protocol and your publication branch. Git Gateway is an open source API that acts as a proxy between authenticated users of your site and your site repo.&lt;/p&gt;
+&lt;p&gt;By default, saving a post in the CMS interface pushes a commit directly to the publication branch. However, you can enable the &lt;strong&gt;Editorial Workflow&lt;/strong&gt;, which adds an very nice intuative interface for drafting, reviewing, and approving posts. To do this, add the following line to your Netlify CMS &lt;code&gt;config.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# This line should *not* be indented&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;publish_mode&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;editorial_workflow&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Great now the admins set up on your account can review and approve posts that your writters are making! But they wont be able to post images sadly. We can easiy fix this.  If you already have an images folder in your project, you could use its path, possibly creating an uploads sub-folder, for example:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# These lines should *not* be indented&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;media_folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;static/images/uploads&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Media files will be stored in the repo under static/images/uploads&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;public_folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/images/uploads&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# The src attribute for uploaded media will begin with /images/uploads&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you&amp;rsquo;re creating a new folder for uploaded media, you&amp;rsquo;ll need to know where your static site generator expects static files. In the configuration above adds a new setting, &lt;code&gt;public_folder&lt;/code&gt;. While &lt;code&gt;media_folder&lt;/code&gt; specifies where uploaded files are saved in the repo, &lt;code&gt;public_folder&lt;/code&gt; indicates where they are found in the published site. Image &lt;code&gt;src&lt;/code&gt; attributes use this path, which is relative to the file where it&amp;rsquo;s called. For this reason, we usually start the path at the site root, using the opening &lt;code&gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If public_folder is not set, Netlify CMS defaults to the same value as &lt;code&gt;media_folder&lt;/code&gt;, adding an opening &lt;code&gt;/&lt;/code&gt; if one is not included.&lt;/p&gt;
+&lt;p&gt;After this we need to set up something called collections. Collections define the structure for the different types of content on your site. For example a magority of my posts all have a title, publish date, description, tags, and a body. I can also post a featured image and list an author if i wanted to. For my website, my &lt;code&gt;config.yml&lt;/code&gt; file in the &lt;code&gt;adnmin&lt;/code&gt; folder has the following:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Project Posts&amp;#34;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;folder&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/content/posts/projects&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;create&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;slug&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{{year}}-{{month}}-{{day}}-{{slug}}&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;fields&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Publish Date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Featured Image&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;cover&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;image&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Decription&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;desciption&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tags&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tags&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;list&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label: Author, name: author, widget: hidden, default&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Joshua Mathie}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - {&lt;span style=&#34;color:#f92672&#34;&gt;label&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;, widget&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;markdown&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is set up for every type of post that I could want to utilize. This might look quite confusing, and not going to lie it is, so let me break it down for you.&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;ITEM&lt;/th&gt;
+          &lt;th&gt;DESCRIPTION&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;name&lt;/td&gt;
+          &lt;td&gt;Post type identifier, used in routes. Must be unique.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;label&lt;/td&gt;
+          &lt;td&gt;What the admin UI calls the post type.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;folder&lt;/td&gt;
+          &lt;td&gt;Where files of this type are stored, relative to the repo root.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;slug&lt;/td&gt;
+          &lt;td&gt;Template for filenames. {{year}}, {{month}}, and {{day}} pulls from the post&amp;rsquo;s date field or save date {{slug}} is a url-safe version of the post&amp;rsquo;s title. Default is simply {{slug}}.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;fields&lt;/td&gt;
+          &lt;td&gt;Fields listed here are shown as fields in the content editor, then saved as front matter at the beginning of the document (except for body , which follows the front matter). Each field contains the following properties:  - label: Field label in the editor UI. - name: Field name in the document front matter. - widget: Determines UI style and value data type (details below). - default(optional): Sets a default value for the field.&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;These collections also act as the submenus when you make a post in the CMS Admin console.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;PHEW that was alot to take in huh? Get conmfy were not done yet!&lt;/p&gt;
+&lt;p&gt;Next we need to set up authentication. Thankfully because we are using the Netlify platform already this is relatively easy to do as they offer a built-in authorization service they call &lt;em&gt;Identify.&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Go to &lt;code&gt;Settings &amp;gt; Identity&lt;/code&gt;, and select &lt;code&gt;Enable Identity service&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;code&gt;Registration preferences&lt;/code&gt;, select &lt;code&gt;Open&lt;/code&gt; or &lt;code&gt;Invite only&lt;/code&gt;. In most cases, you want only invited users to access your CMS, but if you&amp;rsquo;re just experimenting, you can leave it open for convenience.&lt;/li&gt;
+&lt;li&gt;If you&amp;rsquo;d like to allow one-click login with services like Google and GitHub, check the boxes next to the services you&amp;rsquo;d like to use, under &lt;code&gt;External providers&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Scroll down to &lt;code&gt;Services &amp;gt; Git Gateway&lt;/code&gt;, and click &lt;code&gt;Enable Git Gateway&lt;/code&gt;. This authenticates with your Git host and generates an API access token. In this case, we&amp;rsquo;re leaving the &lt;code&gt;Roles&lt;/code&gt; field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once thats done the backend has been setup to handle authentication, now you just need a frontend interface. Don&amp;rsquo;t worry were almost done. Netlify Identify has a nice widget that we can install as a drop-in for this purpose. To include the widget just add the following in 2 places:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://identity.netlify.com/v1/netlify-identity-widget.js&amp;#34;&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These need to be added to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of your CMS index page located at &lt;code&gt;/admin/index.html&lt;/code&gt;, as well as the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; of your sites main index page. Depending on how your site generator is set up, this may mean you need to add it to the default template, or to a &amp;ldquo;partial&amp;rdquo; or &amp;ldquo;include&amp;rdquo; template. If you can find where the site stylesheet is linked, that&amp;rsquo;s probably the right place.&lt;/p&gt;
+&lt;p&gt;Whe a user logs in with the Metlify Identify widget an access token redirects to the site homepage. In order to complete the login and get back into the CMS, we need to redirect the user back to the &lt;code&gt;/admin/&lt;/code&gt; path. This can be accomplished by adding the below script right before the closing &lt;code&gt;body&lt;/code&gt; tag of your sites main index page:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;init&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt; =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;user&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        window.&lt;span style=&#34;color:#a6e22e&#34;&gt;netlifyIdentity&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;on&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;login&amp;#34;&lt;/span&gt;, () =&amp;gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;          document.&lt;span style=&#34;color:#a6e22e&#34;&gt;location&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;href&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/admin/&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    });
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;congratulations-again&#34;&gt;CONGRATULATIONS AGAIN&lt;/h2&gt;
+&lt;p&gt;Your site is now fully configured and ready for you to start using the CMS to draft, review, and post content independant of your base install on your PC. Just don&amp;rsquo;t forget to invite people to post if your doing this!!&lt;/p&gt;
+&lt;h1 id=&#34;enjoy-your-website&#34;&gt;Enjoy your website!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;All thanks to &lt;a href=&#34;http://gohugo.io&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;http://www.netlify.com&#34;&gt;Netlify&lt;/a&gt;, and &lt;a href=&#34;http://www.netlifycms.org&#34;&gt;Netlify CMS&lt;/a&gt; for posting their amazing tutorials on setting this all up.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Setting Up Vim</title>
-      <link>/posts/tutorials/set_up_vim/</link>
+      <link>//localhost:1313/posts/tutorials/set_up_vim/</link>
       <pubDate>Sat, 26 Sep 2020 12:16:20 -0400</pubDate>
       
-      <guid>/posts/tutorials/set_up_vim/</guid>
-      <description>Vim needs no introduction.  Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it. vim or Vi IMproved, is a well known port of the vi editor created by Bill Joy, that was created by Bram Moolenaar. vim was designed as a more improved text editor over the original vi, with a heavy influence on the use of the keyboard over the mouse, and pre-installed movement commands, or custom macros, to traverse the document you are creating or editing.</description>
+      <guid>//localhost:1313/posts/tutorials/set_up_vim/</guid>
+      <description>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
+&lt;code&gt;vim&lt;/code&gt; or Vi IMproved, is a well known port of the vi editor created by Bill
+Joy, that was created by Bram Moolenaar. &lt;code&gt;vim&lt;/code&gt; was designed as a more improved
+text editor over the original vi, with a heavy influence on the use of the
+keyboard over the mouse, and pre-installed movement commands, or custom macros,
+to traverse the document you are creating or editing. For more detailed
+information, including the history of Vim, please go to the home page at &lt;a href=&#34;https://www.vim.org/&#34;&gt;vim.org/&lt;/a&gt;&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
+&lt;code&gt;vim&lt;/code&gt; or Vi IMproved, is a well known port of the vi editor created by Bill
+Joy, that was created by Bram Moolenaar. &lt;code&gt;vim&lt;/code&gt; was designed as a more improved
+text editor over the original vi, with a heavy influence on the use of the
+keyboard over the mouse, and pre-installed movement commands, or custom macros,
+to traverse the document you are creating or editing. For more detailed
+information, including the history of Vim, please go to the home page at &lt;a href=&#34;https://www.vim.org/&#34;&gt;vim.org/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;installing-vim&#34;&gt;Installing Vim&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;As I use Linux, I will mainly work on installing Vim on Arch. To install &lt;code&gt;vim&lt;/code&gt; consult your Linux distributions wiki, or the Vim website for other ways to install vim. A few of the popular ways are below:&lt;/p&gt;
+&lt;p&gt;For Arch based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo pacman -S vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Unbuntu based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo apt install vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For Debian based systems:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ apt-get install vim
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;basic-layout&#34;&gt;Basic layout&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;When you first start vim via &lt;code&gt;$ vim&lt;/code&gt; you are greeted with the following screen:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;Pretty simple design and can get you buy if your need to edit some files, but
+i&amp;rsquo;m going to edit it up a little and make it cleaner, and nicer to use a little
+later. But first lets go though some of the most basic commands that should be
+learned.&lt;/p&gt;
+&lt;p&gt;One of the best things to do if you have never used vim before is to run &lt;code&gt;$ vimtutor&lt;/code&gt; in your preferred terminal. This is a very nice introduction to the
+standard movements utilized in Vim. A few of the really important ones are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The hjkl keys - this is the standard movement keys for getting around in the
+file you are using. &lt;code&gt;h&lt;/code&gt; moves left, &lt;code&gt;j&lt;/code&gt; moves down, &lt;code&gt;k&lt;/code&gt; moves up, &lt;code&gt;l&lt;/code&gt; moves right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Exiting - use &lt;code&gt;:q&lt;/code&gt; to exit, &lt;code&gt;:q!&lt;/code&gt; to force a quit, and &lt;code&gt;:wq&lt;/code&gt; to write the file and exit vim.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When in normal mode (the standard) mode, you can utilize a number in front
+of the action you would like to do, such as &lt;code&gt;2j&lt;/code&gt; moves 2 down, &lt;code&gt;32k&lt;/code&gt; moves 32
+characters up, etc. This can also be utilized for other commands.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In normal mode the &lt;code&gt;x&lt;/code&gt; button will delete a single character at the cursor, &lt;code&gt;dw&lt;/code&gt;
+will delete from the cursor to the end of the word, including the space,
+&lt;code&gt;d$&lt;/code&gt;
+from the cursor to the end of the line, &lt;code&gt;dd&lt;/code&gt; to delete a whole line.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What about if you did something and want to undo it? simply pressing &lt;code&gt;u&lt;/code&gt; in
+normal mode will do that for you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What about if you want to just update a word: &lt;code&gt;cw&lt;/code&gt; and type the  correct word then press &lt;code&gt;&amp;lt;ESC&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pressing &lt;code&gt;i&lt;/code&gt; will put you into INSERT mode.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are just some of the basic commands that can be handled from within vim,
+&lt;code&gt;vimtutor&lt;/code&gt; as well as the documentation can aid you in learning and figuring out
+other macros and commands.&lt;/p&gt;
+&lt;h1 id=&#34;setting-up-customization&#34;&gt;Setting up customization.&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Vim utilizes a configuration file, the vimrc. This vimrc can be utilized
+globally, or at a user level by utilizing a &lt;code&gt;.vimrc&lt;/code&gt; file in your home
+directory.&lt;/p&gt;
+&lt;p&gt;Here you can choose which settings you would like to add. A few of the options
+I utilize are below:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;set line numbers to both relative and number.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;relativenumber&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;set file stats&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ruler&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; spacing and whitespace things&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wrap&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;textwidth&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;79&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabstop&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;shiftwidth&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;softtabstop&lt;/span&gt;=&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;autoindent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;set&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;nofoldenable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can also set custom key macros as well. A few of the ones that are useful
+to me are:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-vim&#34; data-lang=&#34;vim&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; set jk to esc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jk&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;esc&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;vnoremap&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;jk&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;esc&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34;disable arrow keys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;up&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;down&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;left&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;right&lt;/span&gt;&amp;gt; &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;nop&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; Auto Close tags. Adds the start and close tags and centers the cursor in the&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;#34; center.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; ( ()&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; { {}&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;inoremap&lt;/span&gt; [ []&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Left&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then you can utilize Plugins to get other features. I use a program called
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; to install plugins. To
+install Vundle follow the README found on the github, thtough that link.&lt;/p&gt;
+&lt;p&gt;Some of the plugins I utilize are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/preservim/nerdtree&#34;&gt;NERDtree&lt;/a&gt; - A custom file system
+explorer for Vim. Need to also use (Vim-devicons){https://github.com/ryanoasis/vim-devicons} to get working file system icons.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/joshdick/onedark.vim&#34;&gt;Onedark&lt;/a&gt; - A Dark colorscheme for
+Vim/Neovim. Sometimes I use (Gruvbox)[https://github.com/morhetz/gruvbox].&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/frazrepo/vim-rainbow&#34;&gt;vimrainbow&lt;/a&gt; - Colorizes your
+paranthesis, brackets, and squierlies to make them easier to distinguish.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These are just a few of the plugins I utilize. After installing and setting
+everything up my vim now looks like below:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This was a VERY simple introduction to vim. There are a plethora of resources
+online for learning how to utilize, configure and customize vim. a few
+suggestions that i have used are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The vim documentation.&lt;/li&gt;
+&lt;li&gt;the following youtubers / channels: &lt;a href=&#34;https://www.youtube.com/channel/UC2eYFnH61tmytImy1mTYvhA&#34;&gt;Luke Smith&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/channel/UC8ENHE5xdFSwx71u3fDH5Xw&#34;&gt;ThePrimeagen&lt;/a&gt;, and &lt;a href=&#34;https://www.youtube.com/user/ThoughtbotVideo&#34;&gt;Thoughtbot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vim-adventures.com/&#34;&gt;VIM Adventures&lt;/a&gt; - a really fun interactive
+game, created to easily teach vim movements, while playing an RPG style
+game.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If you would like to see my vimrc and other dotfiles please feel free to go to
+my &lt;a href=&#34;https://github.com/Mathie-Josh/Arch_laptop/&#34;&gt;Github&lt;/a&gt;. I need to update my
+README, but the files are all there!&lt;/p&gt;
+&lt;p&gt;I hope you enjoy the wonderful and majestic world that is vim!&lt;/p&gt;
+&lt;hr&gt;
+</content>
     </item>
     
     <item>
       <title>Installing Termux</title>
-      <link>/posts/tutorials/install_termux/</link>
+      <link>//localhost:1313/posts/tutorials/install_termux/</link>
       <pubDate>Thu, 10 Sep 2020 18:20:23 -0400</pubDate>
       
-      <guid>/posts/tutorials/install_termux/</guid>
-      <description>Today I would like to go through how I Installed Termux on my Android phone, how I edited the app, what applications I use it for, why I installed it, and what I have learned.
-First What is Termux you might ask? Pulled directly form the main website https://www.termux.com:
- Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager.</description>
+      <guid>//localhost:1313/posts/tutorials/install_termux/</guid>
+      <description>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
+how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
+website &lt;a href=&#34;https://termux.com/&#34; title=&#34;Termux Main Website&#34;&gt;https://www.termux.com&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; is an Android terminal emulator and Linux environment app that
+works directly with no rooting or setup required. A minimal base system is
+installed automatically - additional packages are available using the APT
+package manager.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Today I would like to go through how I Installed Termux on my Android phone,
+how I edited the app, what applications I use it for, why I installed it, and what I have learned.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;What is&lt;/strong&gt; &lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; you might ask? Pulled directly form the main
+website &lt;a href=&#34;https://termux.com/&#34; title=&#34;Termux Main Website&#34;&gt;https://www.termux.com&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Termux&lt;/strong&gt;&lt;/em&gt; is an Android terminal emulator and Linux environment app that
+works directly with no rooting or setup required. A minimal base system is
+installed automatically - additional packages are available using the APT
+package manager.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That seems like a lot of information to take in at once. Let&amp;rsquo;s break that down
+further:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Android Terminal Emulator: This is a computer program {or in this case
+a android app} that emulates a text terminal on our android phone.&lt;/li&gt;
+&lt;li&gt;Text Terminal:  Also just called a terminal or system console is a standard
+serial computer interface for text entry and display. The system console is
+a text terminal used to operate a computer. One of the main uses and
+applications utilized in a terminal is the Shell, also known as a command-line
+interpreter. The shell is used type out commands and execute them.&lt;/li&gt;
+&lt;li&gt;Linux Environment: This is simply a &amp;ldquo;Linux Like&amp;rdquo; environment that is
+installed on your android phone via the Termux application. You can run normal
+terminal commands as well as applications that are made to run in the terminal,
+such as &lt;a href=&#34;https://weechat.org/&#34;&gt;Weechat&lt;/a&gt;,
+&lt;a href=&#34;https://wiki.archlinux.org/index.php/Ncmpcpp&#34;&gt;ncmpcpp&lt;/a&gt;, or
+&lt;a href=&#34;https://github.com/tmux/tmux/wiki&#34;&gt;tmux&lt;/a&gt;.  It is not a linux subsystem, but
+simply a package ecosystem.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;how-do-you-install-termux&#34;&gt;How do you install Termux?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;There are two ways you can install Termux:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Through the Google Play Apps Store.&lt;/li&gt;
+&lt;li&gt;Through the F-Droid App - The Free Open Source Android App Repository.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The option you choose is entirely up to your preference. The F-Droid versions
+add-on apps (Styling, API, Widget, Float, Boot, and Tasker) are free but are
+not maintained by Frederick Fornwall, the author and main maintainer. Where as
+the Google Play version&amp;rsquo;s add-on apps are small costs to purchase (about $6.00 USD for all
+of them I believe) and is maintained by Frederick and the money goes to helping him continue
+his work. I choose the Google Play Store version as I wanted to support the
+project.&lt;/p&gt;
+&lt;h1 id=&#34;instillation-steps&#34;&gt;Instillation Steps:&lt;/h1&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Download the App from the &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.termux&#34;&gt;Play Store&lt;/a&gt; Or from the &lt;a href=&#34;https://f-droid.org/packages/com.termux&#34;&gt;F-droid App&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Open the app on your phone once it is done installing. The app will install
+the base system itself.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once this is finished you are greeted by the Termux welcome screen. I would recommend reading
+through the wiki,  there is &lt;strong&gt;A LOT&lt;/strong&gt; of great information that
+can help you if you ever get lost. Termux uses the package manager &lt;code&gt;pkg&lt;/code&gt; to
+install different applications or packages. &lt;code&gt;pkg&lt;/code&gt; is used by a majority of
+Debian based Linux distributions ,or Distros,(such as Ubuntu, Linux Mint and
+Zorin OS) use pkg as standard.
+  &lt;img src=&#34;//localhost:1313/images/Welcome_Screen.jpeg&#34;  class=&#34;center&#34;  /&gt;
+
+&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Termux is now installed and ready to use. I would suggest running &lt;code&gt;pkg update&lt;/code&gt; and accept the upgrade. This will make sure your system is completely up to date.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;now-to-make-it-look-better-and-run-some-stuff&#34;&gt;Now to make it look better and run some stuff!&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Now you can install a plethora of packages. You can peruse the full list
+&lt;a href=&#34;https://github.com/termux/termux-packages/tree/master/packages&#34;&gt;here&lt;/a&gt;. Some of
+the apps I Installed were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;vim&lt;/code&gt; - One of the best terminal based text editors around.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git&lt;/code&gt; - for managing git repos, also use it to push my Termux files to github
+to keep them in one place. (This is not really needed as Termux has a built
+in backup utility that saves a zip file of everything in the Termux
+folder, but I am learning how to properly use git, so it helps.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zsh&lt;/code&gt; - a new command-line interpreter that offers improvements over Bash. (with the oh-my-zsh framework and the powerlevel10k theme.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WeeChat&lt;/code&gt; - a IRC (Internet Relay Chat) client. Other alternatives are
+&lt;a href=&#34;https://irssi.org/&#34;&gt;irrsi&lt;/a&gt; or &lt;a href=&#34;http://www.epicsol.org/&#34;&gt;epic&lt;/a&gt; among some of
+the top used ones.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Tmux&lt;/code&gt; - A terminal multiplexer. It allows you to switch between programs that
+you run in a session that you can detach and reattach on a different
+terminal. See the documentation at the link provided above.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OpenSSH&lt;/code&gt; - Secure Shell tool for remote connection.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The easiest way to download a package is to run &lt;code&gt;pkg install &amp;quot;packagename&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;After installing the packages you want you can configure the apps further
+(Please read the documentation for the package you would like to customize.)
+For example I configured my .vimrc to include the
+&lt;a href=&#34;https://github.com/VundleVim/Vundle.vim&#34;&gt;Vundle&lt;/a&gt; plugin manager.&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/Termux_vim.jpg&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;You might notice that there are some extra rows of keys above my keyboard (such as the arrow keys, PGUP
+and HOME buttons.) These are not 100% necessary, but I prefer having them.
+Follow
+&lt;a href=&#34;https://wiki.termux.com/wiki/Touch_Keyboard#:~:text=Extra%20Keys%20Row,Q%20or%20Volume%20Up%2BK.&#34;&gt;this&lt;/a&gt; link to see how to set it up.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quick summary copy the code block from the Wiki and paste it into a &lt;code&gt;termux.properties&lt;/code&gt; file in the &lt;code&gt;~/.termux/&lt;/code&gt; folder (the ~ refers back to the users &lt;code&gt;home&lt;/code&gt; directory.) then tun the &lt;code&gt;termux-reload-settings&lt;/code&gt; from the command line to refresh Termux and ashow the additional keys.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After this I set up a new shell, zsh, with the &lt;a href=&#34;https://ohmyz.sh/&#34;&gt;Oh-my-zsh&lt;/a&gt; framework and the &lt;a href=&#34;https://github.com/romkatv/powerlevel10k&#34;&gt;powerlevel10k&lt;/a&gt; theme. You can
+follow the git repo instillation guides for both of these for how to properly
+install and configure them. After installing, customizing and restarting
+Termux, it now looks like this:&lt;/p&gt;
+
+  &lt;img src=&#34;//localhost:1313/images/Screenshot_Termux.jpg&#34;  class=&#34;center&#34;  /&gt;
+
+
+&lt;p&gt;I used the screen capture tool &lt;code&gt;neofetch&lt;/code&gt; to get the OS Printout info and the
+ascii art image, that I tied to an alias &lt;code&gt;ps&lt;/code&gt;, to make it easier to execute.&lt;/p&gt;
+&lt;h1 id=&#34;why-did-i-install-termux&#34;&gt;Why did I install Termux?&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;I installed Termux as a way to continue learning the Linux command line, and
+understanding the packages that can be used. A majority of everything I have
+installed on my laptop (BTW I use Arch&amp;hellip;sorry that&amp;rsquo;s over used..) I have
+installed on my Termux application. One nice thing I can do is use my phone to
+SSH into some other machine if I need to do something quickly, or ssh tunnel
+into one of my VPS&amp;rsquo;s running Tmux. There are a lot of options I can continue to
+use the app for and will most likely write up more things about it.&lt;/p&gt;
+&lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Before I close out, here are a few projects on github that I personally would suggest you potentially look into related to Termux (I havent tryed any of these, but plan on looking into them):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/YadominJinta/atilo&#34;&gt;atlio&lt;/a&gt; - A termux program to install
+a few minimal linux distors inside termux.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/SDRausty/TermuxArch&#34;&gt;TermuxArch&lt;/a&gt; allows you to attempt
+to install an Arch Linux inside of the Termux environment.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Hax4us/Nethunter-In-Termux&#34;&gt;Nethunter-in-Termux&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;install Kali nethunter in Termux, WITHOUT root.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt; 
+ 
+ &lt;/p&gt;
+&lt;hr&gt;
+</content>
     </item>
     
   </channel>

@@ -1,11 +1,22 @@
 baseurl = "/"
 languageCode = "en-us"
 theme = "terminal"
-paginate = 6
+pagination.pagerSize = 6
 disqusShortname = "mathiejosh-xyz"
 googleAnalytics = "UA-177349046-1"
 
+#[markup]
+#  [markup.goldmark]
+#  [markup.goldmark.extensions]
+#      [markup.goldmark.extensions.passthrough]
+#        enable = true
+#        [markup.goldmark.extensions.passthrough.delimiters]
+#          block = [['\[', '\]'], ['$$', '$$']]
+#          inline = [['\(', '\)']]
 [params]
+   # mathtex
+ #  math = true
+
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
@@ -100,8 +111,6 @@ googleAnalytics = "UA-177349046-1"
         identifier = "MythosReborn"
         name = "Mythos Reborn"
         url = "https://mythosreborn.mathiejosh.xyz"
-        
-
-      
+              
 
 

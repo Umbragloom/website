@@ -75,6 +75,9 @@
 <!-- Extended head section-->
 {{ partial "extended_head.html" . }}
 
+{{ if .Params.math }}{{ partial "helpers/katex.html" . }}{{ end }}
+
+
 {{ range .Site.Params.custom_css -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}

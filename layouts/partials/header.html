@@ -9,4 +9,6 @@
     {{ partial "menu.html" . }}
   {{ end }}
 
+{{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
+
 </header>

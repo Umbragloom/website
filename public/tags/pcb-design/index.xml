@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pcb Design on [Mathie@josh]#</title>
+    <link>//localhost:1313/tags/pcb-design/</link>
+    <description>Recent content in Pcb Design on [Mathie@josh]#</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 30 Jun 2022 20:17:00 +0400</lastBuildDate><atom:link href="//localhost:1313/tags/pcb-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wireless Keyboard Design</title>
+      <link>//localhost:1313/posts/projects/keyboard_design/</link>
+      <pubDate>Thu, 30 Jun 2022 20:17:00 +0400</pubDate>
+      
+      <guid>//localhost:1313/posts/projects/keyboard_design/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve had my eye on wanting to design a wifi/bluetooth enabled keyboard for
+a while. Finding the &lt;a href=&#34;https://hackaday.io/project/13210-the-fsociety-keyboard&#34;&gt;Fsociety Keyboard&lt;/a&gt; gave me the basis for alot of my design.&lt;/p&gt;</description>
+      <content>&lt;p&gt;I&amp;rsquo;ve had my eye on wanting to design a wifi/bluetooth enabled keyboard for
+a while. Finding the &lt;a href=&#34;https://hackaday.io/project/13210-the-fsociety-keyboard&#34;&gt;Fsociety Keyboard&lt;/a&gt; gave me the basis for alot of my design.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

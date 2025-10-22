@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Personal Website with Hugo and Netlify! :: [Mathie@josh]#</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Static websites are amazing! Building your own website, and hosting it is easier than ever nowadays. Especially with things such as WIX, WordPress and Squarespace. But I wanted a bit more of a personal technological feel behind it to justify having one.
+Why do this? There are a lot of reasons to host your own website. My reasons are below:
+I wanted somewhere I could post what ever I wanted.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="//localhost:1313/posts/tutorials/website/" />
+
+
+
+
+<link rel="stylesheet" href="//localhost:1313/assets/style.css">
+
+  <link rel="stylesheet" href="//localhost:1313/assets/:root.css">
+
+
+
+<link rel="stylesheet" href="//localhost:1313/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//localhost:1313/img/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="//localhost:1313/img/favicon/:root.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Personal Website with Hugo and Netlify! :: [Mathie@josh]#">
+<meta property="og:description" content="Setting up Hugo, hosting to Github/Gitlab, deploying with Netlify and Netlify CMS." />
+<meta property="og:url" content="//localhost:1313/posts/tutorials/website/" />
+<meta property="og:site_name" content="Personal Website with Hugo and Netlify!" />
+
+  
+    <meta property="og:image" content="//localhost:1313/img/favicon/:root.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-07-28 12:19:00 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="termynal.js" data-termynal-container="#termynal"></script>
+<link rel="stylesheet" href="termynal.css">
+
+</head>
+<body class=":root">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    [Mathie@josh]#
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/posts/art/">Art</a></li>
+        
+      
+        
+          <li><a href="/posts/blog/">Blog</a></li>
+        
+      
+        
+          <li><a href="/contact">Contact Me</a></li>
+        
+      
+        
+          <li><a href="https://mythosreborn.mathiejosh.xyz">Mythos Reborn</a></li>
+        
+      
+        
+          <li><a href="/posts/projects">Projects</a></li>
+        
+      
+        
+          <li><a href="/posts/tutorials/">Tutorials</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/posts/art/">Art</a></li>
+      
+    
+      
+        <li><a href="/posts/blog/">Blog</a></li>
+      
+    
+      
+        <li><a href="/contact">Contact Me</a></li>
+      
+    
+      
+        <li><a href="https://mythosreborn.mathiejosh.xyz">Mythos Reborn</a></li>
+      
+    
+      
+        <li><a href="/posts/projects">Projects</a></li>
+      
+    
+      
+        <li><a href="/posts/tutorials/">Tutorials</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+
+
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="//localhost:1313/posts/tutorials/website/">Personal Website with Hugo and Netlify!</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-07-28 [Updated: 2021-07-28]
+      </span>
+    
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="//localhost:1313/tags/linux/">Linux</a>&nbsp;
+    
+    #<a href="//localhost:1313/tags/tutorial/">Tutorial</a>&nbsp;
+    
+    #<a href="//localhost:1313/tags/webdev/">WebDev</a>&nbsp;
+    
+  </span>
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="static-websites-are-amazing">Static websites are amazing!<a href="#static-websites-are-amazing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>Building your own website, and hosting it is easier than ever nowadays.
+Especially with things such as WIX, WordPress and Squarespace. But I wanted
+a bit more of a personal technological feel behind it to justify having one.</p>
+<h1 id="why-do-this">Why do this?<a href="#why-do-this" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>There are a lot of reasons to host your own website. My reasons are below:</p>
+<ol>
+<li>
+<p>I wanted somewhere I could post what ever I wanted.</p>
+</li>
+<li>
+<p>I wanted to learn a little of both the frontend and backend development
+that went into WebDev and website management.</p>
+</li>
+<li>
+<p>It looks good to potential employers, as well being able to act as a simple
+portfolio for projects and things you are passionate about.</p>
+</li>
+</ol>
+<h1 id="how-to-get-started">How to get started.<a href="#how-to-get-started" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>RESEARCH is your best friend. Look into YouTube videos, Read the documentation
+from the <a href="http://gohugo.io">Hugo</a>, <a href="http://www.netlify.com">Netlify</a>, and <a href="http://www.netlifycms.org">Netlify CMS</a> and research other
+peoples code bases if they have them available to you.</p>
+<h1 id="so-where-do-i-even-begin">So where do I even begin??<a href="#so-where-do-i-even-begin" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<h2 id="first-steps">First Steps!<a href="#first-steps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The first thing to do once you&rsquo;ve done your research is to install Hugo. For my
+example I will be doing this on Linux. There are a plethora of resources on how
+to handle this if your on Mac or Windows. <strong>COUGH</strong> <em><strong>RTFM</strong></em></p>
+<p>From your terminal make sure whatever system you are using has git installed or
+Homebrew if you go that route. For me as I&rsquo;m using Arch Linux, I can just
+install Hugo directly from the Arch Linux community repository by using the
+following command in my terminal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo pacman -Syu hugo
+</span></span></code></pre></div><p>Then you should verify the install with the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo version
+</span></span></code></pre></div><p>Your Command line should show the version number of Hugo if it was installed
+correctly. If it does congrats you have the Hugo Framework installed.</p>
+<p>Next steps are to create a new site!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new site <span style="color:#e6db74">&#34;Sitename&#34;</span>
+</span></span></code></pre></div><p>The above command will create a new Hugo site in a folder called &ldquo;Sitename&rdquo;, you can
+replace Sitename with your desired name. Within this folder will be the files, folders, and items needed to run your site.</p>
+<p>The main file you currently need is the <code>config.toml</code> file. This is the base configuration of your site. For example mine is below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span><span style="color:#a6e22e">baseurl</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;terminal&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">paginate</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">dir</span> <span style="color:#a6e22e">name</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">main</span> <span style="color:#a6e22e">content</span> (<span style="color:#a6e22e">default</span> <span style="color:#a6e22e">is</span> `<span style="color:#a6e22e">content</span>/<span style="color:#a6e22e">posts</span>`).
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">list</span> <span style="color:#a6e22e">of</span> <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">content</span> <span style="color:#a6e22e">will</span> <span style="color:#a6e22e">show</span> <span style="color:#a6e22e">up</span> <span style="color:#a6e22e">on</span> <span style="color:#a6e22e">your</span> <span style="color:#a6e22e">index</span> <span style="color:#a6e22e">page</span> (<span style="color:#a6e22e">baseurl</span>).
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">contentTypeName</span> = <span style="color:#e6db74">&#34;posts&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # [<span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>, <span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;pink&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">themeColor</span> = <span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">you</span> <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">this</span> <span style="color:#a6e22e">to</span> <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">only</span> <span style="color:#a6e22e">submenu</span> <span style="color:#a6e22e">trigger</span> <span style="color:#a6e22e">will</span> <span style="color:#a6e22e">be</span> <span style="color:#a6e22e">visible</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showMenuItems</span> = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">show</span> <span style="color:#a6e22e">selector</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">switch</span> <span style="color:#a6e22e">language</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showLanguageSelector</span> = <span style="color:#a6e22e">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">theme</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">full</span> <span style="color:#a6e22e">screen</span> <span style="color:#a6e22e">width</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fullWidthTheme</span> = <span style="color:#a6e22e">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">center</span> <span style="color:#a6e22e">theme</span> <span style="color:#a6e22e">with</span> <span style="color:#a6e22e">default</span> <span style="color:#a6e22e">width</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">centerTheme</span> = <span style="color:#a6e22e">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">custom</span> <span style="color:#a6e22e">favicon</span> (<span style="color:#a6e22e">default</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">a</span> `<span style="color:#a6e22e">themeColor</span>` <span style="color:#a6e22e">square</span>)
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">favicon</span> = <span style="color:#e6db74">&#34;favicon.ico&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">post</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">show</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">last</span> <span style="color:#a6e22e">updated</span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">If</span> <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">use</span> <span style="color:#a6e22e">git</span>, <span style="color:#a6e22e">you</span> <span style="color:#a6e22e">can</span> <span style="color:#66d9ef">set</span> `<span style="color:#a6e22e">enableGitInfo</span>` <span style="color:#a6e22e">to</span> `<span style="color:#a6e22e">true</span>` <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">post</span> <span style="color:#a6e22e">will</span> <span style="color:#a6e22e">automatically</span> <span style="color:#a6e22e">get</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">last</span> <span style="color:#a6e22e">updated</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">showLastUpdated</span> = <span style="color:#a6e22e">true</span>
+</span></span><span style="display:flex;"><span>  #<span style="color:#a6e22e">enagleGitInfo</span> = <span style="color:#a6e22e">true</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span> # <span style="color:#a6e22e">Provide</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">string</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">prefix</span> <span style="color:#a6e22e">for</span> <span style="color:#a6e22e">the</span> <span style="color:#a6e22e">last</span> <span style="color:#a6e22e">update</span> <span style="color:#a6e22e">date</span>. <span style="color:#a6e22e">By</span> <span style="color:#a6e22e">default</span>, <span style="color:#a6e22e">it</span> <span style="color:#a6e22e">looks</span> <span style="color:#a6e22e">like</span> <span style="color:#a6e22e">this</span>: <span style="color:#ae81ff">2020</span>-<span style="color:#a6e22e">xx</span>-<span style="color:#a6e22e">xx</span> [<span style="color:#a6e22e">Updated</span>: <span style="color:#ae81ff">2020</span>-<span style="color:#a6e22e">xx</span>-<span style="color:#a6e22e">xx</span>] :: <span style="color:#a6e22e">Author</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">updatedDatePrefix</span> = <span style="color:#e6db74">&#34;Updated&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">all</span> <span style="color:#a6e22e">headings</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">their</span> <span style="color:#a6e22e">default</span> <span style="color:#a6e22e">size</span> (<span style="color:#a6e22e">depending</span> <span style="color:#a6e22e">on</span> <span style="color:#a6e22e">browser</span> <span style="color:#a6e22e">settings</span>)
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">it</span>&#39;<span style="color:#a6e22e">s</span> <span style="color:#66d9ef">set</span> <span style="color:#a6e22e">to</span> `<span style="color:#a6e22e">true</span>` <span style="color:#a6e22e">by</span> <span style="color:#a6e22e">default</span>
+</span></span><span style="display:flex;"><span>  # <span style="color:#a6e22e">oneHeadingSize</span> = <span style="color:#a6e22e">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">languages</span>]
+</span></span><span style="display:flex;"><span>  [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;English&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;[Mathie@josh]#&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">subtitle</span> = <span style="color:#e6db74">&#34;A simple, retro theme for Hugo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">owner</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">keywords</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">menuMore</span> = <span style="color:#e6db74">&#34;Show more&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">readMore</span> = <span style="color:#e6db74">&#34;Read more&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">readOtherPosts</span> = <span style="color:#e6db74">&#34;Read other posts&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">missingContentMessage</span> = <span style="color:#e6db74">&#34;Page not found...&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">missingBackButtonLabel</span> = <span style="color:#e6db74">&#34;Back to home page&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">logo</span>]
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logoText</span> = <span style="color:#e6db74">&#34;[Mathie@josh]#&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">logoHomeLink</span> = <span style="color:#e6db74">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>    [<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>]
+</span></span><span style="display:flex;"><span>      [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/about&#34;</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;projects&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Projects&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/projects&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;blog&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Blog&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/blog/&#34;</span>
+</span></span><span style="display:flex;"><span>          
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;art&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Art&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/art/&#34;</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    [[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">en</span>.<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;tutorials&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Tutorials&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/posts/tutorials/&#34;</span>   
+</span></span></code></pre></div><p>This configures the base navigation section of your website. In my example, I have the sub folders Tutorials,
+Art, Blog, Projects, and the About Me pages. This takes you to the sub pages and content for each. This is
+also where you can have links to your social media, as well as where you can set certain parameters required
+by your theme.</p>
+<p>Congrats you have the start of a website, if you haven&rsquo;t set anyhting up yet in the <code>config.yml</code> its going to be
+pretty bland starting off.</p>
+<h2 id="make-it-stand-out">Make it <em><strong>STAND OUT</strong></em><a href="#make-it-stand-out" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>From here you should add a theme. There are HUNDREDS of themes
+you can install. the best place to go is, you guessed it, the <a href="https://themes.gohugo.io">Hugo
+Themes</a> page.</p>
+<p>For my website I went with the Amazing <a href="themes.gohugo.io/themes/hugo-theme-terminal/">Terminal
+Theme</a> from panr on
+<a href="https://github.com/panr/hugo-theme-terminal">Github</a>.</p>
+<p>This is where Git comes in, you need to clone the theme into your websites
+folder. For the Terminal Theme, panr recommends using a git submodule (as does the Hugo dev team), which
+allows you to use the updates made to the repo, without causing any harm to the master branch of the repository
+once you start making changes to it. To do this type the following into your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd sitename <span style="color:#75715e">#to move into your hugo root folder.</span>
+</span></span><span style="display:flex;"><span>$ git submodule add https://github.com/panr/hugo-theme-terminal.git
+</span></span><span style="display:flex;"><span>themes/terminal
+</span></span></code></pre></div><p>This will install all files you need to utilize the theme on your
+website, in a dedicated theme folder within your root folder of your website.</p>
+<p>From here just follow the documentation to set up the theme and your ready to
+go and start making posts.</p>
+<h1 id="post-and-post-and-post">Post and post and post!!<a href="#post-and-post-and-post" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Now its time to start making some glorious, glorious content! You can manually
+create content files for example typing <code>content/&lt;CATAGORY&gt;/&lt;FILE&gt;/&lt;FORMAT&gt;</code>
+and provide metadata in them, however I would recommend the <code>new</code> command to do
+a few things for you (like add title and date):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new posts/<span style="color:#e6db74">&#34;your-posts-title&#34;</span>
+</span></span></code></pre></div><p>This will create a new .md file for you to edit. Hugo utilizes markdown syntex
+for your websites content. Below would be the example of what will be in your new post that you can open in any text editor:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span>: <span style="color:#e6db74">&#34;Your Posts Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">date</span>: <span style="color:#ae81ff">2019-03-26</span>T<span style="color:#ae81ff">08</span>:<span style="color:#ae81ff">47</span>:<span style="color:#ae81ff">11</span>+<span style="color:#ae81ff">01</span>:<span style="color:#ae81ff">00</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">draft</span>: <span style="color:#a6e22e">true</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>This will make whatever you put in &ldquo;Your Posts Title&rdquo; the title of your first post, then
+display the date of the post. The next line <code>draft: True</code> is important, this sets the post
+as a draft that will not be posted to your site, until it is ready.</p>
+<h1 id="check-it-out">Check it out!<a href="#check-it-out" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>So after you&rsquo;ve set up your website, chosen a theme that you enjoy (or made your own), and posted your
+first piece of content you can start the hugo server and view the local copy of your website in any browser!
+Type the following into your command line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo server -D
+</span></span></code></pre></div><p>Your terminal will output something similar to the below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ▶ hugo server -D
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                   | EN
+</span></span><span style="display:flex;"><span>+------------------+----+
+</span></span><span style="display:flex;"><span>  Pages            | <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  Paginator pages  |  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  Non-page files   |  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  Static files     |  <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>  Processed images |  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>  Aliases          |  <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  Sitemaps         |  <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  Cleaned          |  <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Total in <span style="color:#ae81ff">11</span> ms
+</span></span><span style="display:flex;"><span>Watching <span style="color:#66d9ef">for</span> changes in /Users/bep/quickstart/<span style="color:#f92672">{</span>content,data,layouts,static,themes<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Watching <span style="color:#66d9ef">for</span> config changes in /Users/bep/quickstart/config.toml
+</span></span><span style="display:flex;"><span>Environment: <span style="color:#e6db74">&#34;development&#34;</span>
+</span></span><span style="display:flex;"><span>Serving pages from memory
+</span></span><span style="display:flex;"><span>Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+</span></span><span style="display:flex;"><span>Web Server is available at http://localhost:1313/ <span style="color:#f92672">(</span>bind address 127.0.0.1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Press Ctrl+C to stop
+</span></span></code></pre></div><p>This will load the hugo server for you, and all you need to do is navigate to http://localhost:1313/
+and view your website!! The -D option loads any drafts that you have so you can view them before posting!</p>
+<p>From here you can continue to configure your theme by updating your <code>config.taml</code> file with the certain themes requirements.</p>
+<hr>
+<p>But <em><strong>&ldquo;Wait!&rdquo;</strong></em> you say, <em><strong>&ldquo;My website isn&rsquo;t online now is it?&rdquo;</strong></em> The answer to that is yes, your correct
+its not online, and it canont be accessed on the web. This is where Netlify and Github come in handy!</p>
+<h1 id="git-commit">Git Commit!<a href="#git-commit" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>So you&rsquo;ve made your site, configured it to your hearts content, and seen what it will look like from your browser, now your ready to
+get yourself setup online. For this we will transition our website&rsquo;s root folder into a Git folder! On your commandline <code>cd</code> ,or change directory,
+into the root folder of your website (Should be something like: <code>~username/home/mywebsite/</code> if you made it in your home folder)
+then run the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git init
+</span></span></code></pre></div><p>This will intialize the folder as a git repository waiting to be pushed to GitHub/GitLab. Go to your GitHub/GitLab create a new repo, and copy the supplied <code>git remote add</code> and <code>git push</code> commands from the <code>...or push an existing repository from the Command line</code> section, then commit the changes to the staging area and commit them to GitHub/GitLab:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git add . <span style="color:#75715e">#this adds all files in the root folder to the staging area.</span>
+</span></span><span style="display:flex;"><span>$ git commit -m <span style="color:#e6db74">&#34;Your commit message here&#34;</span> <span style="color:#75715e">#This is the commit message that you </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># should use to keep track of changes you have made to your git folder, this is useful if you are working in groups.</span>
+</span></span></code></pre></div><p>Then push the local Git repo to your repository on Github/Gitlab:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git remote add origin https://your-github<span style="color:#960050;background-color:#1e0010">&#39;</span>s-repository-address.git
+</span></span><span style="display:flex;"><span>$ git push -u origin master
+</span></span></code></pre></div><p>Congrats you have now begun the process of keeping all data on Github/Gitlab for version control!</p>
+<hr>
+<h1 id="netlify-to-the-rescue">Netlify to the rescue!<a href="#netlify-to-the-rescue" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Next steps are to deploy your website on <em><strong>Netlify</strong></em>. Head over to <a href="https://netlify.com">Netlify</a> and create an account. You can also use your GitHub/GitLab login credentials if you feel like that would make it easier. Once your logged in you&rsquo;ll see an option <code>New site from Git:</code> click this and you will be asked to choose your git provider, Either Github or GitLab, Choose which ever site you used. From here you&rsquo;ll be asked to install Netlify on your personal GitHub/GitLab account, Choose the repository where your website is then you&rsquo;ll be asked to verify your build settings. For this set the build command as <code>hugo</code> and what directory you need to publish, for us this is the <code>public</code> directory where all our content is stored. After this is confirmed click the <code>Deply site</code> button at the bottom of the page.</p>
+<p>Your website will not be correctly displayed if you proceed to the URL shown on the in the site overview since it does not match the <code>baseUrl</code> setting value in the <code>config.toml</code> file. Therefore, click on the <code>Deploy settings</code> in the site overview. Then select the <code>Site details</code> under the <code>General</code> tab. In the <code>Site details</code> tab, click on the <code>Change site name:</code> button, this will cause a pop up to show up, from here set it to whatever your <code>baseUrl</code> setting was.</p>
+<h1 id="congratualtions"><em><strong>CONGRATUALTIONS</strong></em><a href="#congratualtions" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>You now have your own personal website with the Netlify hosting page, that is manually updated once you make new posts to your website on whatever device your Git folder is in! Now on to setting up Netlify CMS so you can edit, update and push content remotely!</p>
+<hr>
+<h1 id="cmss-are-great">CMS&rsquo;s are great!<a href="#cmss-are-great" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>CMS&rsquo;s or Content Managment Systems, are fantastic backend utilities that allow for a larger group of people to work and maintain a website. This allows the users that are logged in and authorized on the CMS to make posts or content to the website, and await review from an admin before releaseing and pushing the content to the webpage. For a static website built on Hugo, Netlify CMS is one of the best options in my opinion. For a personal website this is certainly overkill, Unless you would like to be able to work on your website from anywhere, like me.</p>
+<p>We should first understand the basic app file structure used by Netlify CMS. As we are using Hugo, Netlify will store all CMS files, at the root of your site in a static <code>admin</code> folder, in this case with Hugo it is stored in the <code>/static</code> folder as <code>/static/admin/</code></p>
+<p>To get this set up simply do the following in your ROOT folder of your website:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd /static
+</span></span><span style="display:flex;"><span>$ mkdir /admin <span style="color:#f92672">&amp;&amp;</span> cd /admin <span style="color:#75715e"># The &amp;&amp; is a logical AND function.</span>
+</span></span><span style="display:flex;"><span>$ touch index.html <span style="color:#f92672">&amp;&amp;</span> touch config.yml
+</span></span></code></pre></div><p>The first file <code>admin/index.html</code>, is the base entry point for the Netlify CMS admin interface. This allosws users set up in the CMS to navigate to <code>yoursite.com/admin/</code> to access the CMS and start publishing content. On the code side, this is a very basic HTML starter page that loads the Netlify CMS JavaScript file. In the <code>index.html</code> file you can place the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;Content Manager&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- Include the script that builds the page and powers Netlify CMS --&gt;</span>
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><hr>
+<p>The second file <code>admin/config.yml</code> is the heart of the CMS instillation. Since im already utilizing Netlify for hostin and unthentication, the backend configuration is fairly straightforward. For GitHub and GitLab repositories, you should start your <code>config.yml</code> file with the following lines:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">backend</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">git-gateway</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">master</span> <span style="color:#75715e"># Branch to update (optional; defaults to master)</span>
+</span></span></code></pre></div><p>This specifies your backend protocol and your publication branch. Git Gateway is an open source API that acts as a proxy between authenticated users of your site and your site repo.</p>
+<p>By default, saving a post in the CMS interface pushes a commit directly to the publication branch. However, you can enable the <strong>Editorial Workflow</strong>, which adds an very nice intuative interface for drafting, reviewing, and approving posts. To do this, add the following line to your Netlify CMS <code>config.yml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># This line should *not* be indented</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">publish_mode</span>: <span style="color:#ae81ff">editorial_workflow</span>
+</span></span></code></pre></div><p>Great now the admins set up on your account can review and approve posts that your writters are making! But they wont be able to post images sadly. We can easiy fix this.  If you already have an images folder in your project, you could use its path, possibly creating an uploads sub-folder, for example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># These lines should *not* be indented</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">media_folder</span>: <span style="color:#e6db74">&#34;static/images/uploads&#34;</span> <span style="color:#75715e"># Media files will be stored in the repo under static/images/uploads</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">public_folder</span>: <span style="color:#e6db74">&#34;/images/uploads&#34;</span> <span style="color:#75715e"># The src attribute for uploaded media will begin with /images/uploads</span>
+</span></span></code></pre></div><p>If you&rsquo;re creating a new folder for uploaded media, you&rsquo;ll need to know where your static site generator expects static files. In the configuration above adds a new setting, <code>public_folder</code>. While <code>media_folder</code> specifies where uploaded files are saved in the repo, <code>public_folder</code> indicates where they are found in the published site. Image <code>src</code> attributes use this path, which is relative to the file where it&rsquo;s called. For this reason, we usually start the path at the site root, using the opening <code>/</code>.</p>
+<p>If public_folder is not set, Netlify CMS defaults to the same value as <code>media_folder</code>, adding an opening <code>/</code> if one is not included.</p>
+<p>After this we need to set up something called collections. Collections define the structure for the different types of content on your site. For example a magority of my posts all have a title, publish date, description, tags, and a body. I can also post a featured image and list an author if i wanted to. For my website, my <code>config.yml</code> file in the <code>adnmin</code> folder has the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span> - <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;projects&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Project Posts&#34;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">folder</span>: <span style="color:#e6db74">&#34;/content/posts/projects&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">create</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">slug</span>: <span style="color:#e6db74">&#34;{{year}}-{{month}}-{{day}}-{{slug}}&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">fields</span>:
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Title&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;title&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;string&#34;</span>}
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Publish Date&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;date&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;date&#34;</span>}
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Featured Image&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;cover&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;image&#34;</span><span style="color:#f92672">, required</span>: <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Decription&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;desciption&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;string&#34;</span><span style="color:#f92672">, required</span>: <span style="color:#66d9ef">true</span>}
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Tags&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;tags&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">, required</span>: <span style="color:#66d9ef">false</span>}
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label: Author, name: author, widget: hidden, default</span>: <span style="color:#ae81ff">Joshua Mathie}</span>
+</span></span><span style="display:flex;"><span>      - {<span style="color:#f92672">label</span>: <span style="color:#e6db74">&#34;Body&#34;</span><span style="color:#f92672">, name</span>: <span style="color:#e6db74">&#34;body&#34;</span><span style="color:#f92672">, widget</span>: <span style="color:#e6db74">&#34;markdown&#34;</span>}
+</span></span></code></pre></div><p>This is set up for every type of post that I could want to utilize. This might look quite confusing, and not going to lie it is, so let me break it down for you.</p>
+<table>
+  <thead>
+      <tr>
+          <th>ITEM</th>
+          <th>DESCRIPTION</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>name</td>
+          <td>Post type identifier, used in routes. Must be unique.</td>
+      </tr>
+      <tr>
+          <td>label</td>
+          <td>What the admin UI calls the post type.</td>
+      </tr>
+      <tr>
+          <td>folder</td>
+          <td>Where files of this type are stored, relative to the repo root.</td>
+      </tr>
+      <tr>
+          <td>slug</td>
+          <td>Template for filenames. {{year}}, {{month}}, and {{day}} pulls from the post&rsquo;s date field or save date {{slug}} is a url-safe version of the post&rsquo;s title. Default is simply {{slug}}.</td>
+      </tr>
+      <tr>
+          <td>fields</td>
+          <td>Fields listed here are shown as fields in the content editor, then saved as front matter at the beginning of the document (except for body , which follows the front matter). Each field contains the following properties:  - label: Field label in the editor UI. - name: Field name in the document front matter. - widget: Determines UI style and value data type (details below). - default(optional): Sets a default value for the field.</td>
+      </tr>
+  </tbody>
+</table>
+<p>These collections also act as the submenus when you make a post in the CMS Admin console.</p>
+<hr>
+<p>PHEW that was alot to take in huh? Get conmfy were not done yet!</p>
+<p>Next we need to set up authentication. Thankfully because we are using the Netlify platform already this is relatively easy to do as they offer a built-in authorization service they call <em>Identify.</em></p>
+<ol>
+<li>Go to <code>Settings &gt; Identity</code>, and select <code>Enable Identity service</code>.</li>
+<li>Under <code>Registration preferences</code>, select <code>Open</code> or <code>Invite only</code>. In most cases, you want only invited users to access your CMS, but if you&rsquo;re just experimenting, you can leave it open for convenience.</li>
+<li>If you&rsquo;d like to allow one-click login with services like Google and GitHub, check the boxes next to the services you&rsquo;d like to use, under <code>External providers</code>.</li>
+<li>Scroll down to <code>Services &gt; Git Gateway</code>, and click <code>Enable Git Gateway</code>. This authenticates with your Git host and generates an API access token. In this case, we&rsquo;re leaving the <code>Roles</code> field blank, which means any logged in user may access the CMS. For information on changing this, check the Netlify Identity documentation.</li>
+</ol>
+<p>Once thats done the backend has been setup to handle authentication, now you just need a frontend interface. Don&rsquo;t worry were almost done. Netlify Identify has a nice widget that we can install as a drop-in for this purpose. To include the widget just add the following in 2 places:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://identity.netlify.com/v1/netlify-identity-widget.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>These need to be added to the <code>&lt;head&gt;</code> of your CMS index page located at <code>/admin/index.html</code>, as well as the <code>&lt;head&gt;</code> of your sites main index page. Depending on how your site generator is set up, this may mean you need to add it to the default template, or to a &ldquo;partial&rdquo; or &ldquo;include&rdquo; template. If you can find where the site stylesheet is linked, that&rsquo;s probably the right place.</p>
+<p>Whe a user logs in with the Metlify Identify widget an access token redirects to the site homepage. In order to complete the login and get back into the CMS, we need to redirect the user back to the <code>/admin/</code> path. This can be accomplished by adding the below script right before the closing <code>body</code> tag of your sites main index page:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (window.<span style="color:#a6e22e">netlifyIdentity</span>) {
+</span></span><span style="display:flex;"><span>    window.<span style="color:#a6e22e">netlifyIdentity</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;init&#34;</span>, <span style="color:#a6e22e">user</span> =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">user</span>) {
+</span></span><span style="display:flex;"><span>        window.<span style="color:#a6e22e">netlifyIdentity</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;login&#34;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>          document.<span style="color:#a6e22e">location</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/admin/&#34;</span>;
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><hr>
+<h2 id="congratulations-again">CONGRATULATIONS AGAIN<a href="#congratulations-again" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Your site is now fully configured and ready for you to start using the CMS to draft, review, and post content independant of your base install on your PC. Just don&rsquo;t forget to invite people to post if your doing this!!</p>
+<h1 id="enjoy-your-website">Enjoy your website!<a href="#enjoy-your-website" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<p>All thanks to <a href="http://gohugo.io">Hugo</a>, <a href="http://www.netlify.com">Netlify</a>, and <a href="http://www.netlifycms.org">Netlify CMS</a> for posting their amazing tutorials on setting this all up.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h"></span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="//localhost:1313/posts/tutorials/set_up_latex_with_hugo/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Setting up LaTeX to show on Hugo site.</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="//localhost:1313/posts/tutorials/set_up_vim/">
+                <span class="button__text">Setting Up Vim</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "mathiejosh-xyz" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="//localhost:1313/assets/main.js"></script>
+<script src="//localhost:1313/assets/prism.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
