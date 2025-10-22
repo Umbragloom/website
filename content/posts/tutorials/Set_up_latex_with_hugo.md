@@ -86,7 +86,7 @@ math : true
 Now this should allow the KaTeX partial to be used on any page with that in the
 front matter. 
 
-The following: ```bash $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$``` will
+The following: ```$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$``` will
 display as this:
 
 $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
