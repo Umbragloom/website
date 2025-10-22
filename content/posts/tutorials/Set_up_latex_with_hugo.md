@@ -34,7 +34,7 @@ with you're Hugo Site.
 2. You will need to import the required files. these can be found from the
    [KaTeX site](https://katex.org/docs/browser.html). You should add the
    following to the katex.html file you just made. Make sure this matches what
-   ever information is available on the [KaTeX documentation](https://katex.org/docs/browser.htm)l
+   ever information is available on the [KaTeX documentation](https://katex.org/docs/browser.html)
 
 ``` bash
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css" integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi" crossorigin="anonymous">
@@ -51,11 +51,12 @@ with you're Hugo Site.
 ## Integrate this into your website.
 ---
 
-It important to integrate this into something that is commonly accessed in all
+Its important to integrate this into something that is commonly accessed in all
 of your site. the ```header``` or ```footer``` or ```head``` are perfect places.
 
 1. Create a ```footer.html``` or ```header.html``` or ```head.html``` in the same partials folder
-   at ```layouts/patrials```. Note if doing this in a ```footer.html``` this
+   at ```layouts/patrials``` if these arent already made, if they are edit as
+   needed. Note if doing this in a ```footer.html``` this
    will overide the ```footer.html``` provided by the theme you are using.
 2. Add the following to your prefered partial. I will be adding this to my
    ```head.html```:
