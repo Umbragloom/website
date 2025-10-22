@@ -2,88 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:37865/</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/tutorials/</loc>
+    <loc>//localhost:1313/posts/tutorials/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/hugo/</loc>
+    <loc>//localhost:1313/tags/hugo/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/latex/</loc>
+    <loc>//localhost:1313/tags/latex/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/tutorials/set_up_latex_with_hugo/</loc>
+    <loc>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <lastmod>2025-10-20T20:09:35-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/contact/</loc>
+    <loc>//localhost:1313/contact/</loc>
     <lastmod>2025-10-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/projects/</loc>
+    <loc>//localhost:1313/posts/projects/</loc>
     <lastmod>2022-06-30T20:17:00+04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/blog/</loc>
+    <loc>//localhost:1313/tags/pcb-design/</loc>
+    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/projects/</loc>
+    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/projects/keyboard_design/</loc>
+    <lastmod>2022-06-30T20:17:00+04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/blog/</loc>
     <lastmod>2022-06-11T12:56:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/linux/</loc>
+    <loc>//localhost:1313/tags/blog/</loc>
+    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/life/</loc>
+    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/blog/life-updates/</loc>
+    <lastmod>2022-06-11T12:56:00-04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/blog/life-changes/</loc>
+    <lastmod>2021-08-23T08:27:00-04:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/tags/linux/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/tutorials/website/</loc>
+    <loc>//localhost:1313/posts/tutorials/website/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/tutorial/</loc>
+    <loc>//localhost:1313/tags/tutorial/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/webdev/</loc>
+    <loc>//localhost:1313/tags/webdev/</loc>
     <lastmod>2021-07-28T12:19:00-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/blog/</loc>
+    <loc>//localhost:1313/tags/music/</loc>
     <lastmod>2020-09-26T14:05:43-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/music/</loc>
+    <loc>//localhost:1313/posts/blog/first_blog_post/</loc>
     <lastmod>2020-09-26T14:05:43-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/blog/first_blog_post/</loc>
+    <loc>//localhost:1313/tags/ramblings/</loc>
     <lastmod>2020-09-26T14:05:43-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/ramblings/</loc>
-    <lastmod>2020-09-26T14:05:43-04:00</lastmod>
-  </url><url>
-    <loc>//localhost:37865/tags/neovim/</loc>
+    <loc>//localhost:1313/tags/neovim/</loc>
     <lastmod>2020-09-26T12:16:20-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/tutorials/set_up_vim/</loc>
+    <loc>//localhost:1313/posts/tutorials/set_up_vim/</loc>
     <lastmod>2020-09-26T12:16:20-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/vim/</loc>
+    <loc>//localhost:1313/tags/vim/</loc>
     <lastmod>2020-09-26T12:16:20-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/android/</loc>
+    <loc>//localhost:1313/tags/android/</loc>
     <lastmod>2020-09-10T18:20:23-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/tutorials/install_termux/</loc>
+    <loc>//localhost:1313/posts/tutorials/install_termux/</loc>
     <lastmod>2020-09-10T18:20:23-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/mobile-dev-ops/</loc>
+    <loc>//localhost:1313/tags/mobile-dev-ops/</loc>
     <lastmod>2020-09-10T18:20:23-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/tags/termux/</loc>
+    <loc>//localhost:1313/tags/termux/</loc>
     <lastmod>2020-09-10T18:20:23-04:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2020-08-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>//localhost:37865/posts/art/</loc>
+    <loc>//localhost:1313/posts/art/</loc>
   </url><url>
-    <loc>//localhost:37865/thankyou/</loc>
+    <loc>//localhost:1313/thankyou/</loc>
   </url><url>
-    <loc>//localhost:37865/categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
   </url>
 </urlset>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on [Mathie@josh]#</title>
-    <link>//localhost:37865/tags/vim/</link>
+    <link>//localhost:1313/tags/vim/</link>
     <description>Recent content in Vim on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="//localhost:37865/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Sep 2020 12:16:20 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting Up Vim</title>
-      <link>//localhost:37865/posts/tutorials/set_up_vim/</link>
+      <link>//localhost:1313/posts/tutorials/set_up_vim/</link>
       <pubDate>Sat, 26 Sep 2020 12:16:20 -0400</pubDate>
       
-      <guid>//localhost:37865/posts/tutorials/set_up_vim/</guid>
+      <guid>//localhost:1313/posts/tutorials/set_up_vim/</guid>
       <description>&lt;h1 id=&#34;vim-needs-no-introduction&#34;&gt;Vim needs no introduction.&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;Well that&amp;rsquo;s not entirely true, it probably does if you have never heard of it.
@@ -44,7 +44,7 @@ information, including the history of Vim, please go to the home page at &lt;a h
 &lt;hr&gt;
 &lt;p&gt;When you first start vim via &lt;code&gt;$ vim&lt;/code&gt; you are greeted with the following screen:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:37865/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:1313/images/vim_screen.png&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;p&gt;Pretty simple design and can get you buy if your need to edit some files, but
@@ -140,7 +140,7 @@ paranthesis, brackets, and squierlies to make them easier to distinguish.&lt;/li
 &lt;p&gt;These are just a few of the plugins I utilize. After installing and setting
 everything up my vim now looks like below:&lt;/p&gt;
 
-  &lt;img src=&#34;//localhost:37865/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
+  &lt;img src=&#34;//localhost:1313/images/vim_custom.png&#34;  class=&#34;center&#34;  /&gt;
 
 
 &lt;h1 id=&#34;-sudo-exit&#34;&gt;$ sudo exit&lt;/h1&gt;

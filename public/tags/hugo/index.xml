@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on [Mathie@josh]#</title>
-    <link>//localhost:37865/tags/hugo/</link>
+    <link>//localhost:1313/tags/hugo/</link>
     <description>Recent content in Hugo on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:37865/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Oct 2025 20:09:35 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up LaTeX to show on Hugo site.</title>
-      <link>//localhost:37865/posts/tutorials/set_up_latex_with_hugo/</link>
+      <link>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</link>
       <pubDate>Mon, 20 Oct 2025 20:09:35 -0400</pubDate>
       
-      <guid>//localhost:37865/posts/tutorials/set_up_latex_with_hugo/</guid>
+      <guid>//localhost:1313/posts/tutorials/set_up_latex_with_hugo/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been interested in LaTeX for years, and never really had a use case beyond
 a few simple thing, such as writing a pamphlet/leaflet, or my resume. When I
 found out that you could get LaTeX, specifically MathTeX/KaTeX to show in a hugo

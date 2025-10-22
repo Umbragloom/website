@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebDev on [Mathie@josh]#</title>
-    <link>//localhost:37865/tags/webdev/</link>
+    <link>//localhost:1313/tags/webdev/</link>
     <description>Recent content in WebDev on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Jul 2021 12:19:00 -0400</lastBuildDate><atom:link href="//localhost:37865/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Jul 2021 12:19:00 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/webdev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal Website with Hugo and Netlify!</title>
-      <link>//localhost:37865/posts/tutorials/website/</link>
+      <link>//localhost:1313/posts/tutorials/website/</link>
       <pubDate>Wed, 28 Jul 2021 12:19:00 -0400</pubDate>
       
-      <guid>//localhost:37865/posts/tutorials/website/</guid>
+      <guid>//localhost:1313/posts/tutorials/website/</guid>
       <description>&lt;h1 id=&#34;static-websites-are-amazing&#34;&gt;Static websites are amazing!&lt;/h1&gt;
 &lt;hr&gt;
 &lt;p&gt;Building your own website, and hosting it is easier than ever nowadays.
