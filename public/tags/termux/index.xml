@@ -6,7 +6,50 @@
     <description>Recent content in Termux on [Mathie@josh]#</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 10 Sep 2020 18:20:23 -0400</lastBuildDate><atom:link href="//localhost:1313/tags/termux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Oct 2025 13:41:05 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/termux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set up Hugo on Termux</title>
+      <link>//localhost:1313/posts/tutorials/set_up_hugo_on_termux/</link>
+      <pubDate>Mon, 27 Oct 2025 13:41:05 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/tutorials/set_up_hugo_on_termux/</guid>
+      <description>&lt;h1 id=&#34;update-hugo-static-site-from-mobile-phone&#34;&gt;Update Hugo static Site from mobile phone?&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve been slacking on the posting front to this blog, and I believe thats because if I wanted to work on this more, i&amp;rsquo;d have to sit infront of my PC and write up something and test it all from the commamd line. Although I set up the netfly CMS I rarely ever use it as doing it through the command line is my prefered method.&lt;/p&gt;</description>
+      <content>&lt;h1 id=&#34;update-hugo-static-site-from-mobile-phone&#34;&gt;Update Hugo static Site from mobile phone?&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;ve been slacking on the posting front to this blog, and I believe thats because if I wanted to work on this more, i&amp;rsquo;d have to sit infront of my PC and write up something and test it all from the commamd line. Although I set up the netfly CMS I rarely ever use it as doing it through the command line is my prefered method.&lt;/p&gt;
+&lt;p&gt;Well with Termux, which i&amp;rsquo;ve disscussed before, we can actually manage this
+pretty easily.&lt;/p&gt;
+&lt;h1 id=&#34;innpuutt&#34;&gt;Innpuutt&lt;/h1&gt;
+&lt;p&gt;So to get this to work it is quite simple if you already have a git repo made
+up for your project. If not you can also set it up like yoy normal    ly would. Follow my other post [found here](https://mathiejo    sh.xyz/posts/tutorials/website/)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;First download Termux. This should be installed from the F-Droid app. After this is downloaded and installed go ahead and update with&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;pkg update &amp;amp;&amp;amp; pkg upgrade&lt;/code&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Then install the following : Git , Hugo and your recommended editor for me thats Vim, you should aslo male sure openssh is installed.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;pkg install git hugo vim openssh&lt;/code&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Once these are done and there is a public key made by ssh you should copy the contents of of your public key to add it to ssh. Im not going to go into detail on how to do this but you can easily find how online.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now clone your webaite repo from github.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Once this is done you should be able to make updates to your git repo and add and edit your posts as needed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you want to test your pages as a draft like normal just use the standard &lt;code&gt;hugo server -D&lt;/code&gt;in the root folder of your website and then navigate to &lt;code&gt;http://localhost:1313/&lt;/code&gt; This should show your website like how you would normally see it in a browser&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;oooh-aahhh&#34;&gt;Oooh Aahhh&lt;/h1&gt;
+&lt;p&gt;Now you can update your website on the go from your phone!! Just make sure if you have your website stored on multiple places make sure you &lt;code&gt;git pull&lt;/code&gt; to make sure everything is updated.&lt;/p&gt;
+&lt;p&gt;For example this entire post was edited and updated from Termux on my phone!&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Installing Termux</title>
       <link>//localhost:1313/posts/tutorials/install_termux/</link>
