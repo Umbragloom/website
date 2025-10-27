@@ -78,7 +78,7 @@ do is add the following to the front matter of any markdown file on our site.&lt
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;---
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now this should allow the KaTeX partial to be used on any page with that in the
 front matter.&lt;/p&gt;
-&lt;p&gt;The following: &lt;code&gt;bash $$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$&lt;/code&gt; will
+&lt;p&gt;The following: &lt;code&gt;$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$&lt;/code&gt; will
 display as this:&lt;/p&gt;
 &lt;p&gt;$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$&lt;/p&gt;
 &lt;p&gt;If you wanted to have inline equations you should add the following to your
